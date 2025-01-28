@@ -1,0 +1,99 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmmw1fixrkvgi"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_rmxqo"]
+[ext_resource type="FontFile" uid="uid://b8pt6pnbo3vyd" path="res://Ninja Adventure - Asset Pack/Ui/Font/NormalFont.ttf" id="3_0vvvs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uabic"]
+modulate_color = Color(0.347817, 0.347817, 0.347817, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgbp1"]
+bg_color = Color(0.313726, 0.403922, 0.309804, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.407843, 0.498039, 0.403922, 1)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vc58u"]
+bg_color = Color(0.313726, 0.403922, 0.309804, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.407843, 0.498039, 0.403922, 1)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aslpw"]
+bg_color = Color(0.313726, 0.403922, 0.309804, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.407843, 0.498039, 0.403922, 1)
+shadow_size = 20
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rmxqo")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_uabic")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 319.0
+offset_right = 819.0
+offset_bottom = 586.0
+theme_override_constants/separation = 30
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_0vvvs")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_bgbp1")
+text = "jouer"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_vc58u")
+text = "Parametre"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_0vvvs")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_aslpw")
+text = "Quitter"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.0
+offset_top = -205.0
+offset_right = 214.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 150
+text = "Game"
+
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
