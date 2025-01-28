@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://dp2b25ochald7"]
+[gd_scene load_steps=9 format=4 uid="uid://dp2b25ochald7"]
 
 [ext_resource type="Texture2D" uid="uid://cy2lmvtkmyoam" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetField.png" id="3_bmwnq"]
 [ext_resource type="PackedScene" uid="uid://gfjbhs0wljf5" path="res://gameobjects/characters/characterspawner.tscn" id="4_dwike"]
 [ext_resource type="Texture2D" uid="uid://b8qw62eqhk0uh" path="res://Ninja Adventure - Asset Pack/Actor/Animals/Cat/Faceset.png" id="4_rh766"]
 [ext_resource type="Texture2D" uid="uid://yioqtqw5jds1" path="res://Ninja Adventure - Asset Pack/Ui/LifeReceptacle/heart.png" id="5_qkyfs"]
+[ext_resource type="PackedScene" uid="uid://d0tyqouae5tqt" path="res://message.tscn" id="6_d27y4"]
 [ext_resource type="PackedScene" uid="uid://pxr1rydjgatj" path="res://gameobjects/door/door.tscn" id="6_lhiuk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3xj4e"]
@@ -130,3 +131,7 @@ position = Vector2(295, 262)
 position = Vector2(137, 162.5)
 scale = Vector2(1.3, 1.6875)
 texture = ExtResource("5_qkyfs")
+
+[node name="message" parent="." instance=ExtResource("6_d27y4")]
+position = Vector2(-6, -66)
+scale = Vector2(1, 1.11717)

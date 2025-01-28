@@ -1,7 +1,6 @@
 extends Node
 class_name behaviorattackclass
 
-
 var typeofenemy: int
 var timerattack: Timer
 var bosspatternint: int

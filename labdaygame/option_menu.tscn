@@ -62,10 +62,10 @@ texture = ExtResource("2_d6whm")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 344.0
-offset_top = 319.0
-offset_right = 819.0
-offset_bottom = 586.0
+offset_left = 266.0
+offset_top = 318.0
+offset_right = 982.0
+offset_bottom = 585.0
 theme_override_constants/separation = 30
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
@@ -78,7 +78,7 @@ text = "Musique"
 [node name="OptionButton" type="OptionButton" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_b2vlw")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_xpaud")
 alignment = 1
 selected = 0
@@ -113,6 +113,7 @@ offset_right = 249.4
 offset_bottom = -1.80002
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_b2vlw")
 theme_override_font_sizes/font_size = 150
 text = "Option"
 

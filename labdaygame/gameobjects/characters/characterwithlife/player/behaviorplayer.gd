@@ -57,4 +57,3 @@ func beginbehavior() ->void:
 	
 	charactermovementvar.animation_direction2=Gamemanager.playerdirection
 	#print("zumb"+str(Gamemanager.charactermovementvar))
-	
