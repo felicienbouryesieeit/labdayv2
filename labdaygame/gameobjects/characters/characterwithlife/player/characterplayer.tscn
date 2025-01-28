@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://fk7d6yi7t8rl"]
+
+[ext_resource type="PackedScene" uid="uid://omev2b25eiah" path="res://gameobjects/characters/characterwithlife/characterwithlife.tscn" id="1_4c5ou"]
+[ext_resource type="Texture2D" uid="uid://b5ywyac6i4yjo" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Princess/SpriteSheet.png" id="2_5sw4r"]
+[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/player/behaviorplayer.gd" id="3_267ag"]
+[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/player/playerattackbehavior.gd" id="4_w8dua"]
+
+[node name="Character" instance=ExtResource("1_4c5ou")]
+movement_speed = 150.0
+
+[node name="Sprite2D" parent="." index="2"]
+texture = ExtResource("2_5sw4r")
+
+[node name="behavioractor" parent="." index="4"]
+script = ExtResource("3_267ag")
+
+[node name="attackbehavioractor" parent="." index="9"]
+script = ExtResource("4_w8dua")
+range = 0.6
+cadence = 0.3
