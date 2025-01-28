@@ -1,0 +1,120 @@
+[gd_scene load_steps=8 format=3 uid="uid://dijkr4iyb33dj"]
+
+[ext_resource type="Script" path="res://option_menu.gd" id="1_73xgr"]
+[ext_resource type="Texture2D" uid="uid://bi63m83srh0di" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Flam/Faceset.png" id="2_d6whm"]
+[ext_resource type="FontFile" uid="uid://b8pt6pnbo3vyd" path="res://Ninja Adventure - Asset Pack/Ui/Font/NormalFont.ttf" id="3_b2vlw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgbp1"]
+bg_color = Color(0.313726, 0.403922, 0.309804, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.407843, 0.498039, 0.403922, 1)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpaud"]
+bg_color = Color(0.309804, 0.4, 0.309804, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.4, 0.490196, 0.4, 1)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aslpw"]
+bg_color = Color(0.407843, 0.498039, 0.403922, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.407843, 0.498039, 0.403922, 1)
+shadow_size = 20
+
+[sub_resource type="GDScript" id="GDScript_xd2lw"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="optionMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_73xgr")
+
+[node name="Faceset" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(577, 323.5)
+scale = Vector2(30.3158, 17.0263)
+texture = ExtResource("2_d6whm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 319.0
+offset_right = 819.0
+offset_bottom = 586.0
+theme_override_constants/separation = 30
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_b2vlw")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_bgbp1")
+text = "Musique"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_b2vlw")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_xpaud")
+alignment = 1
+selected = 0
+item_count = 4
+popup/item_0/text = "vitesse de lecture du texte"
+popup/item_0/id = 3
+popup/item_1/text = "vitesse 1"
+popup/item_1/id = 1
+popup/item_2/text = "vitesse 2"
+popup/item_2/id = 2
+popup/item_3/text = "vitesse 3"
+popup/item_3/id = 2
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_b2vlw")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_aslpw")
+text = "Retour"
+script = SubResource("GDScript_xd2lw")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55
+anchor_top = 0.475
+anchor_right = 0.55
+anchor_bottom = 0.475
+offset_left = -249.6
+offset_top = -208.8
+offset_right = 249.4
+offset_bottom = -1.80002
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 150
+text = "Option"
+
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
