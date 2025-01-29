@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=4 uid="uid://rhhpahv3c2o6"]
 
-[ext_resource type="Texture2D" uid="uid://cy2lmvtkmyoam" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetField.png" id="1_c8tj4"]
-[ext_resource type="Texture2D" uid="uid://b8qw62eqhk0uh" path="res://Ninja Adventure - Asset Pack/Actor/Animals/Cat/Faceset.png" id="2_8irfv"]
-[ext_resource type="PackedScene" uid="uid://gfjbhs0wljf5" path="res://gameobjects/characters/characterspawner.tscn" id="4_twys3"]
-[ext_resource type="PackedScene" uid="uid://pxr1rydjgatj" path="res://gameobjects/door/door.tscn" id="6_616fr"]
+[ext_resource type="Texture2D" uid="uid://cy2lmvtkmyoam" path="res://content/asset_pack/Backgrounds/Tilesets/TilesetField.png" id="1_c8tj4"]
+[ext_resource type="Texture2D" uid="uid://b8qw62eqhk0uh" path="res://content/asset_pack/Actor/Animals/Cat/Faceset.png" id="2_8irfv"]
+[ext_resource type="PackedScene" uid="uid://gfjbhs0wljf5" path="res://content/game_objects/characters/characterspawner.tscn" id="4_twys3"]
+[ext_resource type="PackedScene" uid="uid://pxr1rydjgatj" path="res://content/game_objects/door/door.tscn" id="6_616fr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3xj4e"]
 texture = ExtResource("1_c8tj4")

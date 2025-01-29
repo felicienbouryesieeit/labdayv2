@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://pxr1rydjgatj"]
+
+[ext_resource type="Script" path="res://content/game_objects/door/doorscr.gd" id="1_chk3s"]
+[ext_resource type="Texture2D" uid="uid://c612bvnoq6kn3" path="res://content/asset_pack/Items/Treasure/GoldCoin.png" id="1_dagxn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qedvd"]
+size = Vector2(6, 6)
+
+[node name="door" type="Node2D"]
+script = ExtResource("1_chk3s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dagxn")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_qedvd")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://omev2b25eiah"]
+
+[ext_resource type="PackedScene" uid="uid://b431jbpqvdrux" path="res://content/game_objects/characters/character.tscn" id="1_ctt8w"]
+[ext_resource type="Script" path="res://content/game_objects/characters/characterwithlife/typecharacterwithlife.gd" id="2_o8fmt"]
+
+[node name="Character" instance=ExtResource("1_ctt8w")]
+
+[node name="typeofcharac" parent="." index="5"]
+script = ExtResource("2_o8fmt")
+life = 5
+
+[node name="animator" parent="." index="10" node_paths=PackedStringArray("timervar")]
+timervar = NodePath("../Timer")

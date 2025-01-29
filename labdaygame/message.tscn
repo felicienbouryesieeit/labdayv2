@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://d0tyqouae5tqt"]
 
-[ext_resource type="Texture2D" uid="uid://bwwvwqt15vlcf" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/DialogBoxFaceset.png" id="1_xel5u"]
-[ext_resource type="Texture2D" uid="uid://bmaitk2nssc08" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Child/Faceset.png" id="2_pypoh"]
-[ext_resource type="FontFile" uid="uid://b8pt6pnbo3vyd" path="res://Ninja Adventure - Asset Pack/Ui/Font/NormalFont.ttf" id="3_20ljv"]
+[ext_resource type="Texture2D" uid="uid://bwwvwqt15vlcf" path="res://content/asset_pack/Ui/Dialog/DialogBoxFaceset.png" id="1_xel5u"]
+[ext_resource type="Texture2D" uid="uid://bmaitk2nssc08" path="res://content/asset_pack/Actor/Characters/Child/Faceset.png" id="2_pypoh"]
+[ext_resource type="FontFile" uid="uid://b8pt6pnbo3vyd" path="res://content/asset_pack/Ui/Font/NormalFont.ttf" id="3_20ljv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nfv40"]
 texture = ExtResource("1_xel5u")

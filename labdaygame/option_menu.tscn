@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://dijkr4iyb33dj"]
 
 [ext_resource type="Script" path="res://option_menu.gd" id="1_73xgr"]
-[ext_resource type="Texture2D" uid="uid://bi63m83srh0di" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Flam/Faceset.png" id="2_d6whm"]
-[ext_resource type="FontFile" uid="uid://b8pt6pnbo3vyd" path="res://Ninja Adventure - Asset Pack/Ui/Font/NormalFont.ttf" id="3_b2vlw"]
+[ext_resource type="Texture2D" uid="uid://bi63m83srh0di" path="res://content/asset_pack/Actor/Characters/Flam/Faceset.png" id="2_d6whm"]
+[ext_resource type="FontFile" uid="uid://b8pt6pnbo3vyd" path="res://content/asset_pack/Ui/Font/NormalFont.ttf" id="3_b2vlw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgbp1"]
 bg_color = Color(0.313726, 0.403922, 0.309804, 1)

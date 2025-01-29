@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyetry5m3wi2k"]
+
+[ext_resource type="Script" path="res://content/game_objects/characters/characterwithlife/projectiles/damageparscr.gd" id="1_8d1l2"]
+[ext_resource type="Texture2D" uid="uid://b5h2j6u17q425" path="res://content/asset_pack/FX/Projectile/Arrow.png" id="2_s3aq6"]
+[ext_resource type="Script" path="res://content/game_objects/characters/characterwithlife/projectiles/projectilebehaviorpar.gd" id="3_oev2f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pk7t4"]
+size = Vector2(16, 6)
+
+[node name="CharacterBody2D" type="CharacterBody2D" node_paths=PackedStringArray("timerrangevar", "projectilebehaviorvar")]
+script = ExtResource("1_8d1l2")
+timerrangevar = NodePath("Timerrange")
+projectilebehaviorvar = NodePath("projectilebehavior")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_s3aq6")
+
+[node name="Timerrange" type="Timer" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_pk7t4")
+
+[node name="projectilebehavior" type="Node" parent="."]
+script = ExtResource("3_oev2f")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
