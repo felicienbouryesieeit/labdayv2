@@ -7,6 +7,3 @@
 
 [node name="Sprite2D" parent="." index="2"]
 texture = ExtResource("2_ac75f")
-
-[node name="attackbehavioractor" parent="." index="9"]
-projectile_directory = "res://gameobjects/characters/characterwithlife/projectiles/ennemiprojectile/projectileaimplayer/projectileaimplayerobject.tscn"

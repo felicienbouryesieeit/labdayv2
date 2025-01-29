@@ -60,6 +60,7 @@ func _ready() -> void:
 	attackbehaviorvar.charactermovementvar=self
 	attackbehaviorvar.timerattack=timerattack
 	attackbehaviorvar.beginattackbehavior()
+	
 """
 	timervar.start(0.15)  # Démarre le Timer pour 2 secondes
 	timervar.timeout.connect(animationframefunc)  # Connecte le signal timeout
@@ -197,3 +198,5 @@ func spawnattack() ->void:
 	
 	main2.add_child.call_deferred(fleche2)
 		
+func onanimationend(currentframe : int) ->void:
+	attackbehaviorvar.onanimationend(currentframe)

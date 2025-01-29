@@ -17,7 +17,7 @@ hframes = 4
 vframes = 7
 
 [node name="typeofcharac" parent="." index="6"]
-life = 100
+life = 160
 
 [node name="attackbehavioractor" parent="." index="10"]
 script = ExtResource("4_uwenf")

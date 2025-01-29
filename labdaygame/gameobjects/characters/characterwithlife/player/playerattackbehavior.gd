@@ -38,5 +38,5 @@ func timerattackvoid() -> void :
 		
 		
 func playerattackvoid() ->void :
-	spawnprojectileangle(playershootdirection.angle() * (180 / PI))
+	spawnprojectilecharacterstats(playershootdirection.angle() * (180 / PI))
 	playercanattack=false

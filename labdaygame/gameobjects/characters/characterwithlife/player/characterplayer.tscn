@@ -16,5 +16,7 @@ script = ExtResource("3_267ag")
 
 [node name="attackbehavioractor" parent="." index="9"]
 script = ExtResource("4_w8dua")
-range = 0.6
+range = 0.7
 cadence = 0.3
+shotspeedmax = 200.0
+shotaccelerationmax = 200.0

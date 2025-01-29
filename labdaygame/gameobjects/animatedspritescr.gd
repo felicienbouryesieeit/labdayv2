@@ -39,10 +39,27 @@ func animationframefunc() -> void:
 			animation_frame+=1
 		timervar.start(walkduration) 
 	else : 
-		set_sprite_index(xlist[animationlistindex],xlist[animationlistindex])
-		animationlistindex+=1
 		
-		timervar.start(durationlist[animationlistindex])  # Démarre le Timer pour 2 secondes
+		print("pitié pitié pitié"+str(xlist.size())+" "+str(animationlistindex))
+		if xlist.size()>animationlistindex :
+			
+			set_sprite_index(xlist[animationlistindex],ylist[animationlistindex])
+			if charactermovementvar!=null:
+				var animationendframe : int = animationlistindex
+				print("zubata bis"+str((xlist.size()-1)==animationlistindex))
+				if (xlist.size()-1) ==animationlistindex:
+					animationendframe=-1
+				charactermovementvar.onanimationend(animationendframe)
+			
+		
+			timervar.start(durationlist[animationlistindex]) 
+			animationlistindex+=1
+		else :
+			xlist = []
+			ylist = []
+			durationlist = []
+			
+		 # Démarre le Timer pour 2 secondes
 	timervar.timeout.connect(animationframefunc)
 	
 
@@ -81,9 +98,9 @@ func set_sprite_index(x : int, y : int) -> void:
 	change_sprite(false,y)
 	
 func change_sprite(isx : bool,current_frame : int) -> void:
-	if charactermovementvar.iswalkinganim : 
-		for i in range(sprite_2d.size()):
-			if isx :
-				sprite_2d[i].frame_coords.x=current_frame
-			else :
-				sprite_2d[i].frame_coords.y=current_frame
+	 
+	for i in range(sprite_2d.size()):
+		if isx :
+			sprite_2d[i].frame_coords.x=current_frame
+		else :
+			sprite_2d[i].frame_coords.y=current_frame
