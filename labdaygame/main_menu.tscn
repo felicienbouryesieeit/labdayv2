@@ -59,7 +59,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_0vvvs")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_bgbp1")
-text = "jouer"
+text = "Jouer"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2

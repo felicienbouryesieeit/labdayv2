@@ -83,13 +83,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_xpaud")
 alignment = 1
 selected = 0
 item_count = 4
-popup/item_0/text = "vitesse de lecture du texte"
+popup/item_0/text = "Vitesse de lecture du texte"
 popup/item_0/id = 3
-popup/item_1/text = "vitesse 1"
+popup/item_1/text = "Vitesse 1"
 popup/item_1/id = 1
-popup/item_2/text = "vitesse 2"
+popup/item_2/text = "Vitesse 2"
 popup/item_2/id = 2
-popup/item_3/text = "vitesse 3"
+popup/item_3/text = "Vitesse 3"
 popup/item_3/id = 2
 
 [node name="Button4" type="Button" parent="VBoxContainer"]
