@@ -15,7 +15,7 @@ func setbehavior() -> void:
 		#charactermovementvar.spawnattack()
 		#spawnbaseprojectile()
 
-	behaviordirection=Input.get_vector("left","right","up","down")
+	behaviordirection=Input.get_vector("move_left","move_right","move_up","move_down")
 	playershootdirection=Input.get_vector("leftshoot","rightshoot","upshoot","downshoot")
 	
 	isnotattacking = (playershootdirection.x==0 and playershootdirection.y==0)
@@ -57,4 +57,3 @@ func beginbehavior() ->void:
 	
 	charactermovementvar.animation_direction2=Gamemanager.playerdirection
 	#print("zumb"+str(Gamemanager.charactermovementvar))
-	

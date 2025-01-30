@@ -2,6 +2,7 @@ extends Node
 var gmtest : int = 0
 var playerposition : Vector2
 var playermovementvar : charactermovementclass
+var objectspawnervar : objectspawnerclass
 var playerdirection : int
 var doorindex : int
 #var beginposition : Vector2 

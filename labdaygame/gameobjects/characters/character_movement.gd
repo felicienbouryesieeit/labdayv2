@@ -29,7 +29,7 @@ var iswalkinganim : bool = true
 @export var onprojectilecollisionvar : onprojectilecollisionclass
 @export var animatedspritevar : animatedspriteclass
 
-var fleche = preload("res://gameobjects/characters/characterwithlife/projectiles/playerprojectile/playerattackbase/playerattackbaseobject.tscn")
+var fleche = preload("res://gameobjects/characters/characterpar.tscn")
 
 @onready var main2 = get_tree().get_root().get_node("game_scene")
 #@onready var animatedspritevar : animatedspriteclass

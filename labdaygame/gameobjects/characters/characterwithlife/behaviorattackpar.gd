@@ -114,8 +114,10 @@ func spawnprojectile2(angle3 : float,range2 : float,speedmax2 :float,acceleratio
 	#projectile2.rotationvar =90
 	#damagevar.rotationvarbegin=0
 		#fleche2.spawnPos=actorposition
-	
-	charactermovementvar.main2.add_child.call_deferred(projectile2)
+	print("toto"+str(Gamemanager))
+	Gamemanager.objectspawnervar.spawn.call_deferred(projectile2)
+	#add_child(projectile2)
+	#charactermovementvar.main2.add_child.call_deferred(projectile2)
 
 func spawnprojectilecharacterstats(angle3 : float) ->void:
 	spawnprojectile2(angle3,range,shotspeedmax,shotaccelerationmax)

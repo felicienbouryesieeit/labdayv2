@@ -1,22 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://fk7d6yi7t8rl"]
+[gd_scene load_steps=4 format=3 uid="uid://dgnp6xlp7hvdn"]
 
-[ext_resource type="PackedScene" uid="uid://omev2b25eiah" path="res://gameobjects/characters/characterwithlife/characterwithlife.tscn" id="1_4c5ou"]
-[ext_resource type="Texture2D" uid="uid://b5ywyac6i4yjo" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Princess/SpriteSheet.png" id="2_5sw4r"]
-[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/player/behaviorplayer.gd" id="3_267ag"]
-[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/player/playerattackbehavior.gd" id="4_w8dua"]
+[ext_resource type="PackedScene" uid="uid://fgglxfrru5gk" path="res://gameobjects/characters/characterpar.tscn" id="1_nmid8"]
+[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/player/behaviorplayer.gd" id="2_dsvmf"]
+[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/player/playerattackbehavior.gd" id="3_81jem"]
 
-[node name="Character" instance=ExtResource("1_4c5ou")]
-movement_speed = 150.0
+[node name="CharacterBody2D" instance=ExtResource("1_nmid8")]
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-6, 0)
 
 [node name="Sprite2D" parent="." index="2"]
-texture = ExtResource("2_5sw4r")
+offset = Vector2(-6, 0)
 
 [node name="behavioractor" parent="." index="4"]
-script = ExtResource("3_267ag")
+script = ExtResource("2_dsvmf")
 
 [node name="attackbehavioractor" parent="." index="9"]
-script = ExtResource("4_w8dua")
-range = 0.7
-cadence = 0.3
-shotspeedmax = 200.0
-shotaccelerationmax = 200.0
+script = ExtResource("3_81jem")
+range = 0.5
+cadence = 0.7
