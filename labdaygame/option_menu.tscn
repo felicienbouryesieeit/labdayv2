@@ -86,7 +86,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_xpaud")
 alignment = 1
 selected = 0
 item_count = 4
-popup/item_0/text = "Vitesse de lecture du texte"
+popup/item_0/text = "Vitesse du texte"
 popup/item_0/id = 3
 popup/item_1/text = "Vitesse 1"
 popup/item_1/id = 1
@@ -115,6 +115,6 @@ offset_bottom = 208.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3_b2vlw")
 theme_override_font_sizes/font_size = 150
-text = "Option"
+text = "Options"
 
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]

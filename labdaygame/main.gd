@@ -1,7 +1,6 @@
 extends Node
-
-
 enum StartingScene {TITLE_SCREEN,GAME}
+
 
 @export var starting_menu:StartingScene = StartingScene.TITLE_SCREEN
 

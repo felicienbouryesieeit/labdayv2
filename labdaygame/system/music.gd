@@ -1,15 +1,29 @@
 extends AudioStreamPlayer
 
-
 signal music_stopped
 
-const VOLUME_MIN = -60
-const VOLUME_MORMAL = 0
+const VOLUME_MIN = -60.0
+const VOLUME_MAX = 0.0
 
-var tween:Tween
+# Déclaration d'une variable personnalisée pour gérer le volume
+var custom_volume_db
+
+func _ready():
+	custom_volume_db = 0.0  # Initialisation du volume personnalisé
 
 
-func change_music(audio_stream:AudioStream):
+# Fonction pour définir le volume
+func set_custom_volume_db(value: float):
+	custom_volume_db = clamp(value, VOLUME_MIN, VOLUME_MAX)
+	volume_db = custom_volume_db  # Mise à jour de la propriété native volume_db
+
+
+# Fonction pour récupérer le volume personnalisé
+func get_custom_volume_db() -> float:
+	return custom_volume_db
+
+
+func change_music(audio_stream: AudioStream):
 	if stream:
 		if stream == audio_stream:
 			return
@@ -17,18 +31,18 @@ func change_music(audio_stream:AudioStream):
 	play_music(audio_stream)
 
 
-func play_music(audio_stream:AudioStream):
+func play_music(audio_stream: AudioStream):
 	stream = audio_stream
-	volume_db = VOLUME_MORMAL
+	set_custom_volume_db(0.0)  # Définit le volume à 0 dB
 	play()
 
 
-func stop_music(time = 1):
-	if !time:
+func stop_music(time: float = 1.0):
+	if time <= 0.0:
 		stream = null
 	else:
-		tween = create_tween()
-		tween.tween_property(self,"volume_db",VOLUME_MIN,time)
+		var tween = create_tween()
+		tween.tween_property(self, "volume_db", VOLUME_MIN, time)
 		await tween.finished
 		music_stopped.emit()
 		stream = null
