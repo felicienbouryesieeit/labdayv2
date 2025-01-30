@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 class_name charactermovementclass
 
-@export var movement_speed : float = 300
+@export var movement_speed : float = 150
 @export var animated_sprite_2d : AnimatedSprite2D # = $AnimatedSprite2D
 @export var sprite_2d : Array[Sprite2D] # = $AnimatedSprite2D
 @export var timervar : Timer

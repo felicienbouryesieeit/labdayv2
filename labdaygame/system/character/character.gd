@@ -38,9 +38,13 @@ var just_teleport := false
 
 @onready var sprite: SpriteCharacter = $Sprite
 
-
+func _process(delta: float) -> void:
+	pass
+	position.x=Gamemanager.playerposition.x-8
+	
+	position.y=Gamemanager.playerposition.y+6
 func _physics_process(delta: float) -> void:
-	"""
+	
 	if Engine.is_editor_hint():
 		return
 	match state:
@@ -52,8 +56,7 @@ func _physics_process(delta: float) -> void:
 				sprite.anim = SpriteCharacter.Anim.IDLE
 				velocity = velocity.move_toward(Vector2.ZERO,deceleration*delta)
 	move_and_slide()
-	"""
-
+	
 
 func teleport(target_teleporter:Teleporter,offset_position:Vector2):
 	if just_teleport:

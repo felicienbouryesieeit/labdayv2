@@ -1,6 +1,8 @@
 extends Node
 var gmtest : int = 0
 var playerposition : Vector2
+var decalagex : float = 10
+var decalagey : float = -5
 var playermovementvar : charactermovementclass
 var objectspawnervar : objectspawnerclass
 var playerdirection : int

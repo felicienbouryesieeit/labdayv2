@@ -27,11 +27,9 @@ animatedspritevar = NodePath("animator")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-6, 0)
 shape = SubResource("RectangleShape2D_e3piw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-6, 0)
 texture = ExtResource("1_2s8ts")
 hframes = 4
 vframes = 7

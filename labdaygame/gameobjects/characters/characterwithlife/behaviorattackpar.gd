@@ -104,7 +104,9 @@ func startattackloop() ->void:
 
 func spawnprojectile2(angle3 : float,range2 : float,speedmax2 :float,acceleration2:float) ->void:
 	var projectile2 = projectile.instantiate()
-	projectile2.spawnposition=charactermovementvar.position
+	projectile2.spawnposition.x=charactermovementvar.position.x+Gamemanager.decalagex
+	projectile2.spawnposition.y=charactermovementvar.position.y+Gamemanager.decalagey
+	
 	projectile2.charactermovementvar=charactermovementvar
 	projectile2.rotationvar = angle3 #charactermovementvar.character_rotation
 	projectile2.behaviorattackvar=self

@@ -66,6 +66,7 @@ func moveforward() -> void:
 	move_and_slide()	
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
+		print("ayooooooooooooooooooo")
 		if body.has_method("haveprojectilecollision"):
 			#pass
 			body.haveprojectilecollision(self,charactermovementvar)
