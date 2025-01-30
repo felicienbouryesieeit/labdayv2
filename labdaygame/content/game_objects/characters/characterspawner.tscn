@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://gfjbhs0wljf5"]
-
-[ext_resource type="Script" path="res://content/game_objects/characters/characterspawnerscr.gd" id="1_7h8vk"]
-
-[node name="Characterspawner" type="Node2D"]
-script = ExtResource("1_7h8vk")
-pathstring = "res://gameobjects/characters/characterwithlife/ennemies/skeleton/skeleton_character.tscn"

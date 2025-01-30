@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://dpeef6j24tmy"]
-
-[ext_resource type="PackedScene" uid="uid://cyetry5m3wi2k" path="res://content/game_objects/characters/characterwithlife/projectiles/projectilepar.tscn" id="1_g5xvl"]
-[ext_resource type="Script" path="res://content/game_objects/characters/characterwithlife/projectiles/playerprojectile/playerattackbase/playerattackbasescr.gd" id="2_phxcs"]
-
-[node name="CharacterBody2D" instance=ExtResource("1_g5xvl")]
-
-[node name="projectilebehavior" parent="." index="3"]
-script = ExtResource("2_phxcs")

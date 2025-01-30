@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dxbffr3ts21rx"]
+[gd_scene load_steps=40 format=3 uid="uid://c7j4hgkdbtapk"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_804hp"]
 [ext_resource type="PackedScene" uid="uid://c83pfkmwxrf3p" path="res://content/map/map_village.tscn" id="2_7kl5b"]
@@ -254,6 +254,7 @@ speed_scale = 0.5
 [node name="Music" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 autoplay = true
+bus = &"Music"
 script = ExtResource("10_4llys")
 
 [node name="Hud" type="CanvasLayer" parent="."]
