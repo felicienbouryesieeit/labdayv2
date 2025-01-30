@@ -29,6 +29,7 @@ window/stretch/mode="viewport"
 [file_customization]
 
 folder_colors={
+"res://Ninja Adventure - Asset Pack/": "orange",
 "res://audio/": "yellow",
 "res://content/": "green",
 "res://system/": "blue",
