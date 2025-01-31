@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=23 format=4 uid="uid://c83pfkmwxrf3p"]
+=======
+[gd_scene load_steps=27 format=4 uid="uid://c83pfkmwxrf3p"]
+>>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://ck4ncv1wxtff5" path="res://system/map/map.tscn" id="1_6r46d"]
 [ext_resource type="Script" path="res://system/environment/environment_shape.gd" id="2_jff21"]
@@ -8,8 +12,16 @@
 [ext_resource type="Script" path="res://system/damage/resource_damage.gd" id="5_u7nr0"]
 [ext_resource type="Script" path="res://system/environment/resource_environment.gd" id="6_tnfad"]
 [ext_resource type="Resource" uid="uid://ujea2b11dl3n" path="res://content/team/player_team.tres" id="6_u73qr"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://co5qpuj3hns3e" path="res://content/character/princess/princess.tscn" id="7_n8vb2"]
 [ext_resource type="Script" path="res://system/player_assignor.gd" id="8_8tm86"]
+=======
+[ext_resource type="PackedScene" path="res://gameobjects/characters/characterwithlife/player/characterplayer.tscn" id="7_h1qda"]
+[ext_resource type="PackedScene" uid="uid://co5qpuj3hns3e" path="res://content/character/princess/princess.tscn" id="7_n8vb2"]
+[ext_resource type="Script" path="res://system/player_assignor.gd" id="8_8tm86"]
+[ext_resource type="PackedScene" uid="uid://dn4s0ltuy5urx" path="res://gameobjects/objectspawner/objectspawner.tscn" id="8_u5hr1"]
+[ext_resource type="Script" path="res://system/camera/camera_grid.gd" id="14_upwb5"]
+>>>>>>> Stashed changes
 [ext_resource type="Script" path="res://system/teleporter/teleporter.gd" id="18_rh3ex"]
 
 [sub_resource type="Resource" id="Resource_m4bmw"]
@@ -58,7 +70,20 @@ meteo_list = Array[int]([5])
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2qsb7"]
 size = Vector2(20, 10)
 
+<<<<<<< Updated upstream
+=======
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_liea2"]
+size = Vector2(99.1667, 70)
+
+>>>>>>> Stashed changes
 [node name="MapVillage" instance=ExtResource("1_6r46d")]
+
+[node name="ScreenGridRef" parent="." index="0"]
+offset_left = -1440.0
+offset_top = -834.0
+offset_right = -43.0
+offset_bottom = 312.0
+texture = null
 
 [node name="Tilemap" parent="." index="1"]
 position = Vector2(8, -5)
@@ -85,6 +110,15 @@ shape = SubResource("CircleShape2D_a20kx")
 position = Vector2(-100, -131)
 curve = SubResource("Curve2D_6dhpb")
 
+<<<<<<< Updated upstream
+=======
+[node name="CharacterBody2D" parent="Tilemap" index="6" node_paths=PackedStringArray("sprite_2d") instance=ExtResource("7_h1qda")]
+position = Vector2(77, 96)
+sprite_2d = []
+
+[node name="Objectspawner" parent="Tilemap" index="7" instance=ExtResource("8_u5hr1")]
+
+>>>>>>> Stashed changes
 [node name="EnvironmentShape" type="CollisionShape2D" parent="EnvironmentArea" index="0"]
 visible = false
 position = Vector2(-296, -64)
@@ -117,7 +151,7 @@ script = ExtResource("2_jff21")
 resource_environment = SubResource("Resource_l38sc")
 
 [node name="Teleporter" type="Area2D" parent="." index="3" node_paths=PackedStringArray("target")]
-position = Vector2(23, -291)
+position = Vector2(24, -300)
 collision_layer = 0
 collision_mask = 16
 script = ExtResource("18_rh3ex")
@@ -128,7 +162,7 @@ position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_2qsb7")
 
 [node name="Teleporter2" type="Area2D" parent="." index="4" node_paths=PackedStringArray("target")]
-position = Vector2(640, -624)
+position = Vector2(640, -635)
 collision_layer = 0
 collision_mask = 16
 script = ExtResource("18_rh3ex")
@@ -137,3 +171,35 @@ direction = Vector2(0, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teleporter2" index="1"]
 shape = SubResource("RectangleShape2D_2qsb7")
+<<<<<<< Updated upstream
+=======
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="5"]
+position = Vector2(117, -292)
+scale = Vector2(0.48, 2.52)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(-45.8333, -25)
+shape = SubResource("RectangleShape2D_liea2")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." index="6"]
+position = Vector2(-25, -292)
+scale = Vector2(0.48, 2.52)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" index="0"]
+position = Vector2(-45.4167, -25)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_liea2")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." index="7"]
+position = Vector2(67, -311)
+scale = Vector2(1, 2.52)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" index="0"]
+position = Vector2(-42, -24.6032)
+shape = SubResource("RectangleShape2D_liea2")
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." index="8"]
+script = ExtResource("14_upwb5")
+>>>>>>> Stashed changes
