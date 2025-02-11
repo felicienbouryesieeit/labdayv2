@@ -1,6 +1,10 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [gd_scene load_steps=23 format=4 uid="uid://c83pfkmwxrf3p"]
+=======
+[gd_scene load_steps=27 format=4 uid="uid://c83pfkmwxrf3p"]
+>>>>>>> Stashed changes
 =======
 [gd_scene load_steps=27 format=4 uid="uid://c83pfkmwxrf3p"]
 >>>>>>> Stashed changes
@@ -18,9 +22,12 @@
 [ext_resource type="Resource" uid="uid://ujea2b11dl3n" path="res://content/team/player_team.tres" id="6_u73qr"]
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://co5qpuj3hns3e" path="res://content/character/princess/princess.tscn" id="7_n8vb2"]
 [ext_resource type="Script" path="res://system/player_assignor.gd" id="8_8tm86"]
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 [ext_resource type="PackedScene" path="res://gameobjects/characters/characterwithlife/player/characterplayer.tscn" id="7_h1qda"]
@@ -29,6 +36,9 @@
 [ext_resource type="PackedScene" uid="uid://dn4s0ltuy5urx" path="res://gameobjects/objectspawner/objectspawner.tscn" id="8_u5hr1"]
 [ext_resource type="Script" path="res://system/camera/camera_grid.gd" id="14_upwb5"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -122,7 +132,10 @@ curve = SubResource("Curve2D_6dhpb")
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 [node name="CharacterBody2D" parent="Tilemap" index="6" node_paths=PackedStringArray("sprite_2d") instance=ExtResource("7_h1qda")]
@@ -216,6 +229,9 @@ metadata/_edit_lock_ = true
 [node name="Camera2D" type="Camera2D" parent="." index="8"]
 script = ExtResource("14_upwb5")
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
