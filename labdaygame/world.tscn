@@ -189,6 +189,11 @@ offset = Vector2(24, 16)
 zoom = Vector2(4, 4)
 process_callback = 0
 script = ExtResource("4_am12t")
+grid_size = null
+current_cell = null
+animation_trans = null
+animation_ease = null
+transition_time = null
 
 [node name="Snow" type="GPUParticles2D" parent="CameraGrid"]
 unique_name_in_owner = true

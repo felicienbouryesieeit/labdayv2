@@ -16,18 +16,12 @@ var map:Map
 @onready var transition: ColorRect = %Transition
 @onready var music: AudioStreamPlayer = %Music
 @onready var color_correction: ColorRect = %ColorCorrection
-@onready var camera_grid: CameraGrid = %CameraGrid
 @onready var pivot: Node2D = %Pivot
 @onready var player_ui: Control = %PlayerUi
 
 
 func _ready():
 	generate_map(starting_map)
-	camera_grid.animation_finished.connect(on_camera_animation_finished)
-
-
-func on_camera_animation_finished():
-	pivot.position = camera_grid.global_position
 
 
 func generate_map(map_scene:PackedScene):
