@@ -1,7 +1,10 @@
 extends Node
 var gmtest : int = 0
 var playerposition : Vector2
+var decalagex : float = 10
+var decalagey : float = -5
 var playermovementvar : charactermovementclass
+var objectspawnervar : objectspawnerclass
 var playerdirection : int
 var doorindex : int
 #var beginposition : Vector2 
@@ -9,6 +12,7 @@ var doorindex : int
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	gmtest=19
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

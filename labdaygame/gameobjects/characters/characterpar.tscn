@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://fgglxfrru5gk"]
+
+[ext_resource type="Texture2D" uid="uid://3kln0ucego3w" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Princess/SpriteSheet.png" id="1_2s8ts"]
+[ext_resource type="Script" path="res://gameobjects/characters/character_movement.gd" id="1_t063p"]
+[ext_resource type="Script" path="res://gameobjects/characters/behaviorpar.gd" id="3_ucebg"]
+[ext_resource type="Script" path="res://gameobjects/characters/typeofcharacterpar.gd" id="4_awgoe"]
+[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/behaviorattackpar.gd" id="5_o04gs"]
+[ext_resource type="Script" path="res://gameobjects/onprojectilecollisionpar.gd" id="5_sj2r4"]
+[ext_resource type="Script" path="res://gameobjects/animatedspritescr.gd" id="7_g3ld2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3piw"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" node_paths=PackedStringArray("animated_sprite_2d", "sprite_2d", "timervar", "timermovement", "timerattack", "behaviorvar", "attackbehaviorvar", "typeofcharactervar", "onprojectilecollisionvar", "animatedspritevar")]
+motion_mode = 1
+script = ExtResource("1_t063p")
+animated_sprite_2d = NodePath("AnimatedSprite2D")
+sprite_2d = [NodePath("Sprite2D")]
+timervar = NodePath("Timer")
+timermovement = NodePath("Timermovement")
+timerattack = NodePath("Timerattack")
+behaviorvar = NodePath("behavioractor")
+attackbehaviorvar = NodePath("attackbehavioractor")
+typeofcharactervar = NodePath("typeofcharac")
+onprojectilecollisionvar = NodePath("on projectile collision")
+animatedspritevar = NodePath("animator")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_e3piw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2s8ts")
+hframes = 4
+vframes = 7
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="behavioractor" type="Node2D" parent="."]
+script = ExtResource("3_ucebg")
+
+[node name="typeofcharac" type="Node2D" parent="."]
+script = ExtResource("4_awgoe")
+
+[node name="on projectile collision" type="Node2D" parent="."]
+script = ExtResource("5_sj2r4")
+
+[node name="Timermovement" type="Timer" parent="."]
+
+[node name="Timerattack" type="Timer" parent="."]
+
+[node name="attackbehavioractor" type="Node2D" parent="."]
+script = ExtResource("5_o04gs")
+
+[node name="animator" type="Node" parent="." node_paths=PackedStringArray("timervar")]
+script = ExtResource("7_g3ld2")
+timervar = NodePath("../Timer")

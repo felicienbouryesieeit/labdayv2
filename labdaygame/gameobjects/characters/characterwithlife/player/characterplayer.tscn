@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgnp6xlp7hvdn"]
+
+[ext_resource type="PackedScene" uid="uid://fgglxfrru5gk" path="res://gameobjects/characters/characterpar.tscn" id="1_nmid8"]
+[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/player/behaviorplayer.gd" id="2_dsvmf"]
+[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/player/playerattackbehavior.gd" id="3_81jem"]
+[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/typecharacterwithlife.gd" id="3_vhp6u"]
+
+[node name="CharacterBody2D" instance=ExtResource("1_nmid8")]
+
+[node name="behavioractor" parent="." index="4"]
+script = ExtResource("2_dsvmf")
+
+[node name="typeofcharac" parent="." index="5"]
+script = ExtResource("3_vhp6u")
+life = 5
+
+[node name="attackbehavioractor" parent="." index="9"]
+script = ExtResource("3_81jem")
+range = 0.5
+cadence = 0.7

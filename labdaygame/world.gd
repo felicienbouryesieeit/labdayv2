@@ -19,6 +19,7 @@ var map:Map
 @onready var camera_grid: CameraGrid = %CameraGrid
 @onready var pivot: Node2D = %Pivot
 @onready var player_ui: Control = %PlayerUi
+@onready var dialog: Control = %Dialog
 
 
 func _ready():

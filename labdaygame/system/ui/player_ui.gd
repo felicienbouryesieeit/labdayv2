@@ -1,8 +1,6 @@
 extends Control
 
-
 @onready var receptacle_bar: Control = %ReceptacleBar
-
 
 var resource_life:ResourceLife:
 	set(v):
