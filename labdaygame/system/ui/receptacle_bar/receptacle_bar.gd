@@ -1,7 +1,7 @@
 @icon("../ui/icon_receptacle_bar.png")
 @tool
 extends Control
-
+class_name heartbar
 
 @export var max_life := 10:
 	set(v):
@@ -26,8 +26,19 @@ extends Control
 		sprite_size = v
 		queue_redraw()
 
+func _ready() -> void:
+	Gamemanager.heartbarvar=self
+	
+func setlife(currentlife : int) -> void:
+	life=currentlife
+	_draw()
 
+func setmaxlife(currentlife : int) -> void:
+	max_life=currentlife
+	_draw()
+	
 func _draw() -> void:
+	
 	var rect_sprite := Rect2(Vector2.ZERO,sprite_size)
 	var rect_draw := Rect2(Vector2.ZERO,sprite_size)
 	var life_left := life

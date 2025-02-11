@@ -19,20 +19,32 @@ var attackrange : float
 #@export var collisionvar : CollisionShape2D
 @export var timerrangevar : Timer
 @export var projectilebehaviorvar : projectilebehaviorclass
+@export var collisionvar : CollisionShape2D
+@export var timerafterspawnvar : Timer
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	collisionvar.disabled=true
 	global_position = spawnposition
 	rotation_degrees = rotationvar
 	rotationvarbegin = rotationvar
 	#collisionvar.disabled=true
+	
+	timerafterspawnvar.one_shot=true
+	timerafterspawnvar.start(0.1)  # Démarre le Timer pour 2 secondes
+	timerafterspawnvar.timeout.connect(activatecollision)
 	
 	projectilebehaviorvar.damagevar=self
 	projectilebehaviorvar.beginbehavior()
 	
 	timerrangevar.start(attackrange)  # Démarre le Timer pour 2 secondes
 	timerrangevar.timeout.connect(destroyrange)
+
+func activatecollision() -> void : 
+	collisionvar.disabled=false
+	timerafterspawnvar.timeout.disconnect(activatecollision)
+	pass
 
 func destroyrange() -> void :
 	queue_free()
@@ -66,7 +78,7 @@ func moveforward() -> void:
 	move_and_slide()	
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
-		print("ayooooooooooooooooooo")
+		#print("ayooooooooooooooooooo")
 		if body.has_method("haveprojectilecollision"):
 			#pass
 			body.haveprojectilecollision(self,charactermovementvar)

@@ -38,11 +38,15 @@ func _ready() -> void:
 
 
 func on_player_entered(player:Character):
+	
 	var transition:Transition = get_tree().get_first_node_in_group("transition")
 	if transition:
+		
 		await transition.play(transition_enter)
+	
 	await player.teleport(target,player.global_position-global_position)
 	if transition:
+		
 		await transition.play(target.transition_exit)
 
 

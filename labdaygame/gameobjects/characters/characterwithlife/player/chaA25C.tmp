@@ -8,20 +8,17 @@
 
 [node name="CharacterBody2D" instance=ExtResource("1_nmid8")]
 
-[node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(0, 4)
-
 [node name="behavioractor" parent="." index="4" node_paths=PackedStringArray("equipmentmanager")]
 script = ExtResource("2_dsvmf")
 equipmentmanager = NodePath("../equipmentmanager")
 
 [node name="typeofcharac" parent="." index="5"]
 script = ExtResource("3_vhp6u")
-maxlife = 12
+life = 12
 
-[node name="attackbehavioractor" parent="." index="9" node_paths=PackedStringArray("timercooldowndamagevar")]
+[node name="attackbehavioractor" parent="." index="9" node_paths=PackedStringArray("equipmentmanager")]
 script = ExtResource("3_81jem")
-timercooldowndamagevar = NodePath("../Timercooldowndamage")
+equipmentmanager = NodePath("../equipmentmanager")
 range = 0.5
 cadence = 0.4
 shotspeedmax = 200.0
@@ -29,6 +26,4 @@ shotaccelerationmax = 200.0
 
 [node name="equipmentmanager" type="Node" parent="." index="11"]
 script = ExtResource("5_b0qs7")
-equipmentlist2 = Array[String](["res://gameobjects/items/equipement/0weapons/weapontest.gd", "res://gameobjects/items/equipement/1helmet/ironhelmet.gd", "", "", "", ""])
-
-[node name="Timercooldowndamage" type="Timer" parent="." index="12"]
+equipmentlist2 = Array[String](["res://gameobjects/items/itemparscr.gd", "", "", "res://gameobjects/items/itemparscr.gd", "", ""])

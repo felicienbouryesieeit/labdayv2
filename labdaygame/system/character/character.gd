@@ -61,6 +61,8 @@ func _physics_process(delta: float) -> void:
 func teleport(target_teleporter:Teleporter,offset_position:Vector2):
 	if just_teleport:
 		return
+	Gamemanager.playermovementvar.global_position = target_teleporter.global_position+offset_position+(target_teleporter.direction*Vector2(25,25))
+	
 	global_position = target_teleporter.global_position+offset_position+(target_teleporter.direction*Vector2(25,25))
 	just_teleport = true
 	for camera in get_tree().get_nodes_in_group("camera"):

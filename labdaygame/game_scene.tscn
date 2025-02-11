@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://b4ivq48ys2ufr"]
+[gd_scene load_steps=28 format=4 uid="uid://b4ivq48ys2ufr"]
 
 [ext_resource type="Texture2D" uid="uid://dwtpv76elqabc" path="res://system/map/map_size_bg.png" id="2_0job0"]
 [ext_resource type="TileSet" uid="uid://tir0rfjtiwma" path="res://content/map/tileset.tres" id="3_28gge"]
@@ -14,6 +14,7 @@
 [ext_resource type="Resource" uid="uid://dkwnklyceey24" path="res://content/environment/autumn/environment.tres" id="12_1v7nc"]
 [ext_resource type="Script" path="res://system/environment/resource_environment.gd" id="13_33s8t"]
 [ext_resource type="Script" path="res://system/teleporter/teleporter.gd" id="14_fdud6"]
+[ext_resource type="PackedScene" uid="uid://dedi18ty873kt" path="res://gameobjects/characters/characterwithlife/ennemies/0boss/bosshat/bosshat.tscn" id="15_2lofu"]
 
 [sub_resource type="Resource" id="Resource_jp5ct"]
 script = ExtResource("7_aibgb")
@@ -123,6 +124,9 @@ shape = SubResource("CircleShape2D_fvaq7")
 [node name="Path2D" type="Path2D" parent="Tilemap"]
 position = Vector2(-100, -131)
 curve = SubResource("Curve2D_m4xkm")
+
+[node name="CharacterBody2D2" parent="Tilemap" instance=ExtResource("15_2lofu")]
+position = Vector2(-354, -220)
 
 [node name="EnvironmentArea" type="Area2D" parent="."]
 unique_name_in_owner = true

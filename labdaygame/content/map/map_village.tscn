@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://c83pfkmwxrf3p"]
+[gd_scene load_steps=27 format=4 uid="uid://c83pfkmwxrf3p"]
 
 [ext_resource type="PackedScene" uid="uid://ck4ncv1wxtff5" path="res://system/map/map.tscn" id="1_6r46d"]
 [ext_resource type="Script" path="res://system/environment/environment_shape.gd" id="2_jff21"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://co5qpuj3hns3e" path="res://content/character/princess/princess.tscn" id="7_n8vb2"]
 [ext_resource type="Script" path="res://system/player_assignor.gd" id="8_8tm86"]
 [ext_resource type="PackedScene" uid="uid://dn4s0ltuy5urx" path="res://gameobjects/objectspawner/objectspawner.tscn" id="8_u5hr1"]
+[ext_resource type="PackedScene" uid="uid://dedi18ty873kt" path="res://gameobjects/characters/characterwithlife/ennemies/0boss/bosshat/bosshat.tscn" id="9_p1xm0"]
 [ext_resource type="Script" path="res://system/teleporter/teleporter.gd" id="18_rh3ex"]
 
 [sub_resource type="Resource" id="Resource_m4bmw"]
@@ -90,10 +91,13 @@ shape = SubResource("CircleShape2D_a20kx")
 position = Vector2(-100, -131)
 curve = SubResource("Curve2D_6dhpb")
 
-[node name="CharacterBody2D" parent="Tilemap" index="6" instance=ExtResource("7_h1qda")]
-position = Vector2(-36, -18)
+[node name="Objectspawner" parent="Tilemap" index="6" instance=ExtResource("8_u5hr1")]
 
-[node name="Objectspawner" parent="Tilemap" index="7" instance=ExtResource("8_u5hr1")]
+[node name="CharacterBody2D2" parent="Tilemap" index="7" instance=ExtResource("9_p1xm0")]
+position = Vector2(-176, 100)
+
+[node name="CharacterBody2D" parent="Tilemap" index="8" instance=ExtResource("7_h1qda")]
+position = Vector2(-21, 3)
 
 [node name="EnvironmentShape" type="CollisionShape2D" parent="EnvironmentArea" index="0"]
 visible = false

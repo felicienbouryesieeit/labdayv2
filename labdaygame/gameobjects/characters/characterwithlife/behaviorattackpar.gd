@@ -15,18 +15,20 @@ var charactermovementvar : charactermovementclass
 
 @export var projectile_directory = "res://gameobjects/characters/characterwithlife/projectiles/playerprojectile/playerattackbase/playerattackbaseobject.tscn"
 
+var projectile = load(projectile_directory)
+
 @export var range : float = 1
 @export var cadence : float = 1
 @export var shotspeedmax : float = 100
 @export var shotaccelerationmax : float = 100
-
-var projectile = load(projectile_directory)
+@export var strengh : float = 1
 
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
 	
 	projectile = load(projectile_directory)
+	
 	pass # Replace with function body.
 
 
@@ -113,6 +115,7 @@ func spawnprojectile2(angle3 : float,range2 : float,speedmax2 :float,acceleratio
 	projectile2.attackrange=range2
 	projectile2.speedmax=speedmax2
 	projectile2.acceleration=acceleration2
+	projectile2.strengh=strengh
 	#projectile2.rotationvar =90
 	#damagevar.rotationvarbegin=0
 		#fleche2.spawnPos=actorposition
@@ -226,7 +229,9 @@ func attackseriebegin(attackserieintmax2 : int,attackseriecadence2 : float) ->vo
 	attackserie()
 	#attackserieintmax,attackseriecadence
 
-
+func ondamage() ->void:
+	pass
+	
 func currentattackserie() ->void:
 	pass
 	

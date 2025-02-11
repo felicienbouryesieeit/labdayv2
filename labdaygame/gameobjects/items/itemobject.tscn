@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvk00v7ndik64"]
+
+[ext_resource type="Script" path="res://gameobjects/items/itemholder.gd" id="1_l670r"]
+
+[node name="Itempar" type="Node2D"]
+script = ExtResource("1_l670r")

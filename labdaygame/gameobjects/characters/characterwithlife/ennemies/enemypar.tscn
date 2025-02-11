@@ -15,4 +15,4 @@ script = ExtResource("2_cxrut")
 
 [node name="typeofcharac" parent="." index="5"]
 script = ExtResource("2_oskpb")
-life = 5
+maxlife = 5

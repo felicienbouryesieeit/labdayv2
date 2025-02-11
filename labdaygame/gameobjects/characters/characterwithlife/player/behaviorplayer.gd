@@ -3,10 +3,12 @@ extends "res://gameobjects/characters/behaviorpar.gd"
 var playershootdirection
 var playercanattack : bool
 var isnotattacking : bool
+@export var equipmentmanager : equipmentmanagervar
 
 func setbehavior() -> void:
 	super.setbehavior()
 	Gamemanager.playerposition = actorposition
+	Gamemanager.playerlife=charactermovementvar.typeofcharactervar.life
 	
 	if Input.is_action_just_pressed("attack"):
 		
@@ -56,4 +58,5 @@ func beginbehavior() ->void:
 	Gamemanager.beginlocationvoid()
 	
 	charactermovementvar.animation_direction2=Gamemanager.playerdirection
+	equipmentmanager.beginequipment()
 	#print("zumb"+str(Gamemanager.charactermovementvar))
