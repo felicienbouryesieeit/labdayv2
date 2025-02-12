@@ -51,7 +51,7 @@ func randombossattack() -> void :
 		lastattack= randomattackint
 	#return randomattackint
 func timerattackvoid() -> void :
-	print("epee")
+	#print("epee")
 	match typeofenemy :
 		0:
 			

@@ -18,6 +18,7 @@ const MASK_PLAYER = 5
 			return
 		if target.target != self:
 			target.target = self
+			Gamemanager.teleportervar = self
 		queue_redraw()
 @export var direction = Vector2.DOWN:
 	set(v):
@@ -34,20 +35,29 @@ func _ready() -> void:
 	collision_mask = 0
 	set_collision_mask_value(MASK_PLAYER,true)
 	body_entered.connect(on_player_entered)
-	update_arrow_direction()
+	#update_arrow_direction()
+	#transitionvoid()
+	#transition2()
 
 
 func on_player_entered(player:Character):
+	pass
+	#ransition2()
+#func transitionvoid() ->void :	
+	#target=self
 	
+	
+func transition2() :
+	var player = Gamemanager.charactervar
+	print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 	var transition:Transition = get_tree().get_first_node_in_group("transition")
 	if transition:
-		
 		await transition.play(transition_enter)
+	#var 
 	
-	await player.teleport(target,player.global_position-global_position)
+	await player.teleport(self,player.global_position-global_position)
 	if transition:
-		
-		await transition.play(target.transition_exit)
+		await transition.play(self.transition_exit)
 
 
 func _draw() -> void:

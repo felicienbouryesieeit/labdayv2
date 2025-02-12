@@ -7,4 +7,6 @@ func _ready() -> void:
 	
 	
 func onattack()->void:
+	#super.onattack()
 	print("attaque zer")
+	

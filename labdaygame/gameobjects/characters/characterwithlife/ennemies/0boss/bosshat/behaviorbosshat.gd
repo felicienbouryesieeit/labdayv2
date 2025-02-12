@@ -145,6 +145,3 @@ func endattackserie() ->void:
 	
 	
 	
-func ondamage() ->void :
-	super.ondamage()
-	print("martien"+str(charactermovementvar.typeofcharactervar.life))

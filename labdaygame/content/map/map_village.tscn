@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://c83pfkmwxrf3p"]
+[gd_scene load_steps=28 format=4 uid="uid://c83pfkmwxrf3p"]
 
 [ext_resource type="PackedScene" uid="uid://ck4ncv1wxtff5" path="res://system/map/map.tscn" id="1_6r46d"]
 [ext_resource type="Script" path="res://system/environment/environment_shape.gd" id="2_jff21"]
@@ -12,7 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://co5qpuj3hns3e" path="res://content/character/princess/princess.tscn" id="7_n8vb2"]
 [ext_resource type="Script" path="res://system/player_assignor.gd" id="8_8tm86"]
 [ext_resource type="PackedScene" uid="uid://dn4s0ltuy5urx" path="res://gameobjects/objectspawner/objectspawner.tscn" id="8_u5hr1"]
-[ext_resource type="PackedScene" uid="uid://dedi18ty873kt" path="res://gameobjects/characters/characterwithlife/ennemies/0boss/bosshat/bosshat.tscn" id="9_p1xm0"]
+[ext_resource type="PackedScene" uid="uid://b0qeileseecxb" path="res://gameobjects/newteleporter/newteleporter.tscn" id="14_jp2g7"]
+[ext_resource type="PackedScene" uid="uid://bpwvt81j7xda0" path="res://gameobjects/characters/characterwithlife/ennemies/enemypar.tscn" id="15_yvkwo"]
 [ext_resource type="Script" path="res://system/teleporter/teleporter.gd" id="18_rh3ex"]
 
 [sub_resource type="Resource" id="Resource_m4bmw"]
@@ -91,13 +92,10 @@ shape = SubResource("CircleShape2D_a20kx")
 position = Vector2(-100, -131)
 curve = SubResource("Curve2D_6dhpb")
 
-[node name="Objectspawner" parent="Tilemap" index="6" instance=ExtResource("8_u5hr1")]
+[node name="CharacterBody2D" parent="Tilemap" index="6" instance=ExtResource("7_h1qda")]
+position = Vector2(-36, -18)
 
-[node name="CharacterBody2D2" parent="Tilemap" index="7" instance=ExtResource("9_p1xm0")]
-position = Vector2(-176, 100)
-
-[node name="CharacterBody2D" parent="Tilemap" index="8" instance=ExtResource("7_h1qda")]
-position = Vector2(-21, 3)
+[node name="Objectspawner" parent="Tilemap" index="7" instance=ExtResource("8_u5hr1")]
 
 [node name="EnvironmentShape" type="CollisionShape2D" parent="EnvironmentArea" index="0"]
 visible = false
@@ -131,7 +129,7 @@ script = ExtResource("2_jff21")
 resource_environment = SubResource("Resource_l38sc")
 
 [node name="Teleporter" type="Area2D" parent="." index="3" node_paths=PackedStringArray("target")]
-position = Vector2(23, -291)
+position = Vector2(-72, -22)
 collision_layer = 0
 collision_mask = 16
 script = ExtResource("18_rh3ex")
@@ -142,14 +140,14 @@ position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_2qsb7")
 
 [node name="Teleporter2" type="Area2D" parent="." index="4" node_paths=PackedStringArray("target")]
-position = Vector2(640, -624)
+position = Vector2(222, -22)
 collision_layer = 0
 collision_mask = 16
 script = ExtResource("18_rh3ex")
 target = NodePath("../Teleporter")
-direction = Vector2(0, -1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Teleporter2" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teleporter2" index="0"]
+position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_2qsb7")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="5"]
@@ -175,3 +173,20 @@ scale = Vector2(1, 2.52)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" index="0"]
 position = Vector2(-43.5, -25)
 shape = SubResource("RectangleShape2D_liea2")
+
+[node name="Newteleporter" parent="." index="8" node_paths=PackedStringArray("otherteleporter") instance=ExtResource("14_jp2g7")]
+position = Vector2(-39, -56)
+otherteleporter = NodePath("../Newteleporter2")
+
+[node name="Newteleporter4" parent="." index="9" instance=ExtResource("14_jp2g7")]
+position = Vector2(-95, 9)
+
+[node name="Newteleporter3" parent="." index="10" node_paths=PackedStringArray("otherteleporter") instance=ExtResource("14_jp2g7")]
+position = Vector2(366, -81)
+otherteleporter = NodePath("../Newteleporter4")
+
+[node name="Newteleporter2" parent="." index="11" instance=ExtResource("14_jp2g7")]
+position = Vector2(330, -47)
+
+[node name="CharacterBody2D" parent="." index="12" instance=ExtResource("15_yvkwo")]
+position = Vector2(22, 27)

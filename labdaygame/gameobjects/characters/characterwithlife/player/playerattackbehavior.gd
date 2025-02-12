@@ -39,9 +39,11 @@ func timerattackvoid() -> void :
 		
 		
 func playerattackvoid() ->void :
-	if Gamemanager.equipmentlistingame[0]!=null:
-		Gamemanager.equipmentlistingame[0].onattack()
 	
+	if Gamemanager.equipmentlistingame[0]!=null:
+		print("nya")
+		Gamemanager.equipmentlistingame[0].onattack()
+		
 		playercanattack=false
 
 func ondamage() ->void :

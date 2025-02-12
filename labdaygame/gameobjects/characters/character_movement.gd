@@ -204,3 +204,7 @@ func onanimationend(currentframe : int) ->void:
 	attackbehaviorvar.onanimationend(currentframe)
 	
 	
+
+func oninteractobject(interact : interactclass) ->void:
+	behaviorvar.oninteractvar(interact)
+	print("la chine 3 ")

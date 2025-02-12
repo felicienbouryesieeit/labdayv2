@@ -41,7 +41,7 @@ func spawnequipment(i : int):
 	if Gamemanager.equipmentlist[i]!="":
 	#	pass
 		var item_directory = "res://gameobjects/items/itemobject.tscn"
-
+		
 		var item = load(item_directory)
 		var item2 = item.instantiate()
 		item2.item_directory=Gamemanager.equipmentlist[i]

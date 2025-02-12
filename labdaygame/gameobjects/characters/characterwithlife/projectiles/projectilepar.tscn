@@ -4,15 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://bis18gdjknbv6" path="res://Ninja Adventure - Asset Pack/FX/Projectile/Arrow.png" id="2_egmn2"]
 [ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/projectiles/projectilebehaviorpar.gd" id="3_a47d3"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wlolp"]
-size = Vector2(14, 8)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gumxg"]
+size = Vector2(15, 6)
 
-[node name="Projectilepar" type="CharacterBody2D" node_paths=PackedStringArray("timerrangevar", "projectilebehaviorvar", "collisionvar", "timerafterspawnvar")]
+[node name="Projectilepar" type="CharacterBody2D" node_paths=PackedStringArray("timerrangevar", "projectilebehaviorvar")]
 script = ExtResource("1_fg6ox")
 timerrangevar = NodePath("Timerrange")
 projectilebehaviorvar = NodePath("projectilebehavior")
-collisionvar = NodePath("Area2D/CollisionShape2D")
-timerafterspawnvar = NodePath("Timerafterspawn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_egmn2")
@@ -22,11 +20,9 @@ texture = ExtResource("2_egmn2")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_wlolp")
+shape = SubResource("RectangleShape2D_gumxg")
 
 [node name="projectilebehavior" type="Node" parent="."]
 script = ExtResource("3_a47d3")
-
-[node name="Timerafterspawn" type="Timer" parent="."]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

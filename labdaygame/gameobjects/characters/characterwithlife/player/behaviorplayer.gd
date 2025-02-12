@@ -4,6 +4,8 @@ var playershootdirection
 var playercanattack : bool
 var isnotattacking : bool
 @export var equipmentmanager : equipmentmanagervar
+var isinteracting : bool
+var interactvar : interactclass
 
 func setbehavior() -> void:
 	super.setbehavior()
@@ -19,10 +21,16 @@ func setbehavior() -> void:
 
 	behaviordirection=Input.get_vector("move_left","move_right","move_up","move_down")
 	playershootdirection=Input.get_vector("leftshoot","rightshoot","upshoot","downshoot")
-	
+	isinteracting=Input.is_action_just_pressed("interact");
 	isnotattacking = (playershootdirection.x==0 and playershootdirection.y==0)
 	
-	
+	#if interactvar!=null:
+		#print("la chine 6"+str(interactvar))
+	if isinteracting==true:
+		if interactvar!=null:
+			interactvar.oninteract()
+			#print("arcane : "+str(interactvar)) #+str(interactvar)
+		pass
 	if (Input.is_action_just_pressed("rightshoot") or Input.is_action_just_pressed("leftshoot") or Input.is_action_just_pressed("upshoot") or Input.is_action_just_pressed("downshoot")):
 		#spawnprojectileangle(playershootdirection.angle() * (180 / PI))
 		pass
@@ -60,3 +68,10 @@ func beginbehavior() ->void:
 	charactermovementvar.animation_direction2=Gamemanager.playerdirection
 	equipmentmanager.beginequipment()
 	#print("zumb"+str(Gamemanager.charactermovementvar))
+
+
+func oninteractvar(interactvar : interactclass) -> void : 
+	
+	super.oninteractvar(interactvar)
+	print("la chine 5 ")
+	self.interactvar=interactvar

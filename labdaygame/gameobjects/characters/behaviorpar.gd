@@ -4,6 +4,7 @@ class_name behaviorclass
 var behaviordirection : Vector2
 var actorposition : Vector2
 var charactermovementvar : charactermovementclass
+
 @export var enemymovementint : int
 
 var timermovement: Timer
@@ -51,3 +52,8 @@ func timermovementvoid() -> void :
 func spawnbaseprojectile() -> void : 
 	#spawnprojectile()
 	print("vladimir")
+	
+	
+func oninteractvar(interactvar : interactclass) -> void : 
+	print("la chine 4 ")
+	pass

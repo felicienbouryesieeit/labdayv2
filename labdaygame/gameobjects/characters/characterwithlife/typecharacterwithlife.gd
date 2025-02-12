@@ -11,6 +11,7 @@ func begintypeofcharacter() -> void:
 	super.begintypeofcharacter()
 	life=maxlife
 	
+	
 func checklife() -> void:
 	
 	print("life"+str(life))
