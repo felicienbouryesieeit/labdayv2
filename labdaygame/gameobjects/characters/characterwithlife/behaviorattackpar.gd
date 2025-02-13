@@ -10,6 +10,8 @@ var lastattack: int = -1
 var attackserieint: int =0
 var attackseriecadence: float=0
 var attackseriemax: int=0
+var spawnprojectileaschild: bool = false
+var decalage2 : Vector2 = Vector2(0,0)
 
 var charactermovementvar : charactermovementclass
 
@@ -24,7 +26,11 @@ var projectile = load(projectile_directory)
 @export var strengh : float = 1
 
 # Called when the node enters the scene tree for the first time.
-
+func spawnchildprojectile(angle3 : float,range2 : float,speedmax2 :float,acceleration2:float) -> void:
+	spawnprojectileaschild=true
+	spawnprojectile2(angle3,range2,speedmax2,acceleration2)
+	spawnprojectileaschild=false
+	
 func _ready() -> void:
 	
 	projectile = load(projectile_directory)
@@ -105,9 +111,11 @@ func startattackloop() ->void:
 
 
 func spawnprojectile2(angle3 : float,range2 : float,speedmax2 :float,acceleration2:float) ->void:
+	projectile = load(projectile_directory)
 	var projectile2 = projectile.instantiate()
-	projectile2.spawnposition.x=charactermovementvar.position.x+Gamemanager.decalagex
-	projectile2.spawnposition.y=charactermovementvar.position.y+Gamemanager.decalagey
+	
+	projectile2.spawnposition.x=charactermovementvar.position.x+decalage2.x#+Gamemanager.decalagex
+	projectile2.spawnposition.y=charactermovementvar.position.y+decalage2.y#+Gamemanager.decalagey
 	
 	projectile2.charactermovementvar=charactermovementvar
 	projectile2.rotationvar = angle3 #charactermovementvar.character_rotation
@@ -120,8 +128,10 @@ func spawnprojectile2(angle3 : float,range2 : float,speedmax2 :float,acceleratio
 	#damagevar.rotationvarbegin=0
 		#fleche2.spawnPos=actorposition
 	print("toto"+str(Gamemanager))
-	Gamemanager.objectspawnervar.spawn.call_deferred(projectile2)
-	#add_child(projectile2)
+	if spawnprojectileaschild==false:
+		Gamemanager.objectspawnervar.spawn.call_deferred(projectile2)
+	else:
+		add_child(projectile2)
 	#charactermovementvar.main2.add_child.call_deferred(projectile2)
 
 func spawnprojectilecharacterstats(angle3 : float) ->void:

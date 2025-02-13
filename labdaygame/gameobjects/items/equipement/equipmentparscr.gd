@@ -7,16 +7,17 @@ var shotspeedbonus : float = 0;
 var rangebonus : float = 0;
 var strenghbonus : int = 0;
 var defensebonus : int =0;
-var candencebonus : float =0;
+var cadencebonus : float =0;
 
 
-func setstats(lifebonus2 : int,speedbonus2 : float,shotspeedbonus2 : float,rangebonus2 : float,strenghbonus2 : int,defensebonus2 : int):
+func setstats(lifebonus2 : int,speedbonus2 : float,shotspeedbonus2 : float,rangebonus2 : float,strenghbonus2 : int,defensebonus2 : int,cadencebonus2 : float):
 	lifebonus=lifebonus2
 	speedbonus=speedbonus2
 	shotspeedbonus=shotspeedbonus2
 	rangebonus=rangebonus2
 	strenghbonus=strenghbonus2
 	defensebonus=defensebonus2
+	cadencebonus = cadencebonus2
 
 
 func onbegin():
@@ -51,6 +52,7 @@ func setplayerstats() -> void:
 	
 	Gamemanager.playermovementvar.attackbehaviorvar.strengh+=strenghbonus
 	Gamemanager.playermovementvar.typeofcharactervar.defense+=defensebonus
+	Gamemanager.playermovementvar.attackbehaviorvar.cadence-=(0.1*cadencebonus)
 	
 	
 #func onattack()->void:

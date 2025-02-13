@@ -4,6 +4,7 @@ extends "res://gameobjects/characters/characterwithlife/behaviorattackpar.gd"
 var speedboost = 2
 func _ready() -> void:
 	super._ready()
+	projectile_directory="res://gameobjects/characters/characterwithlife/projectiles/playerprojectile/playerattackbase/projectilebosshat.tscn"
 	typeofenemy=1
 	bosspatternint=2
 	lastattack=1
@@ -102,15 +103,15 @@ func aftercolorchange() ->void :
 		0:
 			
 			
-			attackseriebegin(3,1)
+			attackseriebegin(3,2)
 			print("zubzub") 
 		1:
 			
 			
-			attackseriebegin(3,0.5)
+			attackseriebegin(3,1)
 			print("zubzub") 
 		2:
-			attackseriebegin(3,1)
+			attackseriebegin(3,2)
 			print("zubzub") 
 
 		
@@ -120,7 +121,7 @@ func currentattackserie() ->void:
 	#spawnprojectilecircleaimplayer(5,10,100,100)
 	#spawnprojectileshotgunaimplayer(5,4,10,100,100)
 	#spawnprojectileaimplayer(1,100,100)
-	var speed1=160
+	var speed1=100
 	var speed2=speed1*1.2
 	match lastattack:
 		0:
@@ -129,12 +130,12 @@ func currentattackserie() ->void:
 			#spawnprojectileshotgunaimplayer(7,4,10,speed1,speed1)
 		1:
 			
-			spawnprojectileshotgunaimplayer(15,5,10,speed2,speed2)
+			spawnprojectileshotgunaimplayer(30,3,10,speed2,speed2)
 		2:
 			var angle:float=0
 			if attackserieint%2==0 :
 				angle=15
-			spawnprojectilecircle(angle,12,10,speed1,speed1)
+			spawnprojectilecircle(angle,8,10,speed1,speed1)
 	
 	
 	

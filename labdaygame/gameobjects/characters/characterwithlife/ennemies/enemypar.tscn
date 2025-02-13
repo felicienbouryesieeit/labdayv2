@@ -21,3 +21,4 @@ maxlife = 5
 
 [node name="Interactobject" parent="." index="11" instance=ExtResource("5_xu38v")]
 script = ExtResource("5_ecij0")
+npcindex = 0

@@ -16,11 +16,14 @@ equipmentmanager = NodePath("../equipmentclass")
 script = ExtResource("3_vhp6u")
 maxlife = 12
 
-[node name="attackbehavioractor" parent="." index="9"]
+[node name="attackbehavioractor" parent="." index="9" node_paths=PackedStringArray("timercooldowndamagevar")]
 script = ExtResource("3_81jem")
+timercooldowndamagevar = NodePath("../Timerdamagecooldown")
 range = 0.5
 cadence = 0.7
 
 [node name="equipmentclass" type="Node2D" parent="." index="11"]
 script = ExtResource("5_oj7q1")
 equipmentlist2 = Array[String](["res://gameobjects/items/equipement/0weapons/weapontest.gd", "res://gameobjects/items/equipement/1helmet/ironhelmet.gd", "", "", "", ""])
+
+[node name="Timerdamagecooldown" type="Timer" parent="." index="12"]

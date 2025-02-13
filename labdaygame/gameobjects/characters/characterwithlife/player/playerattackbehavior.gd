@@ -41,6 +41,7 @@ func timerattackvoid() -> void :
 func playerattackvoid() ->void :
 	
 	if Gamemanager.equipmentlistingame[0]!=null:
+		
 		print("nya")
 		Gamemanager.equipmentlistingame[0].onattack()
 		
@@ -56,12 +57,17 @@ func ondamage() ->void :
 
 
 func aftercooldowndamage() ->void:
+	
 	charactermovementvar.typeofcharactervar.canbeattacked=true
 	timercooldowndamagevar.timeout.disconnect(aftercooldowndamage)
 	
 func beginattackbehavior()->void :
 	super.beginattackbehavior()
+	decalage2 = Vector2(10,-5)
 	equipmentsetmaxlife(charactermovementvar.typeofcharactervar.maxlife)
+	#projectile_directory = "res://gameobjects/characters/characterwithlife/projectiles/projectileinfini.tscn"
+	charactermovementvar.behaviorvar.enemymovementint=1
+	spawnchildprojectile(0,0.1,0,0)
 	
 func equipmentsetmaxlife(maxlife : int)->void :
 	#print("franchise"+str())

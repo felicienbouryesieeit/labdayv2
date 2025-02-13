@@ -1,10 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://dct2lv3kc8vxf"]
+[gd_scene load_steps=13 format=3 uid="uid://dct2lv3kc8vxf"]
 
 [ext_resource type="Texture2D" uid="uid://bokuk8a0qhd08" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/DialogBoxFaceset.png" id="1_xrg3s"]
 [ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="2_1ufqo"]
 [ext_resource type="Script" path="res://dialogue/dialog.gd" id="3_paqo2"]
 [ext_resource type="Texture2D" uid="uid://218hjehqcf5r" path="res://dialogue/arrow.right.png" id="3_rp8nw"]
-[ext_resource type="Texture2D" uid="uid://ct5w6pbcs8wav" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Princess/Faceset.png" id="5_ii7n7"]
+[ext_resource type="Texture2D" uid="uid://b1gn7iacu8q0c" path="res://icon.png" id="6_cxcpl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cdfue"]
 texture = ExtResource("1_xrg3s")
@@ -13,7 +13,7 @@ texture = ExtResource("1_xrg3s")
 default_font = ExtResource("2_1ufqo")
 default_font_size = 14
 Label/colors/font_shadow_color = Color(0, 0, 0, 1)
-Label/font_sizes/font_size = 16
+Label/font_sizes/font_size = 35
 Panel/styles/panel = SubResource("StyleBoxTexture_cdfue")
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 
@@ -35,12 +35,6 @@ modulate_color = Color(0, 0.501961, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kfvee"]
 texture = ExtResource("3_rp8nw")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3176i"]
-texture = ExtResource("5_ii7n7")
-
-[sub_resource type="Theme" id="Theme_cg54a"]
-Panel/styles/panel = SubResource("StyleBoxTexture_3176i")
 
 [node name="Dialog" type="Control"]
 layout_mode = 3
@@ -90,6 +84,7 @@ offset_left = 14.0
 offset_top = 4.0
 offset_right = 88.0
 offset_bottom = 21.0
+scale = Vector2(0.5, 0.5)
 
 [node name="Speaker" type="Label" parent="Box/VBoxContainer"]
 layout_mode = 2
@@ -99,29 +94,28 @@ text = "Princess"
 layout_mode = 0
 offset_left = 100.0
 offset_top = 34.0
-offset_right = 550.0
-offset_bottom = 98.0
+offset_right = 996.0
+offset_bottom = 358.0
+scale = Vector2(0.5, 0.5)
 
 [node name="Dialogue" type="RichTextLabel" parent="Box/VBoxContainer2"]
 layout_mode = 2
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+theme_override_font_sizes/normal_font_size = 35
+theme_override_font_sizes/bold_font_size = 10
 bbcode_enabled = true
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et sagittis nisl. Sed tempus ligula metus, quis semper odio mattis eget. Fusce viverra lorem purus, in maximus turpis fringilla non. Duis tincidunt ultrices erat, a bibendum lectus aliquet ac. Nulla facilisi."
+text = "[wave]Lorem ipsum [/wave]dolor sit amet, consectetur adipiscing elit. Nunc et sagittis nisl. Sed tempus ligula metus, quis semper odio mattis eget. Fusce viverra lorem purus, in maximus turpis fringilla non. Duis tincidunt ultrices erat, a bibendum lectus aliquet ac. Nulla facilisi."
 fit_content = true
 
-[node name="Faceset" type="Control" parent="."]
-anchors_preset = 0
+[node name="Faceset" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 12.0
-offset_top = 28.0
-offset_right = 84.0
-offset_bottom = 102.0
-theme = SubResource("Theme_cg54a")
-
-[node name="Face" type="Panel" parent="Faceset"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_top = 30.0
+offset_right = 52.0
+offset_bottom = 70.0
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("6_cxcpl")
 
 [connection signal="pressed" from="Box/Next" to="." method="_on_next_pressed"]

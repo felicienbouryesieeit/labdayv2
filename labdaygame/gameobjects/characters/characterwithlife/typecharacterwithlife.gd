@@ -43,5 +43,6 @@ func reaction_to_attack(damagevar : damageclass) -> void:
 	#print("projectile: " + str(damagevar.strengh))
 	if canbeattacked == true :
 		dealdamage(damagevar.strengh*(1/(1+(defense*0.1))))
-	damagevar.queue_free()
+	if damagevar.spectral==false:
+		damagevar.queue_free()
 	
