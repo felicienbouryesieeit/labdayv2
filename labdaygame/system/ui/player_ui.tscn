@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ck8bsyolnkr5h"]
+[gd_scene load_steps=5 format=3 uid="uid://ck8bsyolnkr5h"]
 
 [ext_resource type="Script" path="res://system/ui/player_ui.gd" id="1_ky034"]
 [ext_resource type="Script" path="res://system/ui/receptacle_bar/receptacle_bar.gd" id="2_63s4t"]
 [ext_resource type="Texture2D" uid="uid://dy3wbh3kmrlpc" path="res://content/ui/heart.png" id="3_ef262"]
+[ext_resource type="Texture2D" uid="uid://dcst57vgy1atd" path="res://bag_icon.png" id="4_aqmxb"]
 
 [node name="PlayerUi" type="Control"]
 layout_mode = 3
@@ -26,3 +27,15 @@ script = ExtResource("2_63s4t")
 max_life = 12
 life = 12
 texture = ExtResource("3_ef262")
+
+[node name="InventoryBag" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 293.0
+offset_top = 5.0
+offset_right = 429.0
+offset_bottom = 140.0
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("4_aqmxb")
+flat = true
+
+[connection signal="pressed" from="InventoryBag" to="." method="_on_inventory_bag_pressed"]

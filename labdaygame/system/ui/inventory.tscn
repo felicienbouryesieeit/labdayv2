@@ -1,0 +1,174 @@
+[gd_scene load_steps=32 format=3 uid="uid://cvaddpu4odleb"]
+
+[ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="1_xuxvg"]
+[ext_resource type="Script" path="res://system/ui/inventory.gd" id="2_gmn60"]
+[ext_resource type="Texture2D" uid="uid://c6t8ow0n52q14" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Armor.png" id="2_q5jqp"]
+[ext_resource type="Texture2D" uid="uid://wbugdb2usu3f" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Amulet.png" id="3_ej1xd"]
+[ext_resource type="Texture2D" uid="uid://cexa318kwif1m" path="res://Ninja Adventure - Asset Pack/Ui/Theme/ThemeWood/checked_disabled.png" id="3_hjoar"]
+[ext_resource type="Texture2D" uid="uid://coi5ekbjc2o0m" path="res://Ninja Adventure - Asset Pack/Ui/Theme/ThemeWood/checked.png" id="3_xhdrn"]
+[ext_resource type="Texture2D" uid="uid://dwh6i5fqgd3j3" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Arrow.png" id="4_wm23o"]
+[ext_resource type="Texture2D" uid="uid://mwwr1vm0tkas" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Boot.png" id="5_w61fk"]
+[ext_resource type="Texture2D" uid="uid://d003yr0jkl0rr" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Guard.png" id="6_w1r25"]
+[ext_resource type="Texture2D" uid="uid://bri5f5gaao8x4" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Hook.png" id="7_epe7u"]
+[ext_resource type="Texture2D" uid="uid://bnqx5dmh8yt0o" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Kunai.png" id="8_jv6gq"]
+[ext_resource type="Texture2D" uid="uid://bxdkaioccup1a" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Money.png" id="9_x4tfo"]
+[ext_resource type="Texture2D" uid="uid://curomuwajsnr1" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Ring.png" id="10_3jw4e"]
+[ext_resource type="Texture2D" uid="uid://cantcibgenk81" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Scroll.png" id="11_daxi0"]
+[ext_resource type="Texture2D" uid="uid://bu4uy0ejxhxw" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Helmet.png" id="12_hbqod"]
+[ext_resource type="Texture2D" uid="uid://dso7ce44db12j" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Shuriken.png" id="13_md1s4"]
+[ext_resource type="Texture2D" uid="uid://br8yhj3toerx2" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/BookRock.png" id="14_xski0"]
+[ext_resource type="Texture2D" uid="uid://dyhtbdhkv3mj0" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/BookWind.png" id="15_pid6t"]
+[ext_resource type="Texture2D" uid="uid://qc8tes3748kj" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/BookPlant.png" id="16_q28i5"]
+[ext_resource type="Texture2D" uid="uid://dn3je4uyoyu6h" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/BookLight.png" id="17_uliqf"]
+[ext_resource type="Texture2D" uid="uid://kupgitm76lij" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/Counter.png" id="18_pgymn"]
+[ext_resource type="Texture2D" uid="uid://n55jqb55eg5d" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/Cut.png" id="19_qiivy"]
+[ext_resource type="Texture2D" uid="uid://c1dqq587soek2" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/Alchemy.png" id="20_d4em6"]
+[ext_resource type="Texture2D" uid="uid://dxdmgm6vjdhk2" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/DefenseUpgrade.png" id="21_xhu5g"]
+[ext_resource type="Texture2D" uid="uid://ddfrgq2rd31to" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/Heal.png" id="22_c6q3j"]
+[ext_resource type="Texture2D" uid="uid://c18n1r0467o7w" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/MagicWeapon.png" id="23_2qbgv"]
+[ext_resource type="Texture2D" uid="uid://b4dh7ftap6egq" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/Fireball.png" id="24_lbwt2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5oi7g"]
+resource_local_to_scene = true
+texture = ExtResource("3_hjoar")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cbb04"]
+texture = ExtResource("3_hjoar")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mv3n4"]
+texture = ExtResource("3_hjoar")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l575w"]
+texture = ExtResource("3_xhdrn")
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_xuxvg")
+script = ExtResource("2_gmn60")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -960.0
+offset_bottom = -540.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.682353, 0.333333, 0.196078, 0.647059)
+
+[node name="ChooseItem" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 8.0
+offset_right = 331.0
+offset_bottom = 202.0
+scale = Vector2(0.85, 0.85)
+
+[node name="Item" type="Panel" parent="ChooseItem"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 8.0
+offset_right = 130.0
+offset_bottom = 99.0
+
+[node name="Armor" type="Sprite2D" parent="ChooseItem"]
+position = Vector2(81.75, 53.5)
+scale = Vector2(3.5625, 3.375)
+texture = ExtResource("2_q5jqp")
+
+[node name="NameItem" type="Panel" parent="ChooseItem"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 106.0
+offset_right = 151.0
+offset_bottom = 129.0
+
+[node name="ItemTitle" type="RichTextLabel" parent="ChooseItem/NameItem"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 282.0
+offset_bottom = 46.0
+scale = Vector2(0.27, 0.27)
+bbcode_enabled = true
+text = "Old Steel Armor"
+fit_content = true
+
+[node name="Description" type="Panel" parent="ChooseItem"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 131.0
+offset_right = 151.0
+offset_bottom = 186.0
+
+[node name="ItemDescription" type="RichTextLabel" parent="ChooseItem/Description"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 457.0
+offset_bottom = 223.0
+scale = Vector2(0.27, 0.27)
+text = "This heavy armor vas made by skilled craftsmen to protect frontline soldiers. It is a bit worn out."
+fit_content = true
+
+[node name="CloseButton" type="Button" parent="ChooseItem"]
+layout_mode = 0
+offset_left = 142.571
+offset_top = 7.14286
+offset_right = 172.571
+offset_bottom = 37.1429
+scale = Vector2(0.5, 0.5)
+theme_override_styles/disabled = SubResource("StyleBoxTexture_5oi7g")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cbb04")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mv3n4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_l575w")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 186.0
+offset_bottom = 202.0
+scale = Vector2(0.85, 0.85)
+
+[node name="ItemList" type="ItemList" parent="Panel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 166.0
+offset_bottom = 185.0
+item_count = 23
+max_columns = 3
+same_column_width = true
+fixed_column_width = 36
+icon_scale = 1.5
+item_0/icon = ExtResource("3_ej1xd")
+item_1/icon = ExtResource("2_q5jqp")
+item_2/icon = ExtResource("4_wm23o")
+item_3/icon = ExtResource("5_w61fk")
+item_4/icon = ExtResource("6_w1r25")
+item_5/icon = ExtResource("7_epe7u")
+item_6/icon = ExtResource("8_jv6gq")
+item_7/icon = ExtResource("9_x4tfo")
+item_8/icon = ExtResource("10_3jw4e")
+item_9/icon = ExtResource("11_daxi0")
+item_10/icon = ExtResource("12_hbqod")
+item_11/icon = ExtResource("13_md1s4")
+item_12/icon = ExtResource("14_xski0")
+item_13/icon = ExtResource("15_pid6t")
+item_14/icon = ExtResource("16_q28i5")
+item_15/icon = ExtResource("17_uliqf")
+item_16/icon = ExtResource("18_pgymn")
+item_17/icon = ExtResource("19_qiivy")
+item_18/icon = ExtResource("20_d4em6")
+item_19/icon = ExtResource("21_xhu5g")
+item_20/icon = ExtResource("22_c6q3j")
+item_21/icon = ExtResource("23_2qbgv")
+item_22/icon = ExtResource("24_lbwt2")

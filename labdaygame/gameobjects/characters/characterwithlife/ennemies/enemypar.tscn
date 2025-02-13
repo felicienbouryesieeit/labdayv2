@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpwvt81j7xda0"]
+[gd_scene load_steps=7 format=3 uid="uid://bpwvt81j7xda0"]
 
 [ext_resource type="PackedScene" uid="uid://fgglxfrru5gk" path="res://gameobjects/characters/characterpar.tscn" id="1_isaoi"]
 [ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/ennemies/skeleton/behaviorenemy1.gd" id="2_cxrut"]
 [ext_resource type="Texture2D" uid="uid://c68hky16wwq0a" path="res://Ninja Adventure - Asset Pack/Actor/Characters/NinjaRed2/SpriteSheet.png" id="2_eium7"]
 [ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/typecharacterwithlife.gd" id="2_oskpb"]
+[ext_resource type="Script" path="res://gameobjects/characters/pnjscript.gd" id="5_ecij0"]
+[ext_resource type="PackedScene" uid="uid://cmw6i1bx2tq1t" path="res://gameobjects/interactable/interactobject.tscn" id="5_xu38v"]
 
 [node name="CharacterBody2D" instance=ExtResource("1_isaoi")]
 
@@ -15,4 +17,7 @@ script = ExtResource("2_cxrut")
 
 [node name="typeofcharac" parent="." index="5"]
 script = ExtResource("2_oskpb")
-life = 5
+maxlife = 5
+
+[node name="Interactobject" parent="." index="11" instance=ExtResource("5_xu38v")]
+script = ExtResource("5_ecij0")

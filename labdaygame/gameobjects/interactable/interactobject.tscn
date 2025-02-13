@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmw6i1bx2tq1t"]
+
+[ext_resource type="Script" path="res://gameobjects/interactable/interactpar.gd" id="1_t6gsk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evwrg"]
+size = Vector2(45, 44)
+
+[node name="Interactobject" type="Node2D"]
+script = ExtResource("1_t6gsk")
+
+[node name="AreaPNJ" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AreaPNJ"]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_evwrg")
+
+[connection signal="body_entered" from="AreaPNJ" to="." method="_on_area_pnj_body_entered"]

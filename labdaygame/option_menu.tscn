@@ -1,35 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://baeoxxh7yavo4"]
+[gd_scene load_steps=6 format=3 uid="uid://baeoxxh7yavo4"]
 
 [ext_resource type="Script" path="res://option_menu.gd" id="1_73xgr"]
 [ext_resource type="Texture2D" uid="uid://bjap6ctqxnnr0" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Flam/Faceset.png" id="2_d6whm"]
-[ext_resource type="FontFile" uid="uid://d1jihm8t3ou8j" path="res://Ninja Adventure - Asset Pack/Ui/Font/NormalFont.ttf" id="3_b2vlw"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgbp1"]
-bg_color = Color(0.313726, 0.403922, 0.309804, 1)
-corner_radius_top_left = 60
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-corner_radius_bottom_left = 60
-shadow_color = Color(0.407843, 0.498039, 0.403922, 1)
-shadow_size = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpaud"]
-bg_color = Color(0.309804, 0.4, 0.309804, 1)
-corner_radius_top_left = 60
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-corner_radius_bottom_left = 60
-shadow_color = Color(0.4, 0.490196, 0.4, 1)
-shadow_size = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aslpw"]
-bg_color = Color(0.407843, 0.498039, 0.403922, 1)
-corner_radius_top_left = 60
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-corner_radius_bottom_left = 60
-shadow_color = Color(0.407843, 0.498039, 0.403922, 1)
-shadow_size = 20
+[ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="3_3g5ko"]
+[ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="4_d38t0"]
 
 [sub_resource type="GDScript" id="GDScript_xd2lw"]
 script/source = "extends Button
@@ -56,30 +30,31 @@ script = ExtResource("1_73xgr")
 
 [node name="Faceset" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(577, 323.5)
-scale = Vector2(30.3158, 17.0263)
+position = Vector2(640.25, 360)
+scale = Vector2(33.6711, 18.9474)
 texture = ExtResource("2_d6whm")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 266.0
-offset_top = 318.0
-offset_right = 982.0
-offset_bottom = 585.0
+offset_left = 288.0
+offset_top = 320.0
+offset_right = 1004.0
+offset_bottom = 587.0
+theme = ExtResource("3_3g5ko")
 theme_override_constants/separation = 30
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
+[node name="MusicButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_b2vlw")
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("4_d38t0")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_bgbp1")
 text = "Musique"
 
 [node name="OptionButton" type="OptionButton" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_b2vlw")
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("4_d38t0")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_xpaud")
 alignment = 1
 selected = 0
 item_count = 4
@@ -92,11 +67,11 @@ popup/item_2/id = 2
 popup/item_3/text = "Vitesse 3"
 popup/item_3/id = 2
 
-[node name="Button4" type="Button" parent="VBoxContainer"]
+[node name="ReturnButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_b2vlw")
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("4_d38t0")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_aslpw")
 text = "Retour"
 script = SubResource("GDScript_xd2lw")
 
@@ -107,15 +82,15 @@ anchor_left = 0.55
 anchor_top = 0.475
 anchor_right = 0.55
 anchor_bottom = 0.475
-offset_left = -249.6
-offset_top = -208.8
-offset_right = 249.4
-offset_bottom = -1.80002
+offset_left = -250.0
+offset_top = -209.0
+offset_right = 126.0
+offset_bottom = -57.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_b2vlw")
-theme_override_font_sizes/font_size = 150
-text = "Option"
+theme_override_fonts/font = ExtResource("4_d38t0")
+theme_override_font_sizes/font_size = 151
+text = "Options"
 
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="VBoxContainer/MusicButton" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/ReturnButton" to="." method="_on_button_4_pressed"]

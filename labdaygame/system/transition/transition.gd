@@ -32,6 +32,8 @@ func play(type):
 			await fade(0)
 	finished.emit()
 
+func play2():
+	await fade(1)
 
 func fade(alpha:float,time = 0.3):
 	if tween:

@@ -38,6 +38,8 @@ var just_teleport := false
 
 @onready var sprite: SpriteCharacter = $Sprite
 
+func _ready() -> void:
+	Gamemanager.charactervar=self
 func _process(delta: float) -> void:
 	pass
 	position.x=Gamemanager.playerposition.x-8
@@ -61,7 +63,8 @@ func _physics_process(delta: float) -> void:
 func teleport(target_teleporter:Teleporter,offset_position:Vector2):
 	if just_teleport:
 		return
-	global_position = target_teleporter.global_position+offset_position+(target_teleporter.direction*Vector2(25,25))
+	#global_position = target_teleporter.global_position+offset_position+(target_teleporter.direction*Vector2(25,25))
+	
 	just_teleport = true
 	for camera in get_tree().get_nodes_in_group("camera"):
 		camera.teleport_to(global_position)

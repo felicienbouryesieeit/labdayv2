@@ -16,3 +16,7 @@ func _process(delta: float) -> void:
 
 func reaction_to_attack(damagevar : damageclass) -> void:
 	pass
+
+
+func begintypeofcharacter() -> void:
+	pass

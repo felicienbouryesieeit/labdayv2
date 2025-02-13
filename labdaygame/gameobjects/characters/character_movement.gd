@@ -49,6 +49,8 @@ func _ready() -> void:
 	#beginlocation()
 	#print("gougougaga ninho"+str(sprite_2dninho.size()))
 	
+	typeofcharactervar.begintypeofcharacter()
+	
 	animatedspritevar.sprite_2d=sprite_2d
 	animatedspritevar.charactermovementvar=self
 	typeofcharactervar.charactervar = self
@@ -200,3 +202,9 @@ func spawnattack() ->void:
 		
 func onanimationend(currentframe : int) ->void:
 	attackbehaviorvar.onanimationend(currentframe)
+	
+	
+
+func oninteractobject(interact : interactclass) ->void:
+	behaviorvar.oninteractvar(interact)
+	print("la chine 3 ")
