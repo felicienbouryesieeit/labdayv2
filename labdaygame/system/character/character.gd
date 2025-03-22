@@ -44,7 +44,8 @@ func _process(delta: float) -> void:
 	pass
 	position.x=Gamemanager.playerposition.x-8
 	
-	position.y=Gamemanager.playerposition.y+6
+	position.y=Gamemanager.playerposition.y+15
+	
 func _physics_process(delta: float) -> void:
 	
 	if Engine.is_editor_hint():

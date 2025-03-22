@@ -14,6 +14,7 @@ var heartbarvar : heartbar #res://system/ui/receptacle_bar/receptacle_bar.gd
 var equipmentlist : Array[String]
 var equipmentlistingame : Array[equipmentclass] 
 var dialogueboxvar : dialoguebox
+var isteleporting : bool
 #var beginposition : Vector2 
 
 # Called when the node enters the scene tree for the first time.

@@ -17,7 +17,7 @@ signal animation_finished
 		if Engine.is_editor_hint():
 			snap_to_grid()
 @export_group("animation")
-@export var animation_trans:Tween.TransitionType = Tween.TRANS_SINE
+@export var animation_trans:Tween.TransitionType = Tween.TRANS_SINE #Tween.TRANS_LINEAR#
 @export var animation_ease:Tween.EaseType = Tween.EASE_IN_OUT
 @export var transition_time:= 0.8
 
@@ -50,17 +50,33 @@ func go_to_world_position(pos:Vector2):
 	var pos_target := pos
 	var cell_target := world_to_grid(pos_target)
 	if cell_target != current_cell:
+		
 		go_to_cell(cell_target)
 
 
 func go_to_cell(cell_target:Vector2):
+	
 	current_cell = cell_target
+	
 	if tween:
 		tween.kill()
+	
 	tween = create_tween()
-	tween.tween_property(self,"position",grid_to_world(current_cell),transition_time).set_trans(animation_trans).set_ease(animation_ease)
+	
+	#tween.tween_property(self,"position",grid_to_world(current_cell),transition_time).set_trans(animation_trans).set_ease(animation_ease)
+	#0.01
+	var transition_time_2=transition_time
+	
+	transition_time_2=transition_time
+	if Gamemanager.isteleporting==true :
+		transition_time_2=0.01
+		Gamemanager.isteleporting=false
+	tween.tween_property(self,"position",grid_to_world(current_cell),transition_time_2).set_trans(animation_trans).set_ease(animation_ease)
+	#global_position=current_cell
+	
 	await tween.finished
 	animation_finished.emit()
+	
 
 
 func set_world_position(world_pos:Vector2):
@@ -83,6 +99,7 @@ func grid_to_world(pos:Vector2) -> Vector2:
 
 
 func center_to_cell():
+	#pass
 	global_position = grid_to_world(current_cell)
 
 

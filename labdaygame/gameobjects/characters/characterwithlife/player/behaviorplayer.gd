@@ -43,6 +43,7 @@ func setbehavior() -> void:
 
 func _ready() -> void:
 	super._ready()
+	isplayer = true
 	#singleattack=true
 
 		
@@ -67,6 +68,7 @@ func beginbehavior() ->void:
 	
 	charactermovementvar.animation_direction2=Gamemanager.playerdirection
 	equipmentmanager.beginequipment()
+	beginplayer()
 	#print("zumb"+str(Gamemanager.charactermovementvar))
 
 
@@ -75,3 +77,7 @@ func oninteractvar(interactvar : interactclass) -> void :
 	super.oninteractvar(interactvar)
 	print("la chine 5 ")
 	self.interactvar=interactvar
+
+
+func beginplayer() ->void:
+	pass

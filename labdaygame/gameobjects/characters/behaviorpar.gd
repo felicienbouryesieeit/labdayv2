@@ -8,7 +8,7 @@ var charactermovementvar : charactermovementclass
 @export var enemymovementint : int
 
 var timermovement: Timer
-
+var isplayer : bool = false
 
 
 

@@ -43,6 +43,11 @@ var animation_state_bool : bool = false
 
 var character_rotation : float
 
+
+func isplayerfunc() -> bool :
+	
+	return behaviorvar.isplayer
+	
 func _ready() -> void:
 	
 	#queue_free()
