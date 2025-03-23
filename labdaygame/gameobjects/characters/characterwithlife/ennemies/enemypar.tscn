@@ -20,4 +20,6 @@ script = ExtResource("2_oskpb")
 maxlife = 5
 
 [node name="Interactobject" parent="." index="11" instance=ExtResource("5_xu38v")]
+scale = Vector2(0.809524, 0.8125)
 script = ExtResource("5_ecij0")
+havedialogbox = false

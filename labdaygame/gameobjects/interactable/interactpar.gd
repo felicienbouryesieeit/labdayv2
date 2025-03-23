@@ -21,3 +21,11 @@ func _on_area_pnj_body_entered(body: Node2D) -> void:
 func oninteract() ->void :
 	print("campao del mundo karai")
 	
+	
+	
+
+
+func _on_area_pnj_body_exited(body: Node2D) -> void:
+	if body.has_method("onexitinteractobject"):
+		body.onexitinteractobject(self)
+	pass # Replace with function body.

@@ -78,6 +78,11 @@ func oninteractvar(interactvar : interactclass) -> void :
 	print("la chine 5 ")
 	self.interactvar=interactvar
 
+func onexitinteractvar(interactvar : interactclass) -> void : 
+	
+	super.onexitinteractvar(interactvar)
+	
+	self.interactvar=null
 
 func beginplayer() ->void:
 	pass

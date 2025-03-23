@@ -57,3 +57,8 @@ func spawnbaseprojectile() -> void :
 func oninteractvar(interactvar : interactclass) -> void : 
 	print("la chine 4 ")
 	pass
+
+
+func onexitinteractvar(interactvar : interactclass) -> void : 
+	print("la chine 4 ")
+	pass

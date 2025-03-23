@@ -10,6 +10,9 @@ class_name charactermovementclass
 @export var timermovement : Timer
 @export var timerattack : Timer
 
+#@export var dialogindex  : int
+@export var direction : int
+
 #@export var sprite_2dninho : Array[Sprite2D]
 
 
@@ -212,4 +215,8 @@ func onanimationend(currentframe : int) ->void:
 
 func oninteractobject(interact : interactclass) ->void:
 	behaviorvar.oninteractvar(interact)
+	print("la chine 3 ")
+
+func onexitinteractobject(interact : interactclass) ->void:
+	behaviorvar.onexitinteractvar(interact)
 	print("la chine 3 ")

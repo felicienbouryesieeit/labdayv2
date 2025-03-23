@@ -12,7 +12,7 @@ func _ready() -> void:
 	#super._ready()
 	
 func showtext() -> void:
-	_dialogue.text ="toutou"
+	_dialogue.text ="toutou miaou"
 func display_line(line : String, speaker : String =""):
 	_speaker.visible = (speaker !="")
 	_speaker.text = speaker

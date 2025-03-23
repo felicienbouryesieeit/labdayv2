@@ -11,6 +11,7 @@ radius = 3.33333
 radius = 3.33333
 
 [node name="Princess" instance=ExtResource("1_gjf68")]
+visible = false
 team = ExtResource("3_as7xg")
 
 [node name="Shape" type="CollisionShape2D" parent="Hitbox" index="0"]
