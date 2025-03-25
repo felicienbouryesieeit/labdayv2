@@ -62,7 +62,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_u6egg")
 theme_override_font_sizes/font_size = 241
-text = "Game"
+text = "Frog Castle"
 
 [node name="hover" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_glbon")
