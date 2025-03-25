@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cvaddpu4odleb"]
+[gd_scene load_steps=33 format=3 uid="uid://w5fahded1kvw"]
 
 [ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="1_xuxvg"]
 [ext_resource type="Script" uid="uid://bldg2c34yb1kd" path="res://system/ui/inventory.gd" id="2_gmn60"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://coi5ekbjc2o0m" path="res://Ninja Adventure - Asset Pack/Ui/Theme/ThemeWood/checked.png" id="3_xhdrn"]
 [ext_resource type="Texture2D" uid="uid://dwh6i5fqgd3j3" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Arrow.png" id="4_wm23o"]
 [ext_resource type="Texture2D" uid="uid://mwwr1vm0tkas" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Boot.png" id="5_w61fk"]
+[ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="6_42wgh"]
 [ext_resource type="Texture2D" uid="uid://d003yr0jkl0rr" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Guard.png" id="6_w1r25"]
 [ext_resource type="Texture2D" uid="uid://bri5f5gaao8x4" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Hook.png" id="7_epe7u"]
 [ext_resource type="Texture2D" uid="uid://bnqx5dmh8yt0o" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Kunai.png" id="8_jv6gq"]
@@ -77,22 +78,24 @@ scale = Vector2(0.85, 0.85)
 
 [node name="Item" type="Panel" parent="ChooseItem"]
 layout_mode = 0
-offset_left = 34.0
-offset_top = 8.0
-offset_right = 130.0
-offset_bottom = 99.0
+offset_left = 44.7059
+offset_top = 9.41177
+offset_right = 120.706
+offset_bottom = 82.4118
 
 [node name="Armor" type="Sprite2D" parent="ChooseItem"]
-position = Vector2(81.75, 53.5)
-scale = Vector2(3.5625, 3.375)
+position = Vector2(83.5294, 44.7059)
+scale = Vector2(2.69424, 2.59743)
 texture = ExtResource("2_q5jqp")
 
 [node name="NameItem" type="Panel" parent="ChooseItem"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 106.0
-offset_right = 151.0
-offset_bottom = 129.0
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.43
+offset_left = 16.4706
+offset_top = 84.7059
+offset_right = 151.471
+offset_bottom = 24.2859
 
 [node name="ItemTitle" type="RichTextLabel" parent="ChooseItem/NameItem"]
 layout_mode = 0
@@ -107,10 +110,10 @@ fit_content = true
 
 [node name="Description" type="Panel" parent="ChooseItem"]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 131.0
-offset_right = 151.0
-offset_bottom = 186.0
+offset_left = 16.4706
+offset_top = 110.588
+offset_right = 151.471
+offset_bottom = 165.588
 
 [node name="ItemDescription" type="RichTextLabel" parent="ChooseItem/Description"]
 layout_mode = 0
@@ -124,15 +127,26 @@ fit_content = true
 
 [node name="CloseButton" type="Button" parent="ChooseItem"]
 layout_mode = 0
-offset_left = 142.571
-offset_top = 7.14286
-offset_right = 172.571
-offset_bottom = 37.1429
+offset_left = 142.353
+offset_top = 8.23529
+offset_right = 172.353
+offset_bottom = 38.2353
 scale = Vector2(0.5, 0.5)
 theme_override_styles/disabled = SubResource("StyleBoxTexture_5oi7g")
 theme_override_styles/hover = SubResource("StyleBoxTexture_cbb04")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_mv3n4")
 theme_override_styles/normal = SubResource("StyleBoxTexture_l575w")
+
+[node name="Button" type="Button" parent="ChooseItem"]
+layout_mode = 0
+offset_left = 56.4706
+offset_top = 169.412
+offset_right = 214.471
+offset_bottom = 213.412
+scale = Vector2(0.35, 0.35)
+theme_override_fonts/font = ExtResource("6_42wgh")
+theme_override_font_sizes/font_size = 30
+text = "unequipped"
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
