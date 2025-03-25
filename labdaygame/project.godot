@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Gamemanager="*res://gamemanager.gd"
+Save="*res://system/save/save.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [display]

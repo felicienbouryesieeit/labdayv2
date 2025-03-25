@@ -1,4 +1,5 @@
 extends Node
+var statues_parlees := {}
 
 
 enum StartingScene {TITLE_SCREEN,GAME}
