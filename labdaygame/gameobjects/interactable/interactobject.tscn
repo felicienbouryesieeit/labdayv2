@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cmw6i1bx2tq1t"]
 
-[ext_resource type="Script" path="res://gameobjects/interactable/interactpar.gd" id="1_t6gsk"]
+[ext_resource type="Script" uid="uid://dliprn2gp1ge0" path="res://gameobjects/interactable/interactpar.gd" id="1_t6gsk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evwrg"]
 size = Vector2(45, 44)

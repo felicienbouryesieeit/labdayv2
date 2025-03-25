@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://dgnp6xlp7hvdn"]
 
 [ext_resource type="PackedScene" uid="uid://fgglxfrru5gk" path="res://gameobjects/characters/characterpar.tscn" id="1_nmid8"]
-[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/player/behaviorplayer.gd" id="2_dsvmf"]
-[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/player/playerattackbehavior.gd" id="3_81jem"]
-[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/typecharacterwithlife.gd" id="3_vhp6u"]
-[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/player/equipmentmanagerscr.gd" id="5_oj7q1"]
+[ext_resource type="Script" uid="uid://8aofbw4ry6nf" path="res://gameobjects/characters/characterwithlife/player/behaviorplayer.gd" id="2_dsvmf"]
+[ext_resource type="Script" uid="uid://dtj478x6vje3r" path="res://gameobjects/characters/characterwithlife/player/playerattackbehavior.gd" id="3_81jem"]
+[ext_resource type="Script" uid="uid://ds7otdt0a5ph" path="res://gameobjects/characters/characterwithlife/typecharacterwithlife.gd" id="3_vhp6u"]
+[ext_resource type="Script" uid="uid://db5mcxslww7th" path="res://gameobjects/characters/characterwithlife/player/equipmentmanagerscr.gd" id="5_oj7q1"]
 
 [node name="CharacterBody2D" instance=ExtResource("1_nmid8")]
 
