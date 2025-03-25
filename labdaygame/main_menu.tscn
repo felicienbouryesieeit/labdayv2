@@ -1,35 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://vtf6k5og52mj"]
+[gd_scene load_steps=5 format=3 uid="uid://vtf6k5og52mj"]
 
 [ext_resource type="Script" uid="uid://wl7m5k2pveqi" path="res://main_menu.gd" id="1_rmxqo"]
 [ext_resource type="Texture2D" uid="uid://bjap6ctqxnnr0" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Flam/Faceset.png" id="2_sllh8"]
+[ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="3_jix8l"]
 [ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="3_u6egg"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgbp1"]
-bg_color = Color(0.313726, 0.403922, 0.309804, 1)
-corner_radius_top_left = 60
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-corner_radius_bottom_left = 60
-shadow_color = Color(0.407843, 0.498039, 0.403922, 1)
-shadow_size = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vc58u"]
-bg_color = Color(0.313726, 0.403922, 0.309804, 1)
-corner_radius_top_left = 60
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-corner_radius_bottom_left = 60
-shadow_color = Color(0.407843, 0.498039, 0.403922, 1)
-shadow_size = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aslpw"]
-bg_color = Color(0.313726, 0.403922, 0.309804, 1)
-corner_radius_top_left = 60
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-corner_radius_bottom_left = 60
-shadow_color = Color(0.407843, 0.498039, 0.403922, 1)
-shadow_size = 20
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -52,27 +26,25 @@ offset_left = 402.0
 offset_top = 381.0
 offset_right = 877.0
 offset_bottom = 648.0
+theme = ExtResource("3_jix8l")
 theme_override_constants/separation = 30
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_u6egg")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_bgbp1")
 text = "Jouer"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_u6egg")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_vc58u")
 text = "Parametre"
 
 [node name="Button4" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_u6egg")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_aslpw")
 text = "Quitter"
 
 [node name="Label" type="Label" parent="."]
