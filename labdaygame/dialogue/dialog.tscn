@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dct2lv3kc8vxf"]
+[gd_scene load_steps=13 format=3 uid="uid://dct2lv3kc8vxf"]
 
 [ext_resource type="Texture2D" uid="uid://bokuk8a0qhd08" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/DialogBoxFaceset.png" id="1_xrg3s"]
 [ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="2_1ufqo"]
@@ -35,12 +35,6 @@ modulate_color = Color(0, 0.501961, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kfvee"]
 texture = ExtResource("3_rp8nw")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3176i"]
-texture = ExtResource("5_ii7n7")
-
-[sub_resource type="Theme" id="Theme_cg54a"]
-Panel/styles/panel = SubResource("StyleBoxTexture_3176i")
 
 [node name="Dialog" type="Control"]
 layout_mode = 3
@@ -108,20 +102,12 @@ bbcode_enabled = true
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et sagittis nisl. Sed tempus ligula metus, quis semper odio mattis eget. Fusce viverra lorem purus, in maximus turpis fringilla non. Duis tincidunt ultrices erat, a bibendum lectus aliquet ac. Nulla facilisi."
 fit_content = true
 
-[node name="Faceset" type="Control" parent="."]
-anchors_preset = 0
+[node name="Faceset" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 12.0
 offset_top = 28.0
 offset_right = 84.0
 offset_bottom = 102.0
-theme = SubResource("Theme_cg54a")
-
-[node name="Face" type="Panel" parent="Faceset"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+texture = ExtResource("5_ii7n7")
 
 [connection signal="pressed" from="Box/Next" to="." method="_on_next_pressed"]

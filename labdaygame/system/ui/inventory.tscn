@@ -41,7 +41,7 @@ texture = ExtResource("3_hjoar")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l575w"]
 texture = ExtResource("3_xhdrn")
 
-[node name="Inventory" type="Control"]
+[node name="Inventory" type="Control" node_paths=PackedStringArray("itemlist", "descriptionvar", "namevar", "imagevar")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,6 +51,10 @@ grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("1_xuxvg")
 script = ExtResource("2_gmn60")
+itemlist = NodePath("Panel/ItemList")
+descriptionvar = NodePath("ChooseItem/Description/ItemDescription")
+namevar = NodePath("ChooseItem/NameItem/ItemTitle")
+imagevar = NodePath("ChooseItem/Armor")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -172,3 +176,5 @@ item_19/icon = ExtResource("21_xhu5g")
 item_20/icon = ExtResource("22_c6q3j")
 item_21/icon = ExtResource("23_2qbgv")
 item_22/icon = ExtResource("24_lbwt2")
+
+[connection signal="item_selected" from="Panel/ItemList" to="." method="_on_item_list_item_selected"]

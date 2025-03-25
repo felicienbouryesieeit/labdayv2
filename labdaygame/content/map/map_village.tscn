@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=4 uid="uid://c83pfkmwxrf3p"]
+[gd_scene load_steps=72 format=4 uid="uid://c83pfkmwxrf3p"]
 
 [ext_resource type="PackedScene" uid="uid://ck4ncv1wxtff5" path="res://system/map/map.tscn" id="1_6r46d"]
 [ext_resource type="Script" path="res://system/environment/environment_shape.gd" id="2_jff21"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://co5qpuj3hns3e" path="res://content/character/princess/princess.tscn" id="7_n8vb2"]
 [ext_resource type="Script" path="res://system/player_assignor.gd" id="8_8tm86"]
 [ext_resource type="PackedScene" uid="uid://dn4s0ltuy5urx" path="res://gameobjects/objectspawner/objectspawner.tscn" id="8_u5hr1"]
+[ext_resource type="PackedScene" uid="uid://mo1mj3bvuq6f" path="res://gameobjects/characters/characterwithlife/ennemies/pig/pig.tscn" id="10_pxj7p"]
 [ext_resource type="PackedScene" uid="uid://b0qeileseecxb" path="res://gameobjects/newteleporter/newteleporter.tscn" id="14_jp2g7"]
 [ext_resource type="PackedScene" uid="uid://bpwvt81j7xda0" path="res://gameobjects/characters/characterwithlife/ennemies/enemypar.tscn" id="15_yvkwo"]
 [ext_resource type="Texture2D" uid="uid://benehyg10smgv" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png" id="16_l3osy"]
@@ -25,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://byjxsuhdt7ra4" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetElement.png" id="22_7ca07"]
 [ext_resource type="TileSet" uid="uid://tir0rfjtiwma" path="res://content/map/tileset.tres" id="23_f21xr"]
 [ext_resource type="PackedScene" uid="uid://dmc1wunt62e15" path="res://gameobjects/characters/characterwithlife/pnj/pnjpar.tscn" id="25_8fheb"]
+[ext_resource type="PackedScene" uid="uid://dw3a6uxdnmlj4" path="res://gameobjects/characters/characterwithlife/ennemies/skeleton/skeleton.tscn" id="26_7bsyv"]
 
 [sub_resource type="Resource" id="Resource_m4bmw"]
 script = ExtResource("5_u7nr0")
@@ -8266,9 +8268,12 @@ position = Vector2(-100, -131)
 curve = SubResource("Curve2D_6dhpb")
 
 [node name="CharacterBody2D" parent="Tilemap" index="6" instance=ExtResource("7_h1qda")]
-position = Vector2(825, 1022)
+position = Vector2(281, 2294)
 
 [node name="Objectspawner" parent="Tilemap" index="7" instance=ExtResource("8_u5hr1")]
+
+[node name="CharacterBody2D2" parent="Tilemap" index="8" instance=ExtResource("10_pxj7p")]
+position = Vector2(435, 2353)
 
 [node name="EnvironmentShape" type="CollisionShape2D" parent="EnvironmentArea" index="0"]
 visible = false
@@ -9227,3 +9232,10 @@ layer_3/tile_data = PackedInt32Array(-917533, 65537, 12, -851997, 1, 12, -786461
 
 [node name="CharacterBody2D2" parent="." index="51" instance=ExtResource("25_8fheb")]
 position = Vector2(1111, 879)
+animation_direction2 = 3
+npcindex = 1
+npctileset = "RobotGrey"
+npcnameindex = 1
+
+[node name="CharacterBody2D3" parent="." index="52" instance=ExtResource("26_7bsyv")]
+position = Vector2(699, 2289)

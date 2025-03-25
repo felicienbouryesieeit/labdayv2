@@ -10,3 +10,7 @@ func onattack()->void:
 	#super.onattack()
 	print("attaque zer")
 	
+func beginitem():
+	super.beginitem()
+	imagepath = "res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/AttackUpgrade.png"
+	

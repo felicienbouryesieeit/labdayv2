@@ -16,6 +16,7 @@ var direction:Vector2
 var behaviorattackvar: behaviorattackclass
 var attackrange : float
 
+
 #@export var collisionvar : CollisionShape2D
 @export var timerrangevar : Timer
 @export var projectilebehaviorvar : projectilebehaviorclass
@@ -23,6 +24,7 @@ var attackrange : float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
 	global_position = spawnposition
 	rotation_degrees = rotationvar
 	rotationvarbegin = rotationvar
@@ -31,7 +33,7 @@ func _ready() -> void:
 	projectilebehaviorvar.damagevar=self
 	projectilebehaviorvar.beginbehavior()
 	
-	timerrangevar.start(attackrange)  # Démarre le Timer pour 2 secondes
+	timerrangevar.start(attackrange) #  # Démarre le Timer pour 2 secondes
 	timerrangevar.timeout.connect(destroyrange)
 
 func destroyrange() -> void :
@@ -66,7 +68,7 @@ func moveforward() -> void:
 	move_and_slide()	
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
-		print("ayooooooooooooooooooo")
+		#print("ayooooooooooooooooooo")
 		if body.has_method("haveprojectilecollision"):
 			#pass
 			body.haveprojectilecollision(self,charactermovementvar)

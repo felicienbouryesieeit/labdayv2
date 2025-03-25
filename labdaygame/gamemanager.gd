@@ -15,6 +15,7 @@ var equipmentlist : Array[String]
 var equipmentlistingame : Array[equipmentclass] 
 var dialogueboxvar : dialoguebox
 var isteleporting : bool
+var inventoryvar : Array[itemholderclass]
 #var beginposition : Vector2 
 
 # Called when the node enters the scene tree for the first time.

@@ -10,6 +10,7 @@ var lastattack: int = -1
 var attackserieint: int =0
 var attackseriecadence: float=0
 var attackseriemax: int=0
+var invisibleprojectile : bool = false
 
 var charactermovementvar : charactermovementclass
 
@@ -116,6 +117,7 @@ func spawnprojectile2(angle3 : float,range2 : float,speedmax2 :float,acceleratio
 	projectile2.speedmax=speedmax2
 	projectile2.acceleration=acceleration2
 	projectile2.strengh=strengh
+	projectile2.visible=!invisibleprojectile
 	#projectile2.rotationvar =90
 	#damagevar.rotationvarbegin=0
 		#fleche2.spawnPos=actorposition

@@ -22,6 +22,7 @@ var acceleration : float = 70
 var ismovinganim : bool = true
 var ismovinganimdirection : bool = true
 var iswalkinganim : bool = true
+var cantwalk:bool = false
 #var pipi : int = 5
 #var animation_direction : String = "down"
 #var animation_state : String = ""
@@ -40,7 +41,12 @@ var fleche = preload("res://gameobjects/characters/characterpar.tscn")
 
 
 
-var animation_direction2 : int = 0
+@export var animation_direction2 : int = 0
+@export var npcindex : int
+@export var npctileset : String
+@export var npcnameindex : int = 0
+
+
 var animation_frame : int = 0
 var animation_state_bool : bool = false
 
@@ -56,7 +62,8 @@ func _ready() -> void:
 	#queue_free()
 	#beginlocation()
 	#print("gougougaga ninho"+str(sprite_2dninho.size()))
-	
+	if (npctileset!="") :
+		sprite_2d[0].texture=load("res://Ninja Adventure - Asset Pack/Actor/Characters/"+npctileset+"/SpriteSheet.png")
 	typeofcharactervar.begintypeofcharacter()
 	
 	animatedspritevar.sprite_2d=sprite_2d
@@ -140,12 +147,14 @@ func _physics_process(delta: float) -> void:
 	#print(global_position)
 	
 	behaviorvar.actorposition=global_position
+	
 	behaviorvar.setbehavior()
 	attackbehaviorvar.setattackbehavior()
+	
 	var direction:=Vector2(behaviorvar.behaviordirection)
 	
-	
-	update_sprite_direction(direction.x,direction.y)
+	if cantwalk==false :
+		update_sprite_direction(direction.x,direction.y)
 	#update_sprite()
 	if iswalkinganim :
 		ismovinganim = velocity.length()>0
@@ -164,9 +173,9 @@ func _physics_process(delta: float) -> void:
 	
 	#if character_direction.x > 0 : %sprite.flip_h = false
 	#elif character_direction.x < 0 : %sprite.flip_h = true
-	
-	velocity.x=move_toward(velocity.x,direction.x*movement_speed,acceleration)
-	velocity.y=move_toward(velocity.y,direction.y*movement_speed,acceleration)
+	if cantwalk==false :
+		velocity.x=move_toward(velocity.x,direction.x*movement_speed,acceleration)
+		velocity.y=move_toward(velocity.y,direction.y*movement_speed,acceleration)
 	#velocity = velocity.Normalized() * 5;
 	
 	

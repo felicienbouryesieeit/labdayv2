@@ -130,6 +130,7 @@ func currentattackserie() ->void:
 		1:
 			
 			spawnprojectileshotgunaimplayer(15,5,10,speed2,speed2)
+			
 		2:
 			var angle:float=0
 			if attackserieint%2==0 :

@@ -1,6 +1,8 @@
 extends "res://gameobjects/items/itemparscr.gd"
 class_name equipmentclass
 var charactervar : charactermovementclass
+var isequipped : bool 
+
 var lifebonus : int = 0;
 var speedbonus : float = 0;
 var shotspeedbonus : float = 0;
@@ -31,11 +33,13 @@ func _ready() -> void:
 func setequipmenttype(equipmentint : int)	-> void:
 	var equipmentlistsize : int = 6
 	
+	
 	if Gamemanager.equipmentlistingame.size()!=equipmentlistsize :
 		Gamemanager.equipmentlistingame.resize(equipmentlistsize)
-	
-	Gamemanager.equipmentlistingame.insert(equipmentint,self)
-	print("arceus"+str(Gamemanager.equipmentlistingame[0]))
+		
+	if (isequipped==true) : 
+		Gamemanager.equipmentlistingame.insert(equipmentint,self)
+		print("arceus"+str(Gamemanager.equipmentlistingame[0]))
 	
 func setplayerstats() -> void:
 	Gamemanager.playermovementvar.attackbehaviorvar.equipmentaddmaxlife(lifebonus)
@@ -52,6 +56,15 @@ func setplayerstats() -> void:
 	Gamemanager.playermovementvar.attackbehaviorvar.strengh+=strenghbonus
 	Gamemanager.playermovementvar.typeofcharactervar.defense+=defensebonus
 	
+func beginitem():
+	super.beginitem()
+	if isequipped==true:
+		activateequipment()
+		
+		
+
+func activateequipment()->void:
+	print("lac")
 	
 #func onattack()->void:
 #	pass
