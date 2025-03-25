@@ -1,35 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://vtf6k5og52mj"]
+[gd_scene load_steps=6 format=3 uid="uid://vtf6k5og52mj"]
 
-[ext_resource type="Script" path="res://main_menu.gd" id="1_rmxqo"]
+[ext_resource type="Script" uid="uid://wl7m5k2pveqi" path="res://main_menu.gd" id="1_rmxqo"]
 [ext_resource type="Texture2D" uid="uid://bjap6ctqxnnr0" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Flam/Faceset.png" id="2_sllh8"]
+[ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="3_jix8l"]
 [ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="3_u6egg"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgbp1"]
-bg_color = Color(0.313726, 0.403922, 0.309804, 1)
-corner_radius_top_left = 60
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-corner_radius_bottom_left = 60
-shadow_color = Color(0.407843, 0.498039, 0.403922, 1)
-shadow_size = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vc58u"]
-bg_color = Color(0.313726, 0.403922, 0.309804, 1)
-corner_radius_top_left = 60
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-corner_radius_bottom_left = 60
-shadow_color = Color(0.407843, 0.498039, 0.403922, 1)
-shadow_size = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aslpw"]
-bg_color = Color(0.313726, 0.403922, 0.309804, 1)
-corner_radius_top_left = 60
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-corner_radius_bottom_left = 60
-shadow_color = Color(0.407843, 0.498039, 0.403922, 1)
-shadow_size = 20
+[ext_resource type="AudioStream" uid="uid://06hvre0qs2fm" path="res://audio/menu/Menu2.wav" id="5_glbon"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -52,27 +27,25 @@ offset_left = 402.0
 offset_top = 381.0
 offset_right = 877.0
 offset_bottom = 648.0
+theme = ExtResource("3_jix8l")
 theme_override_constants/separation = 30
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_u6egg")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_bgbp1")
 text = "Jouer"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_u6egg")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_vc58u")
-text = "Parametre"
+text = "Parametres"
 
 [node name="Button4" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_u6egg")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_aslpw")
 text = "Quitter"
 
 [node name="Label" type="Label" parent="."]
@@ -82,15 +55,24 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -212.0
-offset_top = -205.0
-offset_right = 214.0
+offset_left = -553.0
+offset_top = -234.0
+offset_right = 552.0
+offset_bottom = -31.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_u6egg")
-theme_override_font_sizes/font_size = 241
-text = "Game"
+theme_override_font_sizes/font_size = 200
+text = "Princess Quest"
 
+[node name="hover" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_glbon")
+bus = &"Sound"
+
+[connection signal="mouse_entered" from="VBoxContainer" to="." method="_on_v_box_container_mouse_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/Button2" to="." method="_on_button_2_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/Button3" to="." method="_on_button_3_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/Button4" to="." method="_on_button_4_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]

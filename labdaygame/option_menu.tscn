@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://baeoxxh7yavo4"]
+[gd_scene load_steps=7 format=3 uid="uid://baeoxxh7yavo4"]
 
-[ext_resource type="Script" path="res://option_menu.gd" id="1_73xgr"]
+[ext_resource type="Script" uid="uid://d4e0btb5156pw" path="res://option_menu.gd" id="1_73xgr"]
 [ext_resource type="Texture2D" uid="uid://bjap6ctqxnnr0" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Flam/Faceset.png" id="2_d6whm"]
 [ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="3_3g5ko"]
 [ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="4_d38t0"]
+[ext_resource type="AudioStream" uid="uid://06hvre0qs2fm" path="res://audio/menu/Menu2.wav" id="5_bdn42"]
 
 [sub_resource type="GDScript" id="GDScript_xd2lw"]
 script/source = "extends Button
@@ -92,5 +93,12 @@ theme_override_fonts/font = ExtResource("4_d38t0")
 theme_override_font_sizes/font_size = 151
 text = "Options"
 
-[connection signal="pressed" from="VBoxContainer/MusicButton" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="VBoxContainer/ReturnButton" to="." method="_on_button_4_pressed"]
+[node name="hover" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_bdn42")
+
+[connection signal="mouse_entered" from="VBoxContainer/MusicButton" to="." method="_on_music_button_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/MusicButton" to="." method="_on_music_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/OptionButton" to="." method="_on_option_button_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/OptionButton" to="." method="_on_option_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/ReturnButton" to="." method="_on_return_button_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]

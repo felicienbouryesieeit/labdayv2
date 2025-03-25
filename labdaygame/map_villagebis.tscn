@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=4 uid="uid://dohtx2rdnhox1"]
 
 [ext_resource type="PackedScene" uid="uid://ck4ncv1wxtff5" path="res://system/map/map.tscn" id="1_6r46d"]
-[ext_resource type="Script" path="res://system/environment/environment_shape.gd" id="2_jff21"]
+[ext_resource type="Script" uid="uid://ybp5id84tyxr" path="res://system/environment/environment_shape.gd" id="2_jff21"]
 [ext_resource type="Resource" uid="uid://bx3bdtejr87up" path="res://content/environment/swamp/environment.tres" id="3_ynwqc"]
 [ext_resource type="Resource" uid="uid://dkwnklyceey24" path="res://content/environment/autumn/environment.tres" id="4_1ojy0"]
-[ext_resource type="Script" path="res://system/environment/resource_environment.gd" id="6_tnfad"]
+[ext_resource type="Script" uid="uid://d10ldqor2fkrf" path="res://system/environment/resource_environment.gd" id="6_tnfad"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q10in"]
 size = Vector2(304, 336)
