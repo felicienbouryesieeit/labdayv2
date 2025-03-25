@@ -4,6 +4,7 @@ var statues_parlees := {}
 
 enum StartingScene {TITLE_SCREEN,GAME}
 
+@onready var anim = $Background
 @export var starting_menu:StartingScene = StartingScene.TITLE_SCREEN
 
 var current_scene:Node
@@ -13,6 +14,7 @@ func _ready() -> void:
 	match starting_menu:
 		StartingScene.TITLE_SCREEN:
 			launch_scene(load("res://content/menu/title_screen.tscn"))
+			anim.play("title_screen")
 		StartingScene.GAME:
 			launch_scene(load("res://world.tscn"))
 
