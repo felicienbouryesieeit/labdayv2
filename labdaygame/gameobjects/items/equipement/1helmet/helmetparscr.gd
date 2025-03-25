@@ -7,5 +7,5 @@ func _ready() -> void:
 	
 func beginitem():
 	super.beginitem()
-	imagepath = "res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Helmet.png"
+	imagepath = "res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Helmet"
 	

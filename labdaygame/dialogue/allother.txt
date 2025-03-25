@@ -1,0 +1,11 @@
+old bow
+An old wooden bow
+iron helmet
+A rusty iron helmet.
+life    
+speed    
+shotspeed    
+range    
+strengh    
+defense   
+cadence   

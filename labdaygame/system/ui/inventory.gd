@@ -17,8 +17,8 @@ func _ready():
 		itemlist.add_item("",Gamemanager.inventoryvar[i].iconimage)
 		#print(element)
 	#print("open inventory")
-	descriptionvar.text="hibou"
-	namevar.text="hibou2"
+	descriptionvar.text=""
+	namevar.text=""
 	imagevar.texture=load("res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/Alchemy.png")
 	'''
 	
@@ -43,4 +43,9 @@ func setinventory():
 
 func _on_item_list_item_selected(index: int) -> void:
 	print("pouloulou")
+	for i in range(Gamemanager.inventoryvar.size()):
+		if index==i : 
+			imagevar.texture=Gamemanager.inventoryvar[i].iconimage
+			descriptionvar.text=Gamemanager.inventoryvar[i].itemdescription
+			namevar.text=Gamemanager.inventoryvar[i].itemname
 	pass # Replace with function body.

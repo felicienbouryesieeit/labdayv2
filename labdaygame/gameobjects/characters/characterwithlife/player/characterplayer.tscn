@@ -31,4 +31,4 @@ cadence = 0.7
 [node name="equipmentclass" type="Node2D" parent="." index="12"]
 script = ExtResource("5_oj7q1")
 equipmentlist2 = Array[String](["", "", "", "", "", ""])
-inventoryvar = Array[String](["1res://gameobjects/items/equipement/0weapons/weapontest.gd", "0res://gameobjects/items/equipement/1helmet/ironhelmet.gd", "0res://gameobjects/items/equipement/1helmet/ironhelmet.gd"])
+inventoryvar = Array[String](["1res://gameobjects/items/equipement/0weapons/weapontest.gd", "1res://gameobjects/items/equipement/1helmet/ironhelmet.gd", "0res://gameobjects/items/equipement/1helmet/ironhelmet.gd"])

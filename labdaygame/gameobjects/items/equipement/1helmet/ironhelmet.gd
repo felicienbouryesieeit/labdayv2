@@ -2,5 +2,7 @@ extends "res://gameobjects/items/equipement/1helmet/helmetparscr.gd"
 
 func _ready() -> void:
 	super._ready()
-	setstats(0,0,0,0,0,0)
+	nameindex=2
+	descriptionindex=3
+	setstats(1,0,0,0,0,0)
 	

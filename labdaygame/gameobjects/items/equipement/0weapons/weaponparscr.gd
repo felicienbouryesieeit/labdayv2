@@ -4,6 +4,8 @@ extends "res://gameobjects/items/equipement/equipmentparscr.gd"
 func _ready() -> void:
 	super._ready()
 	setequipmenttype(0)
+	nameindex=0
+	descriptionindex=1
 	
 	
 func onattack()->void:
@@ -12,5 +14,5 @@ func onattack()->void:
 	
 func beginitem():
 	super.beginitem()
-	imagepath = "res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/AttackUpgrade.png"
-	
+	imagepath = "res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/AttackUpgrade"
+				#res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/AttackUpgradeDisabled.png

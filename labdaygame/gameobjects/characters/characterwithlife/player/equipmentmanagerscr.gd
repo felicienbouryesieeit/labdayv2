@@ -54,13 +54,14 @@ func spawnequipment():
 		#if Gamemanager.equipmentlist[i]!="":
 		#	pass
 		var my_string = inventoryvar[i]
-		var isequipped = (my_string[i]=="1") #
+		print("grunt bis"+my_string[0])	#
+		var isequipped = (my_string[0]=="1") #
 		
 	
 		
 		#my_string.erase(10,1)
 		my_string = my_string.substr(1, my_string.length())
-			#print("grunt"+my_string)
+		print("grunt"+my_string+" "+str(isequipped))	#
 			#equipmentlist2[0]=my_string
 		
 		var item_directory = "res://gameobjects/items/itemobject.tscn"
