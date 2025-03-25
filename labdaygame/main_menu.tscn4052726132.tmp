@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bjap6ctqxnnr0" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Flam/Faceset.png" id="2_sllh8"]
 [ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="3_jix8l"]
 [ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="3_u6egg"]
-[ext_resource type="AudioStream" uid="uid://06hvre0qs2fm" path="res://audio/menu/Menu2.wav" id="5_glbon"]
+[ext_resource type="AudioStream" uid="uid://dsj15dqwyrp1a" path="res://audio/menu/Accept.wav" id="5_glbon"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -48,6 +48,9 @@ theme_override_fonts/font = ExtResource("3_u6egg")
 theme_override_font_sizes/font_size = 50
 text = "Quitter"
 
+[node name="ClickSoundPlayer" type="AudioStreamPlayer" parent="VBoxContainer"]
+stream = ExtResource("5_glbon")
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -64,14 +67,6 @@ theme_override_fonts/font = ExtResource("3_u6egg")
 theme_override_font_sizes/font_size = 241
 text = "Game"
 
-[node name="hover" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_glbon")
-bus = &"Sound"
-
-[connection signal="mouse_entered" from="VBoxContainer" to="." method="_on_v_box_container_mouse_entered"]
-[connection signal="mouse_entered" from="VBoxContainer/Button2" to="." method="_on_button_2_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/Button3" to="." method="_on_button_3_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/Button4" to="." method="_on_button_4_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
