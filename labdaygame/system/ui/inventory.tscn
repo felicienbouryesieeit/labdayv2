@@ -1,7 +1,7 @@
 [gd_scene load_steps=33 format=3 uid="uid://w5fahded1kvw"]
 
 [ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="1_xuxvg"]
-[ext_resource type="Script" uid="uid://bldg2c34yb1kd" path="res://system/ui/inventory.gd" id="2_gmn60"]
+[ext_resource type="Script" path="res://system/ui/inventory.gd" id="2_gmn60"]
 [ext_resource type="Texture2D" uid="uid://c6t8ow0n52q14" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Armor.png" id="2_q5jqp"]
 [ext_resource type="Texture2D" uid="uid://wbugdb2usu3f" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Amulet.png" id="3_ej1xd"]
 [ext_resource type="Texture2D" uid="uid://cexa318kwif1m" path="res://Ninja Adventure - Asset Pack/Ui/Theme/ThemeWood/checked_disabled.png" id="3_hjoar"]
@@ -93,9 +93,9 @@ layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.43
 offset_left = 16.4706
-offset_top = 84.7059
+offset_top = 85.8824
 offset_right = 151.471
-offset_bottom = 24.2859
+offset_bottom = 25.4624
 
 [node name="ItemTitle" type="RichTextLabel" parent="ChooseItem/NameItem"]
 layout_mode = 0
@@ -111,9 +111,9 @@ fit_content = true
 [node name="Description" type="Panel" parent="ChooseItem"]
 layout_mode = 0
 offset_left = 16.4706
-offset_top = 110.588
+offset_top = 111.764
 offset_right = 151.471
-offset_bottom = 165.588
+offset_bottom = 166.764
 
 [node name="ItemDescription" type="RichTextLabel" parent="ChooseItem/Description"]
 layout_mode = 0
@@ -137,15 +137,16 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_cbb04")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_mv3n4")
 theme_override_styles/normal = SubResource("StyleBoxTexture_l575w")
 
-[node name="Button" type="Button" parent="ChooseItem"]
+[node name="ItemEquipped" type="Button" parent="ChooseItem"]
 layout_mode = 0
 offset_left = 56.4706
-offset_top = 169.412
-offset_right = 214.471
-offset_bottom = 213.412
-scale = Vector2(0.35, 0.35)
+offset_top = 170.588
+offset_right = 225.471
+offset_bottom = 214.588
+scale = Vector2(0.32, 0.32)
 theme_override_fonts/font = ExtResource("6_42wgh")
 theme_override_font_sizes/font_size = 30
+toggle_mode = true
 text = "unequipped"
 
 [node name="Panel" type="Panel" parent="."]
