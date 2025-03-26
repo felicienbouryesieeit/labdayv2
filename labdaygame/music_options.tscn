@@ -1,255 +1,254 @@
-[gd_scene load_steps=71 format=3 uid="uid://gf263c1mvevi"]
+[gd_scene load_steps=69 format=3 uid="uid://dl44ge0dq1fgu"]
 
-[ext_resource type="Script" path="res://option_menu.gd" id="1_73xgr"]
-[ext_resource type="Texture2D" uid="uid://b8d0gonr63hsr" path="res://forest-test-new-ezgif.com-gif-to-sprite-converter.png" id="2_njhew"]
-[ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="3_3g5ko"]
-[ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="4_d38t0"]
-[ext_resource type="AudioStream" uid="uid://06hvre0qs2fm" path="res://audio/menu/Menu2.wav" id="5_bdn42"]
-[ext_resource type="Texture2D" uid="uid://bqh6meov36vy5" path="res://options-25-03-2025.png" id="6_s6v64"]
-[ext_resource type="AudioStream" uid="uid://o5s0j377cdlw" path="res://Ninja Adventure - Asset Pack/Musics/6 - Story.ogg" id="7_nr0mr"]
-[ext_resource type="Script" path="res://system/music.gd" id="8_pe4ql"]
+[ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="1_1art0"]
+[ext_resource type="Texture2D" uid="uid://b8d0gonr63hsr" path="res://forest-test-new-ezgif.com-gif-to-sprite-converter.png" id="1_8hfo1"]
+[ext_resource type="Script" path="res://music_options.gd" id="2_o37h1"]
+[ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="4_gbh4a"]
+[ext_resource type="Texture2D" uid="uid://dsnnbkalcrov0" path="res://music-sfx-26-03-2025.png" id="5_88wva"]
+[ext_resource type="AudioStream" uid="uid://o5s0j377cdlw" path="res://Ninja Adventure - Asset Pack/Musics/6 - Story.ogg" id="6_e0my8"]
+[ext_resource type="Script" path="res://system/music.gd" id="7_y0txf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_naeo7"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(0, 0, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bnhqt"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(990, 0, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_akhnt"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(1980, 0, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8sca0"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(2970, 0, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2d72r"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(3960, 0, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w1q3w"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(0, 540, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3j0tf"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(990, 540, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xfvox"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(1980, 540, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nk0gj"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(2970, 540, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x1kr2"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(3960, 540, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ggplv"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(0, 1080, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ay7b"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(990, 1080, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pskty"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(1980, 1080, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y3q5g"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(2970, 1080, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lwa3r"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(3960, 1080, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o2ihv"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(0, 1620, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_laxfj"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(990, 1620, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nuoe6"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(1980, 1620, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vpc1o"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(2970, 1620, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fomb5"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(3960, 1620, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j0awj"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(0, 2160, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kv6mv"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(990, 2160, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_er85c"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(1980, 2160, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5adsa"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(2970, 2160, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g0dxk"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(3960, 2160, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pfc64"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(0, 2700, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_spc6t"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(990, 2700, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6tv37"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(1980, 2700, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fw53r"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(2970, 2700, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jatg6"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(3960, 2700, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cl7tr"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(0, 3240, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6dlk8"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(990, 3240, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_us4me"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(1980, 3240, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2urad"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(2970, 3240, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8vltd"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(3960, 3240, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_heqge"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(0, 3780, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sfgjo"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(990, 3780, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5nyua"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(1980, 3780, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6cf34"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(2970, 3780, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dy1dv"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(3960, 3780, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_60b23"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(0, 4320, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8arsb"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(990, 4320, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_amgd5"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(1980, 4320, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpm0b"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(2970, 4320, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3hc2l"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(3960, 4320, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n78u7"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(0, 4860, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8oatl"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(990, 4860, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qtnkc"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(1980, 4860, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_go5eh"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(2970, 4860, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_op3ro"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(3960, 4860, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a1kb2"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(0, 5400, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_js0sf"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(990, 5400, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lg30y"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(1980, 5400, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_py8kt"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(2970, 5400, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8d7ea"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(3960, 5400, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uio2r"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(0, 5940, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3s828"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(990, 5940, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nbp3k"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(1980, 5940, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m6w7v"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(2970, 5940, 990, 540)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o4018"]
-atlas = ExtResource("2_njhew")
+atlas = ExtResource("1_8hfo1")
 region = Rect2(3960, 5940, 990, 540)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_odh13"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_jp4ck"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -437,102 +436,104 @@ animations = [{
 "speed": 16.0
 }]
 
-[sub_resource type="GDScript" id="GDScript_xd2lw"]
-script/source = "extends Button
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
-
-[node name="optionMenu" type="Control"]
+[node name="MusicOptions" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 2.0
-offset_right = 2.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_73xgr")
+anchors_preset = 0
+theme = ExtResource("1_1art0")
+script = ExtResource("2_o37h1")
 
 [node name="BG_Options" type="AnimatedSprite2D" parent="."]
 position = Vector2(640, 360)
 scale = Vector2(1.29293, 1.33333)
-sprite_frames = SubResource("SpriteFrames_odh13")
+sprite_frames = SubResource("SpriteFrames_jp4ck")
 autoplay = "default"
-frame_progress = 0.746915
+frame_progress = 0.038208
+
+[node name="PanelSFX" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 320.0
+offset_right = 1063.0
+offset_bottom = 505.0
+
+[node name="LabelSFX" type="RichTextLabel" parent="PanelSFX"]
+layout_mode = 2
+offset_left = 72.0001
+offset_top = 23.0
+offset_right = 260.0
+offset_bottom = 59.0
+scale = Vector2(1.3, 1.3)
+bbcode_enabled = true
+text = "SOUND EFFECTS"
+fit_content = true
+scroll_active = false
+
+[node name="CheckButtonSFX" type="CheckButton" parent="PanelSFX"]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 86.0
+offset_right = 177.0
+offset_bottom = 113.0
+scale = Vector2(2.7, 2.7)
+
+[node name="PanelMusic" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 320.0
+offset_right = 618.0
+offset_bottom = 505.0
+
+[node name="CheckButtonMusic" type="CheckButton" parent="PanelMusic"]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 83.0
+offset_right = 175.0
+offset_bottom = 110.0
+scale = Vector2(2.7, 2.7)
+
+[node name="LabelMusic" type="RichTextLabel" parent="PanelMusic"]
+layout_mode = 2
+offset_left = 142.0
+offset_top = 23.0
+offset_right = 215.0
+offset_bottom = 63.0
+scale = Vector2(1.3, 1.3)
+bbcode_enabled = true
+text = "Music"
+fit_content = true
+scroll_active = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.22
-anchor_top = 0.675
-anchor_right = 0.718
-anchor_bottom = 0.953
-offset_left = 98.4
-offset_top = -97.0
-offset_right = 60.96
-offset_bottom = -48.16
-grow_horizontal = 2
-grow_vertical = 0
+layout_mode = 0
+offset_left = 380.0
+offset_top = 524.0
+offset_right = 980.0
+offset_bottom = 680.0
 scale = Vector2(0.89, 0.89)
-theme = ExtResource("3_3g5ko")
+theme = ExtResource("1_1art0")
 theme_override_constants/separation = 30
 
-[node name="MusicButton" type="Button" parent="VBoxContainer"]
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_d38t0")
+theme_override_fonts/font = ExtResource("4_gbh4a")
 theme_override_font_sizes/font_size = 50
-text = "Music"
-
-[node name="OptionButton" type="OptionButton" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("4_d38t0")
-theme_override_font_sizes/font_size = 50
-alignment = 1
-selected = 0
-item_count = 4
-popup/item_0/text = "text display speed"
-popup/item_0/id = 3
-popup/item_1/text = "Vitesse 1"
-popup/item_1/id = 1
-popup/item_2/text = "Vitesse 2"
-popup/item_2/id = 2
-popup/item_3/text = "Vitesse 3"
-popup/item_3/id = 2
+text = "return to options"
 
 [node name="ReturnButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("4_d38t0")
+theme_override_fonts/font = ExtResource("4_gbh4a")
 theme_override_font_sizes/font_size = 50
 text = "back to menu"
-script = SubResource("GDScript_xd2lw")
 
-[node name="hover" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_bdn42")
-
-[node name="Options-title" type="Sprite2D" parent="."]
+[node name="Music-sfx-title" type="Sprite2D" parent="."]
 position = Vector2(640, 235)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("6_s6v64")
+texture = ExtResource("5_88wva")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_nr0mr")
+stream = ExtResource("6_e0my8")
 autoplay = true
-script = ExtResource("8_pe4ql")
+script = ExtResource("7_y0txf")
 
-[connection signal="mouse_entered" from="VBoxContainer/MusicButton" to="." method="_on_music_button_mouse_entered"]
-[connection signal="pressed" from="VBoxContainer/MusicButton" to="." method="_on_music_button_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/OptionButton" to="." method="_on_option_button_mouse_entered"]
-[connection signal="pressed" from="VBoxContainer/OptionButton" to="." method="_on_option_button_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/ReturnButton" to="." method="_on_return_button_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]

@@ -39,7 +39,7 @@ func _ready():
 func beginequipment():
 		#equip()
 		
-		print("current equipment : "+str(equipmentlist2))
+		print("inventaire : "+str(inventoryvar))
 		call_deferred("beginequipment2")
 		
 		#(i)

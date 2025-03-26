@@ -1,7 +1,11 @@
-[gd_scene load_steps=71 format=3 uid="uid://gf263c1mvevi"]
+[gd_scene load_steps=71 format=3 uid="uid://baeoxxh7yavo4"]
 
 [ext_resource type="Script" path="res://option_menu.gd" id="1_73xgr"]
+<<<<<<< HEAD
+[ext_resource type="Texture2D" uid="uid://bjap6ctqxnnr0" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Flam/Faceset.png" id="2_d6whm"]
+=======
 [ext_resource type="Texture2D" uid="uid://b8d0gonr63hsr" path="res://forest-test-new-ezgif.com-gif-to-sprite-converter.png" id="2_njhew"]
+>>>>>>> 322fe55cda6a190495534d69b61d55c68e734015
 [ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="3_3g5ko"]
 [ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="4_d38t0"]
 [ext_resource type="AudioStream" uid="uid://06hvre0qs2fm" path="res://audio/menu/Menu2.wav" id="5_bdn42"]

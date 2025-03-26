@@ -1,7 +1,7 @@
 extends Control
 
 func _on_music_button_pressed() -> void:
-	print("en cours de céation")
+	get_tree().change_scene_to_file("res://music_options.tscn")
 	
 func _on_music_button_mouse_entered() -> void:
 	$hover.play()
