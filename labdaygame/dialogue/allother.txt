@@ -1,11 +1,19 @@
-old bow
+Old bow
 An old wooden bow
-iron helmet
+Iron helmet
 A rusty iron helmet.
-life    
-speed    
-shotspeed    
-range    
-strengh    
-defense   
-cadence   
+Life    
+Speed    
+Shotspeed    
+Range    
+Strengh    
+Defense   
+Cadence   
+Iron armor
+Heavy iron armor offering excellent protection at the expense of mobility.
+Iron Boots
+Heavy iron boots that provide strong protection but limit agility.
+Iron Ring
+A sturdy iron ring that offers minimal defense but may hold hidden enchantments.
+Iron Amulet
+A solid iron amulet that grants slight protection and may carry a subtle magical aura.

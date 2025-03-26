@@ -12,13 +12,15 @@ config_version=5
 
 config/name="labdaygame/debug_version(back-up)"
 run/main_scene="res://main_menu.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 run/max_fps=60
 config/icon="res://icon.png"
 
 [autoload]
 
 Gamemanager="*res://gamemanager.gd"
+Save="*res://system/save/save.gd"
+SoundManager="*res://SoundManager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [display]
