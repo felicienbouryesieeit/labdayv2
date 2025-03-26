@@ -8275,7 +8275,11 @@ position = Vector2(-100, -131)
 curve = SubResource("Curve2D_6dhpb")
 
 [node name="CharacterBody2D" parent="Tilemap" index="6" instance=ExtResource("7_h1qda")]
+<<<<<<< HEAD
 position = Vector2(804, 1379)
+=======
+position = Vector2(845, 1055)
+>>>>>>> 45fd99331c28a23a4881378495f1c2627d89ace4
 
 [node name="Objectspawner" parent="Tilemap" index="7" instance=ExtResource("8_u5hr1")]
 
