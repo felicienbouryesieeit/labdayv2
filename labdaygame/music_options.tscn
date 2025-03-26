@@ -1,10 +1,12 @@
-[gd_scene load_steps=67 format=3 uid="uid://dl44ge0dq1fgu"]
+[gd_scene load_steps=69 format=3 uid="uid://dl44ge0dq1fgu"]
 
 [ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="1_1art0"]
 [ext_resource type="Texture2D" uid="uid://b8d0gonr63hsr" path="res://forest-test-new-ezgif.com-gif-to-sprite-converter.png" id="1_8hfo1"]
 [ext_resource type="Script" path="res://music_options.gd" id="2_o37h1"]
 [ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="4_gbh4a"]
 [ext_resource type="Texture2D" uid="uid://dsnnbkalcrov0" path="res://music-sfx-26-03-2025.png" id="5_88wva"]
+[ext_resource type="AudioStream" uid="uid://o5s0j377cdlw" path="res://Ninja Adventure - Asset Pack/Musics/6 - Story.ogg" id="6_e0my8"]
+[ext_resource type="Script" path="res://system/music.gd" id="7_y0txf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_naeo7"]
 atlas = ExtResource("1_8hfo1")
@@ -445,62 +447,59 @@ position = Vector2(640, 360)
 scale = Vector2(1.29293, 1.33333)
 sprite_frames = SubResource("SpriteFrames_jp4ck")
 autoplay = "default"
-frame_progress = 0.955882
+frame_progress = 0.038208
 
-[node name="Panel" type="Panel" parent="."]
+[node name="PanelSFX" type="Panel" parent="."]
+offset_left = 680.0
+offset_top = 320.0
+offset_right = 1063.0
+offset_bottom = 505.0
+
+[node name="LabelSFX" type="RichTextLabel" parent="PanelSFX"]
+layout_mode = 2
+offset_left = 72.0001
+offset_top = 23.0
+offset_right = 260.0
+offset_bottom = 59.0
+scale = Vector2(1.3, 1.3)
+bbcode_enabled = true
+text = "SOUND EFFECTS"
+fit_content = true
+scroll_active = false
+
+[node name="CheckButtonSFX" type="CheckButton" parent="PanelSFX"]
 layout_mode = 0
-offset_left = 170.0
-offset_top = 334.0
-offset_right = 1126.0
-offset_bottom = 485.0
+offset_left = 134.0
+offset_top = 86.0
+offset_right = 177.0
+offset_bottom = 113.0
+scale = Vector2(2.7, 2.7)
 
-[node name="LabelMusic" type="RichTextLabel" parent="Panel"]
+[node name="PanelMusic" type="Panel" parent="."]
+offset_left = 235.0
+offset_top = 320.0
+offset_right = 618.0
+offset_bottom = 505.0
+
+[node name="CheckButtonMusic" type="CheckButton" parent="PanelMusic"]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 83.0
+offset_right = 175.0
+offset_bottom = 110.0
+scale = Vector2(2.7, 2.7)
+
+[node name="LabelMusic" type="RichTextLabel" parent="PanelMusic"]
 layout_mode = 2
-offset_left = 125.0
-offset_top = 26.0
-offset_right = 299.0
-offset_bottom = 66.0
+offset_left = 142.0
+offset_top = 23.0
+offset_right = 215.0
+offset_bottom = 63.0
 scale = Vector2(1.3, 1.3)
 bbcode_enabled = true
-text = "Music volume"
+text = "Music"
 fit_content = true
 scroll_active = false
-
-[node name="MusicVolume" type="HScrollBar" parent="Panel"]
-layout_mode = 2
-offset_left = 61.0
-offset_top = 73.0
-offset_right = 141.0
-offset_bottom = 82.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(4.5, 4.5)
-size_flags_vertical = 6
-size_flags_stretch_ratio = 0.0
-rounded = true
-
-[node name="LabelSFX" type="RichTextLabel" parent="Panel"]
-layout_mode = 2
-offset_left = 608.0
-offset_top = 26.0
-offset_right = 756.0
-offset_bottom = 62.0
-scale = Vector2(1.3, 1.3)
-bbcode_enabled = true
-text = "SFX volume"
-fit_content = true
-scroll_active = false
-
-[node name="SfxVolume" type="HScrollBar" parent="Panel"]
-layout_mode = 2
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 521.0
-offset_top = 75.0
-offset_right = -355.0
-offset_bottom = -67.0
-scale = Vector2(4.5, 4.5)
-rounded = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 380.0
@@ -527,6 +526,11 @@ text = "back to menu"
 [node name="Music-sfx-title" type="Sprite2D" parent="."]
 position = Vector2(640, 235)
 texture = ExtResource("5_88wva")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_e0my8")
+autoplay = true
+script = ExtResource("7_y0txf")
 
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://baeoxxh7yavo4"]
+[gd_scene load_steps=71 format=3 uid="uid://baeoxxh7yavo4"]
 
 [ext_resource type="Script" path="res://option_menu.gd" id="1_73xgr"]
 [ext_resource type="Texture2D" uid="uid://b8d0gonr63hsr" path="res://forest-test-new-ezgif.com-gif-to-sprite-converter.png" id="2_njhew"]
@@ -6,6 +6,8 @@
 [ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="4_d38t0"]
 [ext_resource type="AudioStream" uid="uid://06hvre0qs2fm" path="res://audio/menu/Menu2.wav" id="5_bdn42"]
 [ext_resource type="Texture2D" uid="uid://bqh6meov36vy5" path="res://options-25-03-2025.png" id="6_s6v64"]
+[ext_resource type="AudioStream" uid="uid://o5s0j377cdlw" path="res://Ninja Adventure - Asset Pack/Musics/6 - Story.ogg" id="7_nr0mr"]
+[ext_resource type="Script" path="res://system/music.gd" id="8_pe4ql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_naeo7"]
 atlas = ExtResource("2_njhew")
@@ -465,7 +467,7 @@ position = Vector2(640, 360)
 scale = Vector2(1.29293, 1.33333)
 sprite_frames = SubResource("SpriteFrames_odh13")
 autoplay = "default"
-frame_progress = 0.897122
+frame_progress = 0.746915
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -522,6 +524,11 @@ stream = ExtResource("5_bdn42")
 position = Vector2(640, 235)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_s6v64")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_nr0mr")
+autoplay = true
+script = ExtResource("8_pe4ql")
 
 [connection signal="mouse_entered" from="VBoxContainer/MusicButton" to="." method="_on_music_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/MusicButton" to="." method="_on_music_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=200 format=3 uid="uid://vtf6k5og52mj"]
+[gd_scene load_steps=202 format=3 uid="uid://vtf6k5og52mj"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_rmxqo"]
 [ext_resource type="Texture2D" uid="uid://cplqg60yqdv2c" path="res://pixelartgifmini-moss-ezgif.com-gif-to-sprite-converter.png" id="2_o4m0l"]
@@ -6,6 +6,8 @@
 [ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="3_u6egg"]
 [ext_resource type="AudioStream" uid="uid://06hvre0qs2fm" path="res://audio/menu/Menu2.wav" id="5_glbon"]
 [ext_resource type="Texture2D" uid="uid://cr4etedrputfv" path="res://theme/Princess-quest-title.png" id="6_cma4s"]
+[ext_resource type="AudioStream" uid="uid://o5s0j377cdlw" path="res://Ninja Adventure - Asset Pack/Musics/6 - Story.ogg" id="7_uqxmg"]
+[ext_resource type="Script" path="res://system/music.gd" id="8_37chr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1f0t1"]
 atlas = ExtResource("2_o4m0l")
@@ -1375,7 +1377,7 @@ scale = Vector2(2.36995, 2.36577)
 sprite_frames = SubResource("SpriteFrames_r2lw0")
 animation = &"title_screen"
 autoplay = "title_screen"
-frame_progress = 0.141934
+frame_progress = 0.572275
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -1410,10 +1412,15 @@ text = "exit"
 stream = ExtResource("5_glbon")
 bus = &"Sound"
 
-[node name="(2)princess-quest-25-03-2025" type="Sprite2D" parent="."]
+[node name="Princess-quest-title" type="Sprite2D" parent="."]
 position = Vector2(640, 235)
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("6_cma4s")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_uqxmg")
+autoplay = true
+script = ExtResource("8_37chr")
 
 [connection signal="mouse_entered" from="VBoxContainer" to="." method="_on_v_box_container_mouse_entered"]
 [connection signal="mouse_entered" from="VBoxContainer/Button2" to="." method="_on_button_2_mouse_entered"]
