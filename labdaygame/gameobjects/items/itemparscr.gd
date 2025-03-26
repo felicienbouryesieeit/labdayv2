@@ -28,11 +28,12 @@ func beginitem():
 	
 func beginitem2(itemholdervar2 : itemholderclass):
 	itemholdervar=itemholdervar2
+	itemholdervar.itemscriptvar=self
 	itemholdervar.iconpath=imagepath
 	call_deferred("begindescription")
 	
 func begindescription():
-	
+	print("king von")
 	itemholdervar.itemdescription=statdescription()+get_txt_line(descriptionindex)
 	itemholdervar.itemname=get_txt_line(nameindex)#itemname
 	

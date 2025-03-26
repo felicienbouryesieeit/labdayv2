@@ -14,6 +14,8 @@ var invisibleprojectile : bool = false
 
 var charactermovementvar : charactermovementclass
 
+var isanimated : bool = true
+
 @export var projectile_directory = "res://gameobjects/characters/characterwithlife/projectiles/playerprojectile/playerattackbase/playerattackbaseobject.tscn"
 
 var projectile = load(projectile_directory)
@@ -23,6 +25,8 @@ var projectile = load(projectile_directory)
 @export var shotspeedmax : float = 100
 @export var shotaccelerationmax : float = 100
 @export var strengh : float = 1
+
+
 
 # Called when the node enters the scene tree for the first time.
 
@@ -253,4 +257,12 @@ func attackserie() ->void:
 		timerattack.timeout.connect(attackserie)
 	
 	
+
+func oninteract(isopened : bool )->void:
+	pass
+
+func onhaveinteracted()->void:
+	pass
 	
+func getitemtext(isopened : bool )->String:
+	return ""

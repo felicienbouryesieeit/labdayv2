@@ -161,12 +161,13 @@ func _physics_process(delta: float) -> void:
 		ismovinganimdirection=true
 	
 		
-	
-	animatedspritevar.update_sprite(ismovinganim)
+	if attackbehaviorvar.isanimated==true:
+		animatedspritevar.update_sprite(ismovinganim)
 	#velocity.length()>0)
 	
 	if ismovinganimdirection :
-		animatedspritevar.update_sprite_direction(animation_direction2)
+		if attackbehaviorvar.isanimated==true:
+			animatedspritevar.update_sprite_direction(animation_direction2)
 	direction = direction.normalized()
 	#print(direction)
 	#animated_sprite_2d.play(animation_state+animation_direction)

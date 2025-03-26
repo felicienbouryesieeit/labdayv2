@@ -11,6 +11,8 @@ var strenghbonus : int = 0;
 var defensebonus : int =0;
 var candencebonus : float =0;
 
+var equipmenttype : int = 0
+
 
 func setstats(lifebonus2 : int,speedbonus2 : float,shotspeedbonus2 : float,rangebonus2 : float,strenghbonus2 : int,defensebonus2 : int):
 	lifebonus=lifebonus2
@@ -34,6 +36,7 @@ func _ready() -> void:
 	
 	
 func setequipmenttype(equipmentint : int)	-> void:
+	equipmenttype=equipmentint
 	var equipmentlistsize : int = 6
 	
 	

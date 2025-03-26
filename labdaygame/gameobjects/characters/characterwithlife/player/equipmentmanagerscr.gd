@@ -2,6 +2,7 @@ extends Node
 class_name equipmentmanagervar
 
 var charactermovementvar : charactermovementclass
+@export var playerattackbehaviorvar : playerattackbehavior 
 """
 var mon_script = preload("res://gameobjects/items/itemparscr.gd")
 #var equipmentarray = Array[equipmentclass]
@@ -19,7 +20,7 @@ var mon_script = preload("res://gameobjects/items/itemparscr.gd")
 
 
 func _ready():
-	
+	Gamemanager.equipmentmanager=self
 	pass
 	#0 arme
 	#1 casque
@@ -37,17 +38,16 @@ func _ready():
 	
 func beginequipment():
 		#equip()
+		
 		print("current equipment : "+str(equipmentlist2))
 		call_deferred("beginequipment2")
 		
 		#(i)
 func beginequipment2():
-	#for i in range(equipmentlist2.size()):
-	#	Gamemanager.equipmentlist.append(equipmentlist2[i])
-	#Gamemanager.inventoryvar=inventoryvar;
-	#Gamemanager.inventoryvar.setinventory()
-	#Gamemanager.inventoryvar.itemlist.item_count=inventoryvar.size();
-	
+	playerattackbehaviorvar.resetplayerstats()
+	#Gamemanager.savesystem.load_game()
+	#Gamemanager.savesystem.inventoryvar=inventoryvar
+	#Gamemanager.savesystem.save_game()
 	spawnequipment()
 func spawnequipment():
 	for i in range(inventoryvar.size()):
@@ -68,6 +68,7 @@ func spawnequipment():
 			
 		var item = load(item_directory)
 		var item2 = item.instantiate()
+		item2.itemindex=i
 		item2.item_directory=my_string#Gamemanager.equipmentlist[i]
 		item2.isequipped=isequipped
 		Gamemanager.objectspawnervar.spawn.call_deferred(item2)

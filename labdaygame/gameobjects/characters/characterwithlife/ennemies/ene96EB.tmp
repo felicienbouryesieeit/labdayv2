@@ -19,11 +19,7 @@ script = ExtResource("2_cxrut")
 script = ExtResource("2_oskpb")
 maxlife = 5
 
-[node name="Interactobject" parent="." index="11" node_paths=PackedStringArray("timervar", "charactervar") instance=ExtResource("5_xu38v")]
+[node name="Interactobject" parent="." index="11" node_paths=PackedStringArray("charactervar") instance=ExtResource("5_xu38v")]
 scale = Vector2(0.809524, 0.8125)
 script = ExtResource("5_ecij0")
-activateonce = 0
-timervar = NodePath("../interacttimer")
 charactervar = NodePath("..")
-
-[node name="interacttimer" type="Timer" parent="." index="12"]

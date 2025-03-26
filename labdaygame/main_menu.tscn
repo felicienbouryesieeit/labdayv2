@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://vtf6k5og52mj"]
 
-[ext_resource type="Script" uid="uid://wl7m5k2pveqi" path="res://main_menu.gd" id="1_rmxqo"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_rmxqo"]
 [ext_resource type="Texture2D" uid="uid://bjap6ctqxnnr0" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Flam/Faceset.png" id="2_sllh8"]
 [ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="3_jix8l"]
 [ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="3_u6egg"]

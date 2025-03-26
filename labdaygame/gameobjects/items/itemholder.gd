@@ -1,12 +1,15 @@
 extends Node
 class_name itemholderclass
 
+var itemscriptvar : itemclass2
 var item_directory = ""
 var isequipped : bool
 var iconimage : Texture2D
 var iconpath : String = "res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Money"
 var itemname : String = "item nom"
 var itemdescription : String = "c est un item"
+var item
+var itemindex : int
 
 func _ready() -> void:
 	
@@ -44,8 +47,8 @@ func additemscript() -> void:
 	
 
 
-
-
+func destroyitem() ->void:
+	queue_free()
 
 
 

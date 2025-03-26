@@ -4,6 +4,9 @@ var life : int = 5
 var canbeattacked : bool = true
 var defense : int = 0;
 
+
+
+
 	
 #	charactervar.queue_free()
 
