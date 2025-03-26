@@ -9,6 +9,8 @@ var my_string_list: Array = ["apple", "banana", "cherry"]
 var activateonceindex : Array = []
 var inventoryvar : Array = []
 
+@export var inventoryvar2 : Array[String]
+
 func save_game():
 	var save_data = {
 		"my_int": my_int,
@@ -55,7 +57,7 @@ func load_game():
 
 func _ready():
 	Gamemanager.savesystem=self
-	erase_save()
+	#erase_save()
 	load_game()
 	call_deferred("_ready2")
 	
@@ -66,7 +68,16 @@ func _ready():
 
 func _ready2() -> void:
 	#Gamemanager.equipmentmanager.inventoryvar=["oui"]
+	
 	print("oui"+str(inventoryvar))
+	load_game()
+	
+	if inventoryvar.size()==0:
+		inventoryvar=inventoryvar2
+	
+	save_game()
+	
+	#inventoryvar=inventoryvar2
 	#Gamemanager.refreshinventory()
 
 func erase_save():
@@ -78,3 +89,4 @@ func erase_save():
 			print("Erreur lors de la suppression de la sauvegarde.")
 	else:
 		print("Aucune sauvegarde à supprimer.")
+	

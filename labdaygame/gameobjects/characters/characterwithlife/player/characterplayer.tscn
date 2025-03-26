@@ -38,3 +38,4 @@ inventoryvar = Array[String](["1res://gameobjects/items/equipement/0weapons/weap
 
 [node name="Savesystem" type="Node" parent="." index="13"]
 script = ExtResource("6_rdrrf")
+inventoryvar2 = Array[String](["1res://gameobjects/items/equipement/0weapons/weapontest.gd", "1res://gameobjects/items/equipement/1helmet/ironhelmet.gd", "0res://gameobjects/items/equipement/1helmet/ironhelmet.gd"])

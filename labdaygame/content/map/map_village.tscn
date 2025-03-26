@@ -8275,7 +8275,7 @@ position = Vector2(-100, -131)
 curve = SubResource("Curve2D_6dhpb")
 
 [node name="CharacterBody2D" parent="Tilemap" index="6" instance=ExtResource("7_h1qda")]
-position = Vector2(-1311, 1262)
+position = Vector2(729, 1430)
 
 [node name="Objectspawner" parent="Tilemap" index="7" instance=ExtResource("8_u5hr1")]
 
@@ -8290,6 +8290,7 @@ position = Vector2(868, 1373)
 
 [node name="CharacterBody2D5" parent="Tilemap" index="11" instance=ExtResource("11_p74ad")]
 position = Vector2(847, 1431)
+itempath = "res://gameobjects/items/equipement/0weapons/weapontest.gd"
 
 [node name="EnvironmentShape" type="CollisionShape2D" parent="EnvironmentArea" index="0"]
 visible = false

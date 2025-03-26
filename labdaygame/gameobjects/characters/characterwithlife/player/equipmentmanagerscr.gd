@@ -50,10 +50,11 @@ func beginequipment2():
 	#Gamemanager.savesystem.save_game()
 	spawnequipment()
 func spawnequipment():
-	for i in range(inventoryvar.size()):
+	
+	for i in range(Gamemanager.savesystem.inventoryvar.size()):
 		#if Gamemanager.equipmentlist[i]!="":
 		#	pass
-		var my_string = inventoryvar[i]
+		var my_string = Gamemanager.savesystem.inventoryvar[i]
 		print("grunt bis"+my_string[0])	#
 		var isequipped = (my_string[0]=="1") #
 		

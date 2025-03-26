@@ -31,10 +31,10 @@ func setbehavior() -> void:
 		savesystem.load_game()
 		#savesystem.my_int_list.append(0)	
 		#savesystem.inventoryvar.append("miaou")
-		print("bougibouga"+str(savesystem.inventoryvar.size()))
+		print("bougibouga"+str(savesystem.inventoryvar))
 		#savesystem.save_game()
 		#Gamemanager.savesystem.inventoryvar=Gamemanager.equipmentmanager.inventoryvar
-		Gamemanager.savesystem.save_game()
+		#Gamemanager.savesystem.save_game()
 		if interactvar!=null:
 			interactvar.oninteract()
 			#print("arcane : "+str(interactvar)) #+str(interactvar)

@@ -69,14 +69,15 @@ func _on_item_equipped_pressed() -> void:
 				
 				if Gamemanager.equipmentlistingame[currentequipment.equipmenttype].itemholdervar.itemindex!=selected_item:
 					print("bomboclaat bis"+str(Gamemanager.equipmentlistingame[currentequipment.equipmenttype].itemholdervar.itemindex))
-					Gamemanager.equipmentmanager.inventoryvar[Gamemanager.equipmentlistingame[currentequipment.equipmenttype].itemholdervar.itemindex][0]="0"
+					Gamemanager.savesystem.inventoryvar[Gamemanager.equipmentlistingame[currentequipment.equipmenttype].itemholdervar.itemindex][0]="0"
 			print("bomboclaat"+str(currentequipment.equipmenttype))
 			#str(Gamemanager.inventoryvar[selected_item])
-			if Gamemanager.equipmentmanager.inventoryvar[selected_item][0]=="0":
-				Gamemanager.equipmentmanager.inventoryvar[selected_item][0]="1"
+			if Gamemanager.savesystem.inventoryvar[selected_item][0]=="0":
+				Gamemanager.savesystem.inventoryvar[selected_item][0]="1"
 			else :
-				Gamemanager.equipmentmanager.inventoryvar[selected_item][0]="0"
+				Gamemanager.savesystem.inventoryvar[selected_item][0]="0"
 			close_inventoryvoid()
+			Gamemanager.savesystem.save_game()
 			Gamemanager.refreshinventory()
 		
 		

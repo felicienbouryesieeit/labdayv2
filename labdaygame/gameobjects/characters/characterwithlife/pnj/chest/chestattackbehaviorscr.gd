@@ -10,9 +10,10 @@ func oninteract(isopened : bool )->void:
 				
 				#charactermovementvar.sprite_2d[0].frame_coords.x=1
 			#Gamemanager.savesystem.load_game()
-			Gamemanager.equipmentmanager.inventoryvar.append("0"+chestcharacter.itempath)
+			#Gamemanager.equipmentmanager.inventoryvar.append("0"+chestcharacter.itempath)
 			#Gamemanager.savesystem.save_game()
-			#Gamemanager.savesystem.inventoryvar=Gamemanager.equipmentmanager.inventoryvar
+			Gamemanager.savesystem.inventoryvar.append("0"+chestcharacter.itempath)
+			Gamemanager.savesystem.save_game()
 			#
 			Gamemanager.refreshinventory()
 		
