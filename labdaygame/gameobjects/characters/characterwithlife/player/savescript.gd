@@ -57,7 +57,7 @@ func load_game():
 
 func _ready():
 	Gamemanager.savesystem=self
-	#erase_save()
+	erase_save()
 	load_game()
 	call_deferred("_ready2")
 	
