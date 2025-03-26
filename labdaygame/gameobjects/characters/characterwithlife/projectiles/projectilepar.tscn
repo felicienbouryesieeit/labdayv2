@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bte074kx8p7ud"]
 
-[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/projectiles/damageparscr.gd" id="1_fg6ox"]
+[ext_resource type="Script" uid="uid://wupj0f5i24gp" path="res://gameobjects/characters/characterwithlife/projectiles/damageparscr.gd" id="1_fg6ox"]
 [ext_resource type="Texture2D" uid="uid://bis18gdjknbv6" path="res://Ninja Adventure - Asset Pack/FX/Projectile/Arrow.png" id="2_egmn2"]
-[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/projectiles/projectilebehaviorpar.gd" id="3_a47d3"]
+[ext_resource type="Script" uid="uid://bw01x1d6hnyla" path="res://gameobjects/characters/characterwithlife/projectiles/projectilebehaviorpar.gd" id="3_a47d3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gumxg"]
 size = Vector2(15, 6)

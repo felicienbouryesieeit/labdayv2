@@ -2,11 +2,11 @@
 
 [ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="1_1art0"]
 [ext_resource type="Texture2D" uid="uid://b8d0gonr63hsr" path="res://forest-test-new-ezgif.com-gif-to-sprite-converter.png" id="1_8hfo1"]
-[ext_resource type="Script" path="res://music_options.gd" id="2_o37h1"]
+[ext_resource type="Script" uid="uid://c831m0c18n7bj" path="res://music_options.gd" id="2_o37h1"]
 [ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="4_gbh4a"]
 [ext_resource type="Texture2D" uid="uid://dsnnbkalcrov0" path="res://music-sfx-26-03-2025.png" id="5_88wva"]
 [ext_resource type="AudioStream" uid="uid://o5s0j377cdlw" path="res://Ninja Adventure - Asset Pack/Musics/6 - Story.ogg" id="6_e0my8"]
-[ext_resource type="Script" path="res://system/music.gd" id="7_y0txf"]
+[ext_resource type="Script" uid="uid://d25mlq8cysnuk" path="res://system/music.gd" id="7_y0txf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_naeo7"]
 atlas = ExtResource("1_8hfo1")

@@ -1,10 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://c02qfp6h5ud5a"]
 
 [ext_resource type="Texture2D" uid="uid://btryd5g3oajow" path="res://content/character/Shadow.png" id="1_obr11"]
-[ext_resource type="Script" uid="uid://dvpanxsgy8ep3" path="res://system/character/animal.gd" id="1_tw42a"]
+
+[sub_resource type="Resource" id="Resource_k3s4r"]
+metadata/__load_path__ = "res://system/character/animal.gd"
 
 [node name="Animal" type="Node2D"]
-script = ExtResource("1_tw42a")
+script = SubResource("Resource_k3s4r")
 
 [node name="Shadow" type="Sprite2D" parent="."]
 position = Vector2(0, 7)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0qeileseecxb"]
 
-[ext_resource type="Script" path="res://gameobjects/newteleporter/newteleporterscr.gd" id="1_qpfxi"]
+[ext_resource type="Script" uid="uid://dfgblbfxhqpci" path="res://gameobjects/newteleporter/newteleporterscr.gd" id="1_qpfxi"]
 [ext_resource type="Texture2D" uid="uid://b1gn7iacu8q0c" path="res://icon.png" id="2_nrm3v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ra05"]
