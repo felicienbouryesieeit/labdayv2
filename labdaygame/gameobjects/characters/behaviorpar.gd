@@ -8,7 +8,7 @@ var charactermovementvar : charactermovementclass
 @export var enemymovementint : int
 
 var timermovement: Timer
-
+var isplayer : bool = false
 
 
 
@@ -55,5 +55,10 @@ func spawnbaseprojectile() -> void :
 	
 	
 func oninteractvar(interactvar : interactclass) -> void : 
+	print("la chine 4 ")
+	pass
+
+
+func onexitinteractvar(interactvar : interactclass) -> void : 
 	print("la chine 4 ")
 	pass

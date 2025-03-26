@@ -1,6 +1,5 @@
-[gd_resource type="Theme" load_steps=53 format=3 uid="uid://dx4r0mviklhsx"]
+[gd_resource type="Theme" load_steps=54 format=3 uid="uid://dx4r0mviklhsx"]
 
-[ext_resource type="FontFile" uid="uid://bxm2dwu0cke1x" path="res://theme/font_normal.ttf" id="1_itlnu"]
 [ext_resource type="Texture2D" uid="uid://hidj6lx0rkkr" path="res://theme/theme_1/button_disabled.png" id="1_jdeyh"]
 [ext_resource type="Texture2D" uid="uid://caqf1ry8xi30l" path="res://theme/theme_1/button_normal.png" id="1_yswdg"]
 [ext_resource type="Texture2D" uid="uid://cglvwx3xsytvi" path="res://theme/theme_1/button_hover.png" id="2_ebkcy"]
@@ -21,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://c8k8yvxejwqy1" path="res://theme/theme_1/v_slidder_grabber_hover.png" id="13_7n17u"]
 [ext_resource type="Texture2D" uid="uid://g6d7n32878wy" path="res://theme/theme_1/nine_path_bg_2.png" id="13_jn0pb"]
 [ext_resource type="Texture2D" uid="uid://b6nfgwugugveh" path="res://theme/theme_1/v_slidder_grabber_disabled.png" id="14_gbgoh"]
+[ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="17_bd45c"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yqgdd"]
 texture = ExtResource("1_jdeyh")
@@ -43,12 +43,11 @@ expand_margin_right = 1.0
 expand_margin_bottom = 1.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_36yo4"]
-texture = ExtResource("1_yswdg")
-texture_margin_left = 5.0
-texture_margin_top = 3.0
+texture = ExtResource("5_xfqc4")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
 texture_margin_right = 5.0
-texture_margin_bottom = 3.0
-expand_margin_top = 1.0
+texture_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x3ac1"]
 texture = ExtResource("4_bke42")
@@ -56,6 +55,8 @@ texture_margin_left = 5.0
 texture_margin_top = 4.0
 texture_margin_right = 5.0
 texture_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6ti5v"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t5lg3"]
 texture = ExtResource("1_yswdg")
@@ -294,9 +295,25 @@ texture_margin_bottom = 4.0
 region_rect = Rect2(0, 0, 16, 16)
 
 [resource]
-default_font = ExtResource("1_itlnu")
-default_font_size = 9
+default_font = ExtResource("17_bd45c")
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
 Button/colors/font_pressed_color = Color(1, 0.678431, 0.333333, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
 Button/styles/disabled = SubResource("StyleBoxTexture_yqgdd")
 Button/styles/focus = SubResource("StyleBoxEmpty_osfks")
 Button/styles/hover = SubResource("StyleBoxTexture_ponhk")
@@ -306,6 +323,7 @@ CheckBox/icons/checked = ExtResource("5_rcq0d")
 CheckBox/icons/checked_disabled = ExtResource("6_w0x2h")
 CheckBox/icons/unchecked = ExtResource("6_ms6b0")
 CheckBox/icons/unchecked_disabled = ExtResource("8_nb74r")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_6ti5v")
 HScrollBar/styles/grabber = SubResource("StyleBoxTexture_t5lg3")
 HScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_k6m3r")
 HScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_lh8iq")
@@ -316,17 +334,21 @@ HSlider/icons/grabber_highlight = ExtResource("6_g12mc")
 HSlider/styles/grabber_area = SubResource("StyleBoxTexture_6l1ch")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_ukn1n")
 HSlider/styles/slider = SubResource("StyleBoxTexture_mba6n")
-ItemList/constants/h_separation = 8
+ItemList/constants/h_separation = 9
+ItemList/constants/v_separation = 5
 ItemList/styles/focus = SubResource("StyleBoxTexture_yhi8a")
 ItemList/styles/hovered = SubResource("StyleBoxTexture_1mukp")
 ItemList/styles/panel = SubResource("StyleBoxTexture_armq1")
 ItemList/styles/selected = SubResource("StyleBoxTexture_qvrij")
 ItemList/styles/selected_focus = SubResource("StyleBoxTexture_rtjil")
+Label/font_sizes/font_size = 12
+Label/fonts/font = ExtResource("17_bd45c")
 LineEdit/styles/focus = SubResource("StyleBoxTexture_qh8fu")
 LineEdit/styles/normal = SubResource("StyleBoxTexture_pefr2")
 Panel/styles/panel = SubResource("StyleBoxTexture_d63jr")
 ProgressBar/styles/background = SubResource("StyleBoxTexture_j7x53")
 ProgressBar/styles/fill = SubResource("StyleBoxTexture_6u3wi")
+RichTextLabel/font_sizes/normal_font_size = 35
 TextEdit/styles/focus = SubResource("StyleBoxTexture_so3vk")
 TextEdit/styles/normal = SubResource("StyleBoxTexture_vad1a")
 VScrollBar/styles/grabber = SubResource("StyleBoxTexture_wupf4")

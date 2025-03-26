@@ -4,6 +4,9 @@ var life : int = 5
 var canbeattacked : bool = true
 var defense : int = 0;
 
+
+
+
 	
 #	charactervar.queue_free()
 
@@ -43,6 +46,5 @@ func reaction_to_attack(damagevar : damageclass) -> void:
 	#print("projectile: " + str(damagevar.strengh))
 	if canbeattacked == true :
 		dealdamage(damagevar.strengh*(1/(1+(defense*0.1))))
-	if damagevar.spectral==false:
-		damagevar.queue_free()
+	damagevar.queue_free()
 	

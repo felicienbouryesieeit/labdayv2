@@ -6,6 +6,7 @@ var isnotattacking : bool
 @export var equipmentmanager : equipmentmanagervar
 var isinteracting : bool
 var interactvar : interactclass
+@export var savesystem : savesystemclass
 
 func setbehavior() -> void:
 	super.setbehavior()
@@ -27,6 +28,13 @@ func setbehavior() -> void:
 	#if interactvar!=null:
 		#print("la chine 6"+str(interactvar))
 	if isinteracting==true:
+		savesystem.load_game()
+		#savesystem.my_int_list.append(0)	
+		#savesystem.inventoryvar.append("miaou")
+		print("bougibouga"+str(savesystem.inventoryvar))
+		#savesystem.save_game()
+		#Gamemanager.savesystem.inventoryvar=Gamemanager.equipmentmanager.inventoryvar
+		#Gamemanager.savesystem.save_game()
 		if interactvar!=null:
 			interactvar.oninteract()
 			#print("arcane : "+str(interactvar)) #+str(interactvar)
@@ -43,6 +51,7 @@ func setbehavior() -> void:
 
 func _ready() -> void:
 	super._ready()
+	isplayer = true
 	#singleattack=true
 
 		
@@ -67,6 +76,7 @@ func beginbehavior() ->void:
 	
 	charactermovementvar.animation_direction2=Gamemanager.playerdirection
 	equipmentmanager.beginequipment()
+	beginplayer()
 	#print("zumb"+str(Gamemanager.charactermovementvar))
 
 
@@ -75,3 +85,12 @@ func oninteractvar(interactvar : interactclass) -> void :
 	super.oninteractvar(interactvar)
 	print("la chine 5 ")
 	self.interactvar=interactvar
+
+func onexitinteractvar(interactvar : interactclass) -> void : 
+	
+	super.onexitinteractvar(interactvar)
+	
+	self.interactvar=null
+
+func beginplayer() ->void:
+	pass

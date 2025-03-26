@@ -1,4 +1,6 @@
 extends "res://gameobjects/characters/characterwithlife/behaviorattackpar.gd"
+class_name playerattackbehavior
+
 var playershootdirection
 var playercanattack : bool
 var isnotattacking : bool
@@ -41,7 +43,6 @@ func timerattackvoid() -> void :
 func playerattackvoid() ->void :
 	
 	if Gamemanager.equipmentlistingame[0]!=null:
-		
 		print("nya")
 		Gamemanager.equipmentlistingame[0].onattack()
 		
@@ -57,17 +58,14 @@ func ondamage() ->void :
 
 
 func aftercooldowndamage() ->void:
-	
 	charactermovementvar.typeofcharactervar.canbeattacked=true
 	timercooldowndamagevar.timeout.disconnect(aftercooldowndamage)
 	
 func beginattackbehavior()->void :
 	super.beginattackbehavior()
-	decalage2 = Vector2(10,-5)
-	equipmentsetmaxlife(charactermovementvar.typeofcharactervar.maxlife)
-	#projectile_directory = "res://gameobjects/characters/characterwithlife/projectiles/projectileinfini.tscn"
-	charactermovementvar.behaviorvar.enemymovementint=1
-	spawnchildprojectile(0,0.1,0,0)
+	
+	resetplayerstats()
+	#equipmentsetmaxlife(charactermovementvar.typeofcharactervar.maxlife)
 	
 func equipmentsetmaxlife(maxlife : int)->void :
 	#print("franchise"+str())
@@ -80,3 +78,24 @@ func equipmentsetmaxlife(maxlife : int)->void :
 func equipmentaddmaxlife(maxlife : int)->void : 
 	equipmentsetmaxlife(charactermovementvar.typeofcharactervar.maxlife+(maxlife*4))
 	
+func resetplayerstats() ->void:
+	equipmentsetmaxlife(12)
+	charactermovementvar.movement_speed=150
+	range=0.5
+	cadence=0.7
+	shotspeedmax=100
+	shotaccelerationmax=100
+	strengh=1
+	'''
+		Gamemanager.playermovementvar.attackbehaviorvar.range+=(rangebonus*0.3)
+		
+		var baseshotspeed : float =(shotspeedbonus*30)
+		Gamemanager.playermovementvar.attackbehaviorvar.shotaccelerationmax+=(baseshotspeed)
+		Gamemanager.playermovementvar.attackbehaviorvar.shotspeedmax+=(baseshotspeed)
+		Gamemanager.playermovementvar.attackbehaviorvar.range=Gamemanager.playermovementvar.attackbehaviorvar.range*((1.0/((shotspeedbonus*0.15)+1)))
+		
+		Gamemanager.playermovementvar.attackbehaviorvar.strengh+=strenghbonus
+		Gamemanager.playermovementvar.typeofcharactervar.defense+=defensebonus
+		'''
+	print("toutou CHIEN")
+	pass

@@ -20,6 +20,8 @@ func _ready() -> void:
 func showtext(line : String,speaker : String,imagepath : String) -> void:
 	_dialogue.text =line
 	_speaker.text = speaker
+	#imagepath="res://Ninja Adventure - Asset Pack/Actor/Boss/GiantBamboo/Faceset.png"
+	print("juice : "+imagepath)
 	_image.texture=load(imagepath)
 func display_line(line : String, speaker : String =""):
 	_speaker.visible = (speaker !="")
@@ -29,9 +31,13 @@ func display_line(line : String, speaker : String =""):
 	_next.grab_focus()
 	
 func open():
+	if Gamemanager.playermovementvar!=null:
+		Gamemanager.playermovementvar.cantwalk=true
 	visible = true
 	
 func close():
+	if Gamemanager.playermovementvar!=null:
+		Gamemanager.playermovementvar.cantwalk=false
 	visible = false		
 
 

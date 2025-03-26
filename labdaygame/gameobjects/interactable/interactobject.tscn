@@ -15,3 +15,4 @@ position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_evwrg")
 
 [connection signal="body_entered" from="AreaPNJ" to="." method="_on_area_pnj_body_entered"]
+[connection signal="body_exited" from="AreaPNJ" to="." method="_on_area_pnj_body_exited"]

@@ -1,32 +1,60 @@
 extends "res://gameobjects/interactable/interactpar.gd"
+class_name interactablecharacter
 var isopened : bool = false;
-@export var npcindex : int = 0;
+var npcindex : int = 0;
 var alldialogsvar = "res://dialogue/alldialogs.txt"
 var allnamesvar = "res://dialogue/allnames.txt"
 var currentline=0;
 var beginningline=0;
 var endingline=0;
+var itemname : String = "";
+@export var activateonce=0;
+var activateonceindex: int =-1;
+@export var timervar : Timer;
+
+@export var charactervar : charactermovementclass
+
 func oninteract() ->void :
-	super.oninteract()
+		super.oninteract()
 	
 	
+		print("coffre")
+		if activateonce!=2:
+			charactervar.attackbehaviorvar.oninteract(isopened)
+		#itemname = "pardon"
+		
+		timervar.one_shot=true
+		timervar.start(0.1)  # Démarre le Timer pour 2 secondes
+		timervar.timeout.connect(oninteract2)
+		
+		
+func oninteract2() ->void :
+	itemname = charactervar.attackbehaviorvar.getitemtext(isopened)
 	if isopened == false : 
-		currentline=0
-		isopened=true
-		
-		
-		setcurrentdialog()	
-		setcurrentline()
-		Gamemanager.dialogueboxvar.open()
-		
-	else:
-		if currentline!=(endingline-beginningline-2) :
-			currentline+=1
-			setcurrentline()
-		else:
-			isopened=false
-			Gamemanager.dialogueboxvar.close()
+			if activateonce!=2:
+	
+				if activateonce==1:
+					Gamemanager.savesystem.load_game()
+					Gamemanager.savesystem.activateonceindex.append(activateonceindex)
+					print("activate once index :"+str(activateonceindex)+" lin gan gou"+str(Gamemanager.savesystem.activateonceindex.size()))
+					activateoncefunc()
+					Gamemanager.savesystem.save_game()
+				currentline=0
+				isopened=true
+				
+				
+				setcurrentdialog()	
+				setcurrentline()
+				Gamemanager.dialogueboxvar.open()
 			
+	else:
+			if currentline!=(endingline-beginningline-2) :
+				currentline+=1
+				setcurrentline()
+			else:
+				isopened=false
+				Gamemanager.dialogueboxvar.close()
+	
 func setcurrentline() -> void:
 	var file = FileAccess.open(alldialogsvar,FileAccess.READ)
 	var filetext = null
@@ -36,7 +64,7 @@ func setcurrentline() -> void:
 		
 		filetext =file.get_line()
 		if i==currentline+beginningline+1:
-			filetext2=filetext
+			filetext2=filetext+" "+itemname
 		print("night in the wood"+filetext)
 		i+=1		
 	file.close()
@@ -45,7 +73,7 @@ func setcurrentline() -> void:
 	
 	var currentlinestring = "doudou : "+str(filetext2) + " " + str(currentline)
 	
-	Gamemanager.dialogueboxvar.showtext(nameanddesc[0],setname(nameanddesc[1])[0],setname(nameanddesc[1])[1])
+	Gamemanager.dialogueboxvar.showtext(nameanddesc[0],setname(nameanddesc[1])[0],setname(nameanddesc[1])[1]) #
 	#
 	
 	
@@ -91,6 +119,8 @@ func setname(index : int):
 	var index2 = 0
 	var filetext = null
 	var namepath : String = "res://Ninja Adventure - Asset Pack/Actor/Characters/Princess/Faceset.png"
+	if index!=0 :
+		index=charactervar.npcnameindex
 	while not file.eof_reached():
 		filetext =file.get_line()
 		if index2==index:
@@ -98,12 +128,15 @@ func setname(index : int):
 		index2+=1
 		
 	
-	match index:
-		0:namepath = "res://Ninja Adventure - Asset Pack/Actor/Characters/Princess/Faceset.png"
-		1:namepath = "res://Ninja Adventure - Asset Pack/Actor/Characters/NinjaMageBlack/Faceset.png"
+	if index==0 :
+		namepath = "res://Ninja Adventure - Asset Pack/Actor/Characters/Princess/Faceset.png"
+	else:
+		namepath = "res://Ninja Adventure - Asset Pack/Actor/Characters/"+charactervar.npctileset+"/Faceset.png"
+		'''
+		1:namepath = "res://Ninja Adventure - Asset Pack/Actor/Characters/"+charactervar.npctileset+"/Faceset.png"
 		2:namepath = "res://Ninja Adventure - Asset Pack/Actor/Characters/Princess/Faceset.png"
 		3:namepath = "res://Ninja Adventure - Asset Pack/Actor/Characters/Princess/Faceset.png"
-	
+		'''
 	return 	[name,namepath]
 	
 func setcurrentdialog2(textline : String,textlinenumber : int,havebeenfound : bool):
@@ -185,5 +218,45 @@ func setnameanddescription(textline : String):
 	return[descriptionstr,nameint]
 func _ready() -> void:
 	super._ready()
-	print("allemagne")
+	
+	npcindex=charactervar.npcindex
+	call_deferred("beginsave")
+
+func beginsave()->void:
+	if activateonce!=0:
+		activateonceindex = Gamemanager.activateonceindex
+		
+		print("chinois deter"+str(Gamemanager.savesystem.activateonceindex.size()))
+		
+		for i in range(Gamemanager.savesystem.activateonceindex.size()):  # De 0 à 4
+			if Gamemanager.savesystem.activateonceindex[i]==activateonceindex:
+				activateoncefunc()
+	
+		'''
+		for currentindex in Gamemanager.savesystem.activateonceindex:
+			pass
+			
+			if currentindex==activateonceindex:
+				activateoncefunc()
+		'''
+		
+		Gamemanager.activateonceindex+=1
+		'''
+		var isinlist:bool = false
+		for interact in Gamemanager.savesystem.allinteractabledoonce:
+			if interact==self:
+				isinlist=true
+		if isinlist==false:
+			Gamemanager.savesystem.allinteractabledoonce.append(self)
+		'''
+	call_deferred("checklist")
+	
+	
+func activateoncefunc()->void:
+	charactervar.attackbehaviorvar.onhaveinteracted()
+	activateonce=2
+	
+func checklist()->void:
 	pass
+	#print("soupcon "+str(Gamemanager.savesystem.allinteractabledoonce.size()))
+	

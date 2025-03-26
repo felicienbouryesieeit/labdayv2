@@ -15,16 +15,16 @@ var direction:Vector2
 #var characterbehaviorvar: behaviorclass
 var behaviorattackvar: behaviorattackclass
 var attackrange : float
-@export var rotationrate : float = 0
+
 
 #@export var collisionvar : CollisionShape2D
 @export var timerrangevar : Timer
 @export var projectilebehaviorvar : projectilebehaviorclass
-@export var isinfinite : bool = false
-@export var spectral : bool = false 
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
 	global_position = spawnposition
 	rotation_degrees = rotationvar
 	rotationvarbegin = rotationvar
@@ -33,9 +33,8 @@ func _ready() -> void:
 	projectilebehaviorvar.damagevar=self
 	projectilebehaviorvar.beginbehavior()
 	
-	if isinfinite==false or attackrange==-1 : 
-		timerrangevar.start(attackrange)  # Démarre le Timer pour 2 secondes
-		timerrangevar.timeout.connect(destroyrange)
+	timerrangevar.start(attackrange) #  # Démarre le Timer pour 2 secondes
+	timerrangevar.timeout.connect(destroyrange)
 
 func destroyrange() -> void :
 	queue_free()
@@ -46,8 +45,6 @@ func havedamage() -> void:
 
 func _physics_process(delta: float) -> void:
 		projectilebehaviorvar.processbehavior()
-		if rotationrate != 0 : 
-			global_rotation+=(rotationrate*delta)
 	
 	#rotation+=0.1
 	
@@ -71,11 +68,10 @@ func moveforward() -> void:
 	move_and_slide()	
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
-		print("ayooooooooooooooooooo")
+		#print("ayooooooooooooooooooo")
 		if body.has_method("haveprojectilecollision"):
 			#pass
 			body.haveprojectilecollision(self,charactermovementvar)
 		else :
-			if spectral == false :
-				queue_free()
+			queue_free()
 	#print("vendredi")

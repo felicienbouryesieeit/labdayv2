@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dwtpv76elqabc" path="res://system/map/map_size_bg.png" id="2_0job0"]
 [ext_resource type="TileSet" uid="uid://tir0rfjtiwma" path="res://content/map/tileset.tres" id="3_28gge"]
-[ext_resource type="PackedScene" path="res://gameobjects/characters/characterwithlife/player/characterplayer.tscn" id="4_3srnt"]
+[ext_resource type="PackedScene" uid="uid://dgnp6xlp7hvdn" path="res://gameobjects/characters/characterwithlife/player/characterplayer.tscn" id="4_3srnt"]
 [ext_resource type="PackedScene" uid="uid://co5qpuj3hns3e" path="res://content/character/princess/princess.tscn" id="4_6hlq3"]
 [ext_resource type="Script" path="res://system/player_assignor.gd" id="5_3x1wx"]
 [ext_resource type="Script" path="res://system/damage/damage_area.gd" id="6_7dhsc"]
@@ -68,7 +68,6 @@ size = Vector2(103, 70)
 position = Vector2(-1, 0)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_3srnt")]
-visible = false
 position = Vector2(360, 334)
 
 [node name="ScreenGridRef" type="TextureRect" parent="."]
@@ -167,6 +166,7 @@ script = ExtResource("10_mcf0d")
 resource_environment = SubResource("Resource_a643q")
 
 [node name="Teleporter" type="Area2D" parent="." node_paths=PackedStringArray("target")]
+visible = false
 position = Vector2(23, -291)
 collision_layer = 0
 collision_mask = 16
@@ -174,10 +174,12 @@ script = ExtResource("14_fdud6")
 target = NodePath("../Teleporter2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teleporter"]
+visible = false
 position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_jlqcl")
 
 [node name="Teleporter2" type="Area2D" parent="." node_paths=PackedStringArray("target")]
+visible = false
 position = Vector2(640, -624)
 collision_layer = 0
 collision_mask = 16
@@ -186,28 +188,35 @@ target = NodePath("../Teleporter")
 direction = Vector2(0, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teleporter2"]
+visible = false
 shape = SubResource("RectangleShape2D_jlqcl")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(117, -292)
 scale = Vector2(0.48, 2.52)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
 position = Vector2(-43.5, -25)
 shape = SubResource("RectangleShape2D_b3v3f")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(-25, -292)
 scale = Vector2(0.48, 2.52)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+visible = false
 position = Vector2(-43.5, -25)
 shape = SubResource("RectangleShape2D_b3v3f")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(67, -311)
 scale = Vector2(1, 2.52)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+visible = false
 position = Vector2(-43.5, -25)
 shape = SubResource("RectangleShape2D_b3v3f")

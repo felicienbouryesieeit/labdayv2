@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://kbdh21w30uwd"]
+
+[ext_resource type="PackedScene" uid="uid://dmc1wunt62e15" path="res://gameobjects/characters/characterwithlife/pnj/pnjpar.tscn" id="1_tm6pa"]
+[ext_resource type="Texture2D" uid="uid://cyhf1ja1armm6" path="res://Ninja Adventure - Asset Pack/Items/Treasure/LittleTreasureChest.png" id="2_hqoyq"]
+[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/pnj/chest/chestcharacterscr.gd" id="2_j0ai8"]
+[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/pnj/chest/chestattackbehaviorscr.gd" id="4_4hhh7"]
+
+[node name="CharacterBody2D" instance=ExtResource("1_tm6pa")]
+script = ExtResource("2_j0ai8")
+itempath = "res://gameobjects/items/equipement/1helmet/ironhelmet.gd"
+npcindex = 3
+npcnameindex = 1
+
+[node name="Sprite2D" parent="." index="2"]
+texture = ExtResource("2_hqoyq")
+hframes = 2
+vframes = 1
+
+[node name="attackbehavioractor" parent="." index="9" node_paths=PackedStringArray("chestcharacter")]
+script = ExtResource("4_4hhh7")
+chestcharacter = NodePath("..")
+
+[node name="Interactobject" parent="." index="11"]
+activateonce = 1

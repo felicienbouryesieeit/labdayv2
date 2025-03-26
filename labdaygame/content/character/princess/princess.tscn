@@ -1,26 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://co5qpuj3hns3e"]
+[gd_scene load_steps=6 format=3 uid="uid://co5qpuj3hns3e"]
 
 [ext_resource type="PackedScene" uid="uid://skrlnoimlhsv" path="res://system/character/character.tscn" id="1_gjf68"]
-[ext_resource type="Texture2D" uid="uid://3kln0ucego3w" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Princess/SpriteSheet.png" id="3_7r00q"]
 [ext_resource type="Resource" uid="uid://ujea2b11dl3n" path="res://content/team/player_team.tres" id="3_as7xg"]
+[ext_resource type="Texture2D" uid="uid://de34o85wjyubi" path="res://Ninja Adventure - Asset Pack/Actor/Characters/RedGladiator/SpriteSheet.png" id="3_ifven"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0we05"]
+radius = 3.33333
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hi2a4"]
-radius = 4.0
+radius = 3.33333
 
 [node name="Princess" instance=ExtResource("1_gjf68")]
-scale = Vector2(2, 2)
+visible = false
 team = ExtResource("3_as7xg")
 
 [node name="Shape" type="CollisionShape2D" parent="Hitbox" index="0"]
+z_index = 1
 position = Vector2(0, -1)
-
-[node name="Shadow" parent="." index="1"]
-visible = false
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_0we05")
 
 [node name="Sprite" parent="." index="2"]
-visible = false
-texture = ExtResource("3_7r00q")
+texture = ExtResource("3_ifven")
 
 [node name="Shape" type="CollisionShape2D" parent="." index="3"]
 position = Vector2(0, -1)
+scale = Vector2(0.3, 0.3)
 shape = SubResource("CircleShape2D_hi2a4")

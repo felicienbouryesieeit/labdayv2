@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://c7j4hgkdbtapk"]
+[gd_scene load_steps=42 format=3 uid="uid://c7j4hgkdbtapk"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_804hp"]
 [ext_resource type="PackedScene" uid="uid://c83pfkmwxrf3p" path="res://content/map/map_village.tscn" id="2_7kl5b"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dct2lv3kc8vxf" path="res://dialogue/dialog.tscn" id="16_4hx8m"]
 [ext_resource type="Shader" path="res://system/shader/shader_moving_texture.gdshader" id="16_fmd6i"]
 [ext_resource type="Texture2D" uid="uid://dxic1avnc53ct" path="res://system/environment/fx/fog.png" id="16_wcll6"]
+[ext_resource type="PackedScene" uid="uid://w5fahded1kvw" path="res://system/ui/inventory.tscn" id="17_5ef8y"]
 [ext_resource type="Script" path="res://system/transition/transition.gd" id="20_5rxny"]
 [ext_resource type="Material" uid="uid://d388iuq2hfgth" path="res://system/color_correction/material.tres" id="28_nkm27"]
 [ext_resource type="Script" path="res://system/color_correction/color_correction.gd" id="29_12dcn"]
@@ -274,6 +275,10 @@ unique_name_in_owner = true
 
 [node name="Dialog" parent="World/Hud" instance=ExtResource("16_4hx8m")]
 unique_name_in_owner = true
+
+[node name="Inventory" parent="World/Hud" instance=ExtResource("17_5ef8y")]
+unique_name_in_owner = true
+visible = false
 
 [node name="ScreenFxLayer" type="CanvasLayer" parent="World"]
 layer = 10

@@ -1,4 +1,5 @@
 extends Node
+var statues_parlees := {}
 
 
 enum StartingScene {TITLE_SCREEN,GAME}
@@ -11,7 +12,7 @@ var current_scene:Node
 func _ready() -> void:
 	match starting_menu:
 		StartingScene.TITLE_SCREEN:
-			launch_scene(load("res://content/menu/title_screen.tscn"))
+			launch_scene(load("res://main_menu.tscn"))
 		StartingScene.GAME:
 			launch_scene(load("res://world.tscn"))
 
