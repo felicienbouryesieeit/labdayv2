@@ -28,7 +28,7 @@ func setbehavior() -> void:
 	#if interactvar!=null:
 		#print("la chine 6"+str(interactvar))
 	if isinteracting==true:
-		savesystem.load_game()
+		#savesystem.load_game()
 		#savesystem.my_int_list.append(0)	
 		#savesystem.inventoryvar.append("miaou")
 		print("bougibouga"+str(savesystem.inventoryvar))

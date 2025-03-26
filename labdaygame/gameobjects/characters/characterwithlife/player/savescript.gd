@@ -8,6 +8,7 @@ var my_int_list: Array = [1, 2, 3, 4, 5]
 var my_string_list: Array = ["apple", "banana", "cherry"]
 var activateonceindex : Array = []
 var inventoryvar : Array = []
+var unlockableteleporterlist : Array = []
 
 @export var inventoryvar2 : Array[String]
 
@@ -57,7 +58,7 @@ func load_game():
 
 func _ready():
 	Gamemanager.savesystem=self
-	erase_save()
+	#erase_save()
 	load_game()
 	call_deferred("_ready2")
 	

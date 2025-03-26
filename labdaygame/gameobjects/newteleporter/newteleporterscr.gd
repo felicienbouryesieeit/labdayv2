@@ -9,7 +9,9 @@ var canteleport = true
 var unlockableteleporterindex : int = -1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	if unlockableteleporter == 1:
+		unlockableteleporterindex=Gamemanager.unlockableteleporterindex
+		Gamemanager.unlockableteleporterindex+=1
 	if otherteleporter!=null : 
 		otherteleporter.otherteleporter=self
 		otherteleporter.samecreen=samecreen
@@ -47,6 +49,13 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		if body.has_method("isplayerfunc"):
 			
 			if body.isplayerfunc()==true :
+				if unlockableteleporter==1:
+					var isinindex : bool = false
+					for i in range(Gamemanager.savesystem.unlockableteleporterlist.size()):
+						if Gamemanager.savesystem.unlockableteleporterlist[i]==unlockableteleporterindex:
+							isinindex=true
+						if isinindex==false:
+							Gamemanager.savesystem.unlockableteleporterlist.append(unlockableteleporterindex)
 				var decalageY : float = Gamemanager.playermovementvar.global_position.y-global_position.y
 				var decalageX : float = Gamemanager.playermovementvar.global_position.x-global_position.x
 				

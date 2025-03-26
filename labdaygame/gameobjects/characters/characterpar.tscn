@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://fgglxfrru5gk"]
 
 [ext_resource type="Texture2D" uid="uid://3kln0ucego3w" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Princess/SpriteSheet.png" id="1_2s8ts"]
-[ext_resource type="Script" uid="uid://cualxkypg0rmu" path="res://gameobjects/characters/character_movement.gd" id="1_t063p"]
-[ext_resource type="Script" uid="uid://cv44fym4hcgbk" path="res://gameobjects/characters/behaviorpar.gd" id="3_ucebg"]
-[ext_resource type="Script" uid="uid://24j5yhqcmli6" path="res://gameobjects/characters/typeofcharacterpar.gd" id="4_awgoe"]
-[ext_resource type="Script" uid="uid://dwtd0k0cukl7n" path="res://gameobjects/characters/characterwithlife/behaviorattackpar.gd" id="5_o04gs"]
-[ext_resource type="Script" uid="uid://cf30qj44tr8p3" path="res://gameobjects/onprojectilecollisionpar.gd" id="5_sj2r4"]
-[ext_resource type="Script" uid="uid://dh1f3krqxsy2k" path="res://gameobjects/animatedspritescr.gd" id="7_g3ld2"]
+[ext_resource type="Script" path="res://gameobjects/characters/character_movement.gd" id="1_t063p"]
+[ext_resource type="Script" path="res://gameobjects/characters/behaviorpar.gd" id="3_ucebg"]
+[ext_resource type="Script" path="res://gameobjects/characters/typeofcharacterpar.gd" id="4_awgoe"]
+[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/behaviorattackpar.gd" id="5_o04gs"]
+[ext_resource type="Script" path="res://gameobjects/onprojectilecollisionpar.gd" id="5_sj2r4"]
+[ext_resource type="Script" path="res://gameobjects/animatedspritescr.gd" id="7_g3ld2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3piw"]
 

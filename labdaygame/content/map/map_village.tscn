@@ -1,17 +1,17 @@
 [gd_scene load_steps=73 format=4 uid="uid://c83pfkmwxrf3p"]
 
 [ext_resource type="PackedScene" uid="uid://ck4ncv1wxtff5" path="res://system/map/map.tscn" id="1_6r46d"]
-[ext_resource type="Script" uid="uid://ybp5id84tyxr" path="res://system/environment/environment_shape.gd" id="2_jff21"]
+[ext_resource type="Script" path="res://system/environment/environment_shape.gd" id="2_jff21"]
 [ext_resource type="Texture2D" uid="uid://dwtpv76elqabc" path="res://system/map/map_size_bg.png" id="2_qk6kh"]
 [ext_resource type="Resource" uid="uid://bx3bdtejr87up" path="res://content/environment/swamp/environment.tres" id="3_ynwqc"]
 [ext_resource type="Resource" uid="uid://dkwnklyceey24" path="res://content/environment/autumn/environment.tres" id="4_1ojy0"]
-[ext_resource type="Script" uid="uid://dnehj0pn7ltqk" path="res://system/damage/damage_area.gd" id="4_x8ws0"]
-[ext_resource type="Script" uid="uid://bd4lctsmi0ono" path="res://system/damage/resource_damage.gd" id="5_u7nr0"]
-[ext_resource type="Script" uid="uid://d10ldqor2fkrf" path="res://system/environment/resource_environment.gd" id="6_tnfad"]
+[ext_resource type="Script" path="res://system/damage/damage_area.gd" id="4_x8ws0"]
+[ext_resource type="Script" path="res://system/damage/resource_damage.gd" id="5_u7nr0"]
+[ext_resource type="Script" path="res://system/environment/resource_environment.gd" id="6_tnfad"]
 [ext_resource type="Resource" uid="uid://ujea2b11dl3n" path="res://content/team/player_team.tres" id="6_u73qr"]
 [ext_resource type="PackedScene" uid="uid://dgnp6xlp7hvdn" path="res://gameobjects/characters/characterwithlife/player/characterplayer.tscn" id="7_h1qda"]
 [ext_resource type="PackedScene" uid="uid://co5qpuj3hns3e" path="res://content/character/princess/princess.tscn" id="7_n8vb2"]
-[ext_resource type="Script" uid="uid://cedo26bx088kx" path="res://system/player_assignor.gd" id="8_8tm86"]
+[ext_resource type="Script" path="res://system/player_assignor.gd" id="8_8tm86"]
 [ext_resource type="PackedScene" uid="uid://dn4s0ltuy5urx" path="res://gameobjects/objectspawner/objectspawner.tscn" id="8_u5hr1"]
 [ext_resource type="PackedScene" uid="uid://mo1mj3bvuq6f" path="res://gameobjects/characters/characterwithlife/ennemies/pig/pig.tscn" id="10_pxj7p"]
 [ext_resource type="PackedScene" uid="uid://kbdh21w30uwd" path="res://gameobjects/characters/characterwithlife/pnj/chest/chest.tscn" id="11_p74ad"]
@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://benehyg10smgv" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png" id="16_l3osy"]
 [ext_resource type="Texture2D" uid="uid://b7tshgwwhh3qi" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetInteriorFloor.png" id="17_4hl5v"]
 [ext_resource type="Texture2D" uid="uid://78onhjxafj8r" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetWallSimple.png" id="18_cjkrp"]
-[ext_resource type="Script" uid="uid://bb07ii3bndyle" path="res://system/teleporter/teleporter.gd" id="18_rh3ex"]
+[ext_resource type="Script" path="res://system/teleporter/teleporter.gd" id="18_rh3ex"]
 [ext_resource type="Texture2D" uid="uid://dsu01bpv36pc5" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetHouse.png" id="19_lcnff"]
 [ext_resource type="Texture2D" uid="uid://ckvw7a72pg7ti" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetWater.png" id="20_iadx1"]
 [ext_resource type="Texture2D" uid="uid://bno5pvtk4fsxc" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetNature.png" id="21_crrbv"]
@@ -9265,3 +9265,76 @@ direction = 2
 
 [node name="Newteleporter2" parent="." index="54" instance=ExtResource("14_jp2g7")]
 position = Vector2(773, 738)
+
+[node name="CharacterBody2D4" parent="." index="55" instance=ExtResource("15_yvkwo")]
+position = Vector2(22, 27)
+
+[node name="CharacterBody2D5" parent="." index="56" instance=ExtResource("25_8fheb")]
+position = Vector2(1179, 933)
+npcindex = 1
+npctileset = "OldMan2"
+npcnameindex = 1
+
+[node name="CharacterBody2D6" parent="." index="57" instance=ExtResource("26_7bsyv")]
+position = Vector2(699, 2289)
+
+[node name="CharacterBody2D7" parent="." index="58" instance=ExtResource("25_8fheb")]
+position = Vector2(1103, 1066)
+npcindex = 4
+npctileset = "Hunter"
+npcnameindex = 4
+
+[node name="CharacterBody2D8" parent="." index="59" instance=ExtResource("25_8fheb")]
+position = Vector2(2532, -1047)
+npcindex = 5
+npctileset = "Master"
+npcnameindex = 5
+
+[node name="CharacterBody2D9" parent="." index="60" instance=ExtResource("25_8fheb")]
+position = Vector2(3559, -998)
+npcindex = 6
+npctileset = "Samurai"
+npcnameindex = 6
+
+[node name="CharacterBody2D10" parent="." index="61" instance=ExtResource("25_8fheb")]
+position = Vector2(994, 774)
+npcindex = 7
+npctileset = "Woman"
+npcnameindex = 7
+
+[node name="CharacterBody2D11" parent="." index="62" instance=ExtResource("25_8fheb")]
+position = Vector2(839, 1007)
+npcindex = 8
+npctileset = "EggBoy"
+npcnameindex = 8
+
+[node name="CharacterBody2D12" parent="." index="63" instance=ExtResource("25_8fheb")]
+position = Vector2(930, 1006)
+npcindex = 9
+npctileset = "Boy"
+npcnameindex = 9
+
+[node name="CharacterBody2D13" parent="." index="64" instance=ExtResource("25_8fheb")]
+position = Vector2(889, 939)
+npcindex = 10
+npctileset = "OldMan"
+npcnameindex = 10
+
+[node name="CharacterBody2D14" parent="." index="65" instance=ExtResource("25_8fheb")]
+position = Vector2(942, 1085)
+animation_direction2 = 1
+npcindex = 11
+npctileset = "Villager3"
+npcnameindex = 11
+
+[node name="CharacterBody2D15" parent="." index="66" instance=ExtResource("25_8fheb")]
+position = Vector2(1134, 809)
+npcindex = 12
+npctileset = "OldWoman"
+npcnameindex = 12
+
+[node name="CharacterBody2D16" parent="." index="67" instance=ExtResource("25_8fheb")]
+position = Vector2(3882, -1021)
+npcindex = 13
+npctileset = "Villager5"
+npcnameindex = 13

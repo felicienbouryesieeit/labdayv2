@@ -1,7 +1,7 @@
 [gd_scene load_steps=33 format=3 uid="uid://w5fahded1kvw"]
 
 [ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="1_xuxvg"]
-[ext_resource type="Script" uid="uid://bldg2c34yb1kd" path="res://system/ui/inventory.gd" id="2_gmn60"]
+[ext_resource type="Script" path="res://system/ui/inventory.gd" id="2_gmn60"]
 [ext_resource type="Texture2D" uid="uid://c6t8ow0n52q14" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Armor.png" id="2_q5jqp"]
 [ext_resource type="Texture2D" uid="uid://wbugdb2usu3f" path="res://Ninja Adventure - Asset Pack/Ui/Icon/Items&Weapon/Amulet.png" id="3_ej1xd"]
 [ext_resource type="Texture2D" uid="uid://cexa318kwif1m" path="res://Ninja Adventure - Asset Pack/Ui/Theme/ThemeWood/checked_disabled.png" id="3_hjoar"]

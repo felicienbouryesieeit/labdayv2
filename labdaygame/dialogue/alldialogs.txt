@@ -3,12 +3,7 @@ $0$zab zab
 $0$zib zib
 $0$zubzub
 #1#
-$0$zouzou
-$1$zaza
-$0$zozo
-$1$zozi
-$0$zozu
-$1$zozote
+$1$Je pourrais te donner un bon conseil, mais honnêtement… C’est plus drôle de te voir te débrouiller toute seule !
 #2#
 $0$xhvbdjxv
 $0$skjvnsfj
@@ -16,3 +11,23 @@ $0$sjhbd
 #3#
 $0$Oh! I found a 
 #4#
+$1$Ce village a été reconstruit ici suite à un terrible drame...
+#5#
+$1$ Si tu veux une épée incassable, j’ai bien une solution… Ne la sors jamais du fourreau !
+#6#
+$1$ Oh, fais attention où tu mets les pieds ! J’aimerais dire que c’est pour ta sécurité, mais en vrai, c’est surtout parce que j’ai la flemme de nettoyer après…
+#7#
+$1$ On raconte que la statue au fond du village aurait un étrange pouvoir... Moi je suis convaincue que ce n'est qu un gros caillou sans interet!
+#8#
+$1$Hé, t’es une aventurière, toi ?! Trop cool ! Tu crois que je peux devenir fort comme toi un jour ?
+#9#
+$1$Tu veux jouer à l'épée avec moi ? Je parie que tu ne gagnera pas !
+#10#
+$1$ Tu as vu mon fils jouer avec son épée en bois ? Il frappe plus fort que certains monstres que j’ai croisés !
+#11#
+$1$Maman dit que c'est dangereux de sortir du village, mais moi je veux sortir explorer le monde!
+#12#
+$1$Notre ancien village a été détruit par des monstres .... Les meme qui se sont emparé du chateau de notre chere princesse... Je me demande ce qu'elle est devenue d'ailleurs....
+#13#
+$1$Tu veux aller combattre des monstres?! Moi je suis déjà épuisé rien qu'à l’idée de sortir de ma chambre ! s
+#14#

@@ -1,4 +1,14 @@
 Princess
-Sorcerer
+Vieil Homme
 Skeleton
 Ninja
+Jeune Homme
+Forgeron
+Femme
+Jeune Femme
+Enfant
+Enfant
+Homme
+Enfant
+Vieille Dame
+Jeune Homme

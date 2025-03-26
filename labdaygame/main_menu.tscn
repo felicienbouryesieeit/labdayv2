@@ -1,13 +1,13 @@
 [gd_scene load_steps=202 format=3 uid="uid://vtf6k5og52mj"]
 
-[ext_resource type="Script" uid="uid://wl7m5k2pveqi" path="res://main_menu.gd" id="1_rmxqo"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_rmxqo"]
 [ext_resource type="Texture2D" uid="uid://cplqg60yqdv2c" path="res://pixelartgifmini-moss-ezgif.com-gif-to-sprite-converter.png" id="2_o4m0l"]
 [ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="3_jix8l"]
 [ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="3_u6egg"]
 [ext_resource type="AudioStream" uid="uid://06hvre0qs2fm" path="res://audio/menu/Menu2.wav" id="5_glbon"]
 [ext_resource type="Texture2D" uid="uid://cr4etedrputfv" path="res://theme/Princess-quest-title.png" id="6_cma4s"]
 [ext_resource type="AudioStream" uid="uid://o5s0j377cdlw" path="res://Ninja Adventure - Asset Pack/Musics/6 - Story.ogg" id="7_uqxmg"]
-[ext_resource type="Script" uid="uid://d25mlq8cysnuk" path="res://system/music.gd" id="8_37chr"]
+[ext_resource type="Script" path="res://system/music.gd" id="8_37chr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1f0t1"]
 atlas = ExtResource("2_o4m0l")
