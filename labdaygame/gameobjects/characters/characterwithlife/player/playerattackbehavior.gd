@@ -55,7 +55,8 @@ func timerattackvoid() -> void :
 		
 func ondeath()->void:
 	super.ondeath()
-	get_tree().change_scene_to_file("res://world.tscn")
+	get_tree().quit()
+	#get_tree().change_scene_to_file("res://main_menu.tscn")# "res://world.tscn"
 	
 func playerattackvoid() ->void :
 	

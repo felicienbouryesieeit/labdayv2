@@ -22,6 +22,7 @@ var savesystem : savesystemclass
 var activateonceindex : int
 var unlockableteleporterindex : int
 var playerattackvar : playerattackbehavior
+var inventoryvar2:Array[itemholderclass]
 
 #var beginposition : Vector2 
 
@@ -52,6 +53,6 @@ func openbag2() ->void:
 func refreshinventory() ->void:
 	for i in range(inventoryvar.size()):
 		inventoryvar[i].destroyitem()
-	inventoryvar.clear()
+	inventoryvar = []
 	equipmentmanager.beginequipment()
 		

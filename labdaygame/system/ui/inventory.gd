@@ -10,6 +10,7 @@ class_name inventory;
 signal close_inventory
 var selected_item=-1
 
+
 func _ready():
 	$ChooseItem/CloseButton.pressed.connect(_on_CloseButton_pressed)
 	$ChooseItem/CloseButton.pressed.connect(_on_CloseButton_pressed)
@@ -23,11 +24,16 @@ func _ready():
 	'''
 func _ready2():
 	itemlist.item_count=0
+	print("OUI OUI : "+str(Gamemanager.inventoryvar))
 	
-	for i in range(Gamemanager.inventoryvar.size()):
-		itemlist.add_item("",Gamemanager.inventoryvar[i].iconimage)
+	if Gamemanager.inventoryvar!=null:
+		if Gamemanager.inventoryvar.size()>0 :
+			for i in range(Gamemanager.inventoryvar.size()):
+				itemlist.add_item("",Gamemanager.inventoryvar[i].iconimage)
+	
 		#print(element)
 	#print("open inventory")
+	
 	descriptionvar.text=""
 	namevar.text=""
 	imagevar.texture=load("res://Ninja Adventure - Asset Pack/Ui/Icon/Spell/Alchemy.png")
