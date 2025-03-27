@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://vtf6k5og52mj"]
+
+[ext_resource type="Script" uid="uid://wl7m5k2pveqi" path="res://main_menu.gd" id="1_rmxqo"]
+[ext_resource type="Texture2D" uid="uid://bjap6ctqxnnr0" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Flam/Faceset.png" id="2_sllh8"]
+[ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="3_jix8l"]
+[ext_resource type="FontFile" uid="uid://cuw538mdpfx5v" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/pixel-game.regular.otf" id="3_u6egg"]
+[ext_resource type="AudioStream" uid="uid://dsj15dqwyrp1a" path="res://audio/menu/Accept.wav" id="5_glbon"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rmxqo")
+
+[node name="Faceset" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(641, 358.5)
+scale = Vector2(33.6842, 18.9211)
+texture = ExtResource("2_sllh8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 381.0
+offset_right = 877.0
+offset_bottom = 648.0
+theme = ExtResource("3_jix8l")
+theme_override_constants/separation = 30
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_u6egg")
+theme_override_font_sizes/font_size = 50
+text = "Jouer"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_u6egg")
+theme_override_font_sizes/font_size = 50
+text = "Parametre"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_u6egg")
+theme_override_font_sizes/font_size = 50
+text = "Quitter"
+
+[node name="ClickSoundPlayer" type="AudioStreamPlayer" parent="VBoxContainer"]
+stream = ExtResource("5_glbon")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.0
+offset_top = -205.0
+offset_right = 214.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_u6egg")
+theme_override_font_sizes/font_size = 241
+text = "Game"
+
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw3a6uxdnmlj4"]
+
+[ext_resource type="PackedScene" uid="uid://bpwvt81j7xda0" path="res://gameobjects/characters/characterwithlife/ennemies/enemypar.tscn" id="1_gbh11"]
+[ext_resource type="Texture2D" uid="uid://cob8wqakhewtx" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Skeleton/SpriteSheet.png" id="2_22cji"]
+[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/ennemies/skeleton/behaviorskeleton.gd" id="3_5sebe"]
+
+[node name="CharacterBody2D" instance=ExtResource("1_gbh11")]
+movement_speed = 50.0
+
+[node name="Sprite2D" parent="." index="2"]
+texture = ExtResource("2_22cji")
+
+[node name="attackbehavioractor" parent="." index="9"]
+script = ExtResource("3_5sebe")

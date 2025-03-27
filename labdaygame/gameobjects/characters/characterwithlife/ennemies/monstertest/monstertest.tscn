@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bh1w67kqr83tj"]
+
+[ext_resource type="PackedScene" uid="uid://bpwvt81j7xda0" path="res://gameobjects/characters/characterwithlife/ennemies/enemypar.tscn" id="1_sse0d"]
+[ext_resource type="Texture2D" uid="uid://ctong7vwe2oxc" path="res://Ninja Adventure - Asset Pack/Actor/Monsters/Bamboo/SpriteSheet.png" id="2_orecw"]
+[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/ennemies/monstertest/monstertestbehavior.gd" id="3_4derh"]
+
+[node name="CharacterBody2D" instance=ExtResource("1_sse0d")]
+movement_speed = 50.0
+
+[node name="Sprite2D" parent="." index="2"]
+texture = ExtResource("2_orecw")
+vframes = 4
+
+[node name="attackbehavioractor" parent="." index="9"]
+script = ExtResource("3_4derh")

@@ -1,0 +1,41 @@
+#0#
+$0$zab zab
+$0$zib zib
+$0$zubzub
+#1#
+$1$I could give you good advice, but honestly… It's more fun to watch you figure it out on your own!
+#2#
+$0$xhvbdjxv
+$0$skjvnsfj
+$0$sjhbd
+#3#
+$0$Oh! I found a
+#4#
+$1$This village was rebuilt here after a terrible tragedy...
+#5#
+$1$If you want an unbreakable sword, I do have a solution… Just never take it out of its sheath!
+#6#
+$1$Oh, watch where you step! I’d like to say it’s for your safety, but honestly, it’s mostly because I don’t feel like cleaning up after...
+#7#
+$1$They say the statue at the back of the village has a strange power... But I’m convinced it’s just a big, uninteresting rock!
+#8#
+$1$Hey, are you an adventurer?! So cool! Do you think I could become as strong as you one day?
+#9#
+$1$Do you want to play sword fight with me? I bet you won’t win!
+#10#
+$1$Have you seen my son playing with his wooden sword? He hits harder than some monsters I’ve encountered!
+#11#
+$1$Mom says it’s dangerous to leave the village, but I want to go out and explore the world!
+#12#
+$1$Our old village was destroyed by monsters... The same ones that took over our dear princess’s castle... I wonder what happened to her...
+#13#
+$1$You want to go fight monsters?! I’m already exhausted just thinking about leaving my room!
+#14#
+$0$Hello, Sir!
+$1$Developers: Nesrine, Félicien, Sellia, and Romain
+$1$Game Engine: Godot
+$1$Asset Pack: Ninja Adventure by Pixel-Boy
+$1$Additional Pixel Art: Piskel
+$1$Special Mentions: ChatGPT (grand monsieur)
+$1$Press 0 to reset the game
+$0$Alright... Goodbye, Sir!

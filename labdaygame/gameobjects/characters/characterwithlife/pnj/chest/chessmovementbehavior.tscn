@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dnfco8f23ci6p"]
+
+[node name="Chessmovementbehavior" type="Node2D"]
