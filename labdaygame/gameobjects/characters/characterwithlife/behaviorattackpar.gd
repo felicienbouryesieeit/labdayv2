@@ -263,6 +263,9 @@ func oninteract(isopened : bool )->void:
 
 func onhaveinteracted()->void:
 	pass
-	
+
+func ondeath()->void:
+	pass
+		
 func getitemtext(isopened : bool )->String:
 	return ""

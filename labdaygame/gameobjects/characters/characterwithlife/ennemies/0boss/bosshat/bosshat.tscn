@@ -21,3 +21,4 @@ maxlife = 40
 
 [node name="attackbehavioractor" parent="." index="10"]
 script = ExtResource("4_hes4s")
+strengh = 3.0

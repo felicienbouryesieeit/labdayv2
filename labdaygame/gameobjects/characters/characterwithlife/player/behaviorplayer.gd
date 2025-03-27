@@ -6,6 +6,7 @@ var isnotattacking : bool
 @export var equipmentmanager : equipmentmanagervar
 var isinteracting : bool
 var interactvar : interactclass
+var isresetting : bool
 @export var savesystem : savesystemclass
 
 func setbehavior() -> void:
@@ -27,6 +28,14 @@ func setbehavior() -> void:
 	
 	#if interactvar!=null:
 		#print("la chine 6"+str(interactvar))
+	isresetting =  Input.is_action_just_pressed("reset")
+	
+	if isresetting :
+		Gamemanager.savesystem.erase_save()
+		
+		get_tree().quit()
+		#get_tree().quit()
+	
 	if isinteracting==true:
 		#savesystem.load_game()
 		#savesystem.my_int_list.append(0)	

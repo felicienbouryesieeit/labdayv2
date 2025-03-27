@@ -1,15 +1,15 @@
 Princess
-Vieil Homme
+Old Man
 Skeleton
 Ninja
-Jeune Homme
-Forgeron
-Femme
-Jeune Femme
-Enfant
-Enfant
-Homme
-Enfant
-Vieille Dame
-Jeune Homme
-Crédit Man
+Young Man
+Blacksmith
+Woman
+Young Woman
+Child
+Child
+Man
+Child
+Old Lady
+Young Man
+Credit Man

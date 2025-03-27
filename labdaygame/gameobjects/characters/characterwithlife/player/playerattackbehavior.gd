@@ -39,7 +39,10 @@ func timerattackvoid() -> void :
 	else :
 		playerattackvoid()
 		
-		
+func ondeath()->void:
+	super.ondeath()
+	get_tree().change_scene_to_file("res://world.tscn")
+	
 func playerattackvoid() ->void :
 	
 	if Gamemanager.equipmentlistingame.size()>0:

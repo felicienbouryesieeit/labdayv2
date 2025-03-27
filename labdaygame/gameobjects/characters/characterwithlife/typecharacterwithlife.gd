@@ -23,13 +23,16 @@ func checklife() -> void:
 	#queue_free()
 	if life<=0 :
 		#print(charactervar)
+		charactervar.attackbehaviorvar.ondeath()
 		charactervar.queue_free()
-
+   #
 
 func setlife(change : int) -> void:
 	life = change
 	checklife()
-	
+
+
+		
 func addlife(change: int) ->void:
 	life = life + change
 	setlife(life)
