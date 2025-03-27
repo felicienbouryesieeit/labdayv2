@@ -13,3 +13,6 @@ vframes = 4
 
 [node name="attackbehavioractor" parent="." index="9"]
 script = ExtResource("3_188p3")
+
+[node name="Interactobject" parent="." index="11"]
+haveicon = false

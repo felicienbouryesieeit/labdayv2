@@ -5,6 +5,7 @@ class_name inventory;
 @export var namevar : RichTextLabel
 @export var imagevar : Sprite2D
 @export var timervar: Timer
+@export var equipbutton : Button
 #@export var imagevar2 : Sprite2D
 signal close_inventory
 var selected_item=-1
@@ -52,6 +53,10 @@ func _on_item_list_item_selected(index: int) -> void:
 			imagevar.texture=Gamemanager.inventoryvar[i].iconimage
 			descriptionvar.text=Gamemanager.inventoryvar[i].itemdescription
 			namevar.text=Gamemanager.inventoryvar[i].itemname
+			if Gamemanager.inventoryvar[i].isequipped:
+				equipbutton.text="unequip"
+			else :
+				equipbutton.text="equip"
 	if Gamemanager.inventoryvar[selected_item].itemscriptvar is equipmentclass : 
 		var currentequipment : equipmentclass = Gamemanager.inventoryvar[selected_item].itemscriptvar
 		if Gamemanager.equipmentlistingame[currentequipment.equipmenttype]!=null:

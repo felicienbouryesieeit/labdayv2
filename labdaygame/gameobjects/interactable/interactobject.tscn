@@ -1,18 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmw6i1bx2tq1t"]
+[gd_scene load_steps=4 format=3 uid="uid://cmw6i1bx2tq1t"]
 
 [ext_resource type="Script" path="res://gameobjects/interactable/interactpar.gd" id="1_t6gsk"]
+[ext_resource type="Texture2D" uid="uid://cl58lj084fiq" path="res://Ninja Adventure - Asset Pack/Ui/Emote/emote20.png" id="2_5xsul"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evwrg"]
 size = Vector2(45, 44)
 
-[node name="Interactobject" type="Node2D"]
+[node name="Interactobject" type="Node2D" node_paths=PackedStringArray("iconsprite")]
 script = ExtResource("1_t6gsk")
+iconsprite = NodePath("Sprite2D")
 
 [node name="AreaPNJ" type="Area2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="AreaPNJ"]
 position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_evwrg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -25)
+texture = ExtResource("2_5xsul")
 
 [connection signal="body_entered" from="AreaPNJ" to="." method="_on_area_pnj_body_entered"]
 [connection signal="body_exited" from="AreaPNJ" to="." method="_on_area_pnj_body_exited"]

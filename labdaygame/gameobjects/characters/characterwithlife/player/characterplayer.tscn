@@ -24,9 +24,10 @@ maxlife = 1
 
 [node name="Timercooldowndamage" type="Timer" parent="." index="9"]
 
-[node name="attackbehavioractor" parent="." index="10" node_paths=PackedStringArray("timercooldowndamagevar")]
+[node name="attackbehavioractor" parent="." index="10" node_paths=PackedStringArray("timercooldowndamagevar", "teleporttimer")]
 script = ExtResource("3_81jem")
 timercooldowndamagevar = NodePath("../Timercooldowndamage")
+teleporttimer = NodePath("../transitiontimer")
 cadence = 0.7
 
 [node name="equipmentclass" type="Node2D" parent="." index="12" node_paths=PackedStringArray("playerattackbehaviorvar")]
@@ -36,3 +37,5 @@ equipmentlist2 = Array[String](["", "", "", "", "", ""])
 
 [node name="Savesystem" type="Node" parent="." index="13"]
 script = ExtResource("6_rdrrf")
+
+[node name="transitiontimer" type="Timer" parent="." index="14"]

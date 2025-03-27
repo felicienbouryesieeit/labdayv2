@@ -86,12 +86,24 @@ func beginitem2(itemholdervar2 : itemholderclass):
 func statdescription()-> String:
 	super.statdescription()
 	var statdescriptionvar2=""#"oui "+str(lifebonus)+" "+str(speedbonus)+" "+str(rangebonus)+" "+str(strenghbonus)+" "+str(defensebonus)+" "+str(candencebonus)+" "
+	#life speed shotspeed range strengh defense
 	statdescriptionvar2+=setdescription(lifebonus,4)
 	statdescriptionvar2+=setdescription(speedbonus,5)
-	statdescriptionvar2+=setdescription(rangebonus,6)
-	statdescriptionvar2+=setdescription(strenghbonus,7)
-	statdescriptionvar2+=setdescription(defensebonus,8)
-	statdescriptionvar2+=setdescription(speedbonus,candencebonus)
+	statdescriptionvar2+=setdescription(shotspeedbonus,6)
+	statdescriptionvar2+=setdescription(rangebonus,7)
+	statdescriptionvar2+=setdescription(strenghbonus,8)
+	statdescriptionvar2+=setdescription(defensebonus,9)
+	
+	'''
+	Life    5
+Speed    6
+Shotspeed 7   
+Range    8
+Strengh   9 
+Defense   10
+Cadence   11
+	'''
+	
 	if statdescriptionvar2!="":
 		statdescriptionvar2="( "+statdescriptionvar2+" ) "
 	return statdescriptionvar2

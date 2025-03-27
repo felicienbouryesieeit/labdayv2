@@ -42,7 +42,7 @@ texture = ExtResource("3_hjoar")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l575w"]
 texture = ExtResource("3_xhdrn")
 
-[node name="Inventory" type="Control" node_paths=PackedStringArray("itemlist", "descriptionvar", "namevar", "imagevar", "timervar")]
+[node name="Inventory" type="Control" node_paths=PackedStringArray("itemlist", "descriptionvar", "namevar", "imagevar", "timervar", "equipbutton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -57,6 +57,7 @@ descriptionvar = NodePath("ChooseItem/Description/ItemDescription")
 namevar = NodePath("ChooseItem/NameItem/ItemTitle")
 imagevar = NodePath("ChooseItem/Armor")
 timervar = NodePath("Timer")
+equipbutton = NodePath("ChooseItem/ItemEquipped")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

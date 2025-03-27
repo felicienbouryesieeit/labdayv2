@@ -5,7 +5,21 @@ var playershootdirection
 var playercanattack : bool
 var isnotattacking : bool
 @export var timercooldowndamagevar : Timer
+@export var teleporttimer:Timer
 
+func teleporttransition()->void : 
+	Gamemanager.isteleporting=true
+	teleporttimer.one_shot=true
+	teleporttimer.start(0.2)  # Démarre le Timer pour 2 secondes
+	teleporttimer.timeout.connect(teleporttransition2)
+
+func teleporttransition2()->void :
+	Gamemanager.isteleporting=false
+func _ready() -> void:
+	Gamemanager.playerattackvar=self
+	
+	teleporttransition()
+	
 func setattackbehavior() -> void:
 	super.setattackbehavior()
 	#Gamemanager.playerposition = actorposition

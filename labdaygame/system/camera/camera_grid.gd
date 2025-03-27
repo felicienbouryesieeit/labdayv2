@@ -70,7 +70,7 @@ func go_to_cell(cell_target:Vector2):
 	transition_time_2=transition_time
 	if Gamemanager.isteleporting==true :
 		transition_time_2=0.01
-		Gamemanager.isteleporting=false
+		#Gamemanager.isteleporting=false
 	tween.tween_property(self,"position",grid_to_world(current_cell),transition_time_2).set_trans(animation_trans).set_ease(animation_ease)
 	#global_position=current_cell
 	

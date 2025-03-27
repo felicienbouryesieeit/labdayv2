@@ -39,3 +39,4 @@ $1$Additional Pixel Art: Piskel
 $1$Special Mentions: ChatGPT (grand monsieur)
 $1$Press 0 to reset the game
 $0$Alright... Goodbye, Sir!
+#15#

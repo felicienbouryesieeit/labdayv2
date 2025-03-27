@@ -12,3 +12,6 @@ texture = ExtResource("2_22cji")
 
 [node name="attackbehavioractor" parent="." index="9"]
 script = ExtResource("3_5sebe")
+
+[node name="Interactobject" parent="." index="11"]
+haveicon = false

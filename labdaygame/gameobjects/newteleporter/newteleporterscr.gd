@@ -101,7 +101,7 @@ func teleport()->void:
 				print("gaga gougou ouaf ouaf X : "+str(Gamemanager.playermovementvar.global_position.x-global_position.x))
 				if otherteleporter!=null :
 					if (samecreen==false) :
-						Gamemanager.isteleporting=true
+						Gamemanager.playerattackvar.teleporttransition()
 					Gamemanager.teleportervar.transition2()
 					var distancetospawn=15
 					var distancey=0

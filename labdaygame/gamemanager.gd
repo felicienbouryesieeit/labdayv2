@@ -21,6 +21,7 @@ var equipmentmanager : equipmentmanagervar
 var savesystem : savesystemclass
 var activateonceindex : int
 var unlockableteleporterindex : int
+var playerattackvar : playerattackbehavior
 
 #var beginposition : Vector2 
 

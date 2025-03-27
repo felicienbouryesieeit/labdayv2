@@ -13,9 +13,13 @@ var activateonceindex: int =-1;
 @export var timervar : Timer;
 
 @export var charactervar : charactermovementclass
+@export var haveicon : bool
+
+
 
 func oninteract() ->void :
 		super.oninteract()
+		iconsprite.visible=false
 	
 	
 		print("coffre")
@@ -64,7 +68,7 @@ func setcurrentline() -> void:
 		
 		filetext =file.get_line()
 		if i==currentline+beginningline+1:
-			filetext2="u"#filetext+" "+itemname
+			filetext2=filetext+" "+itemname
 		print("night in the wood"+filetext)
 		i+=1		
 	file.close()
@@ -260,3 +264,17 @@ func checklist()->void:
 	pass
 	#print("soupcon "+str(Gamemanager.savesystem.allinteractabledoonce.size()))
 	
+
+
+
+
+func onplayercollisionenter():
+	super.onplayercollisionenter()
+	if haveicon==true:
+		iconsprite.visible=true
+	pass
+	
+func onplayercollisionexit():
+	super.onplayercollisionexit()
+	iconsprite.visible=false
+	pass

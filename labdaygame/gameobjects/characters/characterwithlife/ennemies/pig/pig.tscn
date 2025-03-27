@@ -13,3 +13,6 @@ texture = ExtResource("2_8k4po")
 [node name="attackbehavioractor" parent="." index="9"]
 script = ExtResource("3_pryf2")
 cadence = 0.3
+
+[node name="Interactobject" parent="." index="11"]
+haveicon = false

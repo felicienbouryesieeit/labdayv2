@@ -25,3 +25,4 @@ chestcharacter = NodePath("..")
 
 [node name="Interactobject" parent="." index="11"]
 activateonce = 1
+haveicon = false

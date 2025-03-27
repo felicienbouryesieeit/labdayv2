@@ -98,6 +98,7 @@ offset_bottom = 98.0
 
 [node name="Dialogue" type="RichTextLabel" parent="Box/VBoxContainer2"]
 layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_1ufqo")
 bbcode_enabled = true
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et sagittis nisl. Sed tempus ligula metus, quis semper odio mattis eget. Fusce viverra lorem purus, in maximus turpis fringilla non. Duis tincidunt ultrices erat, a bibendum lectus aliquet ac. Nulla facilisi."
 fit_content = true

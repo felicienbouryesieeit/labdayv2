@@ -25,5 +25,6 @@ script = ExtResource("5_ecij0")
 activateonce = 0
 timervar = NodePath("../interacttimer")
 charactervar = NodePath("..")
+haveicon = false
 
 [node name="interacttimer" type="Timer" parent="." index="12"]
