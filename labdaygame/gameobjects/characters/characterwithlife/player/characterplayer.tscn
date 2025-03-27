@@ -27,15 +27,12 @@ maxlife = 1
 [node name="attackbehavioractor" parent="." index="10" node_paths=PackedStringArray("timercooldowndamagevar")]
 script = ExtResource("3_81jem")
 timercooldowndamagevar = NodePath("../Timercooldowndamage")
-range = 0.5
 cadence = 0.7
 
 [node name="equipmentclass" type="Node2D" parent="." index="12" node_paths=PackedStringArray("playerattackbehaviorvar")]
 script = ExtResource("5_oj7q1")
 playerattackbehaviorvar = NodePath("../attackbehavioractor")
 equipmentlist2 = Array[String](["", "", "", "", "", ""])
-inventoryvar = Array[String](["1res://gameobjects/items/equipement/0weapons/weapontest.gd", "1res://gameobjects/items/equipement/1helmet/ironhelmet.gd", "0res://gameobjects/items/equipement/1helmet/ironhelmet.gd"])
 
 [node name="Savesystem" type="Node" parent="." index="13"]
 script = ExtResource("6_rdrrf")
-inventoryvar2 = Array[String](["1res://gameobjects/items/equipement/0weapons/weapontest.gd", "1res://gameobjects/items/equipement/1helmet/ironhelmet.gd", "0res://gameobjects/items/equipement/1helmet/ironhelmet.gd"])

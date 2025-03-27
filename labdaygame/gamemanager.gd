@@ -20,7 +20,7 @@ var playeruivar : playerui
 var equipmentmanager : equipmentmanagervar 
 var savesystem : savesystemclass
 var activateonceindex : int
-var teleporteurindex : int
+var unlockableteleporterindex : int
 
 #var beginposition : Vector2 
 

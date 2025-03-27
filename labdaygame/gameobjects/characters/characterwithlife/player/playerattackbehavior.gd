@@ -42,11 +42,12 @@ func timerattackvoid() -> void :
 		
 func playerattackvoid() ->void :
 	
-	if Gamemanager.equipmentlistingame[0]!=null:
-		print("nya")
-		Gamemanager.equipmentlistingame[0].onattack()
-		
-		playercanattack=false
+	if Gamemanager.equipmentlistingame.size()>0:
+		if Gamemanager.equipmentlistingame[0]!=null:
+			print("nya")
+			Gamemanager.equipmentlistingame[0].onattack()
+			
+			playercanattack=false
 
 func ondamage() ->void :
 	super.ondamage()
@@ -82,9 +83,9 @@ func resetplayerstats() ->void:
 	equipmentsetmaxlife(12)
 	charactermovementvar.movement_speed=150
 	range=0.5
-	cadence=0.7
-	shotspeedmax=100
-	shotaccelerationmax=100
+	cadence=0.5
+	shotspeedmax=130
+	shotaccelerationmax=130
 	strengh=1
 	'''
 		Gamemanager.playermovementvar.attackbehaviorvar.range+=(rangebonus*0.3)

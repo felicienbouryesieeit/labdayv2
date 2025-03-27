@@ -31,3 +31,11 @@ $1$Notre ancien village a été détruit par des monstres .... Les meme qui se s
 #13#
 $1$Tu veux aller combattre des monstres?! Moi je suis déjà épuisé rien qu'à l’idée de sortir de ma chambre ! s
 #14#
+$0$Bonjour Monsieur!
+$1$Développeurs : Nesrine, Félicien, Sellia et Romain
+$1$Moteur de jeu : Godot
+$1$Asset Pack : Ninja Adventure par Pixel-Boy
+$1$Pixel art additionnel : Piskel
+$1$Mentions spéciales : Chat GPT (grand monsieur)
+$0$D'accords... Au revoir Monsieur!
+#15#

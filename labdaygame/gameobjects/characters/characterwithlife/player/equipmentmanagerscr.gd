@@ -12,11 +12,9 @@ var mon_script = preload("res://gameobjects/items/itemparscr.gd")
 
 @export var equipmentlist2 : Array[String]
 @export var inventoryvar : Array[String]
-#res://gameobjects/items/equipement/0weapons/weapontest.gd
-#res://gameobjects/items/equipement/1helmet/ironhelmet.gd
-
-
-	
+#1res://gameobjects/items/equipement/0weapons/weapontest.gd
+#1res://gameobjects/items/equipement/1helmet/ironhelmet.gd
+#0res://gameobjects/items/equipement/1helmet/ironhelmet.gd
 
 
 func _ready():

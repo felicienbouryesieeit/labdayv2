@@ -16,6 +16,9 @@ texture = ExtResource("2_hqoyq")
 hframes = 2
 vframes = 1
 
+[node name="on projectile collision" parent="." index="6"]
+position = Vector2(-1, -14)
+
 [node name="attackbehavioractor" parent="." index="9" node_paths=PackedStringArray("chestcharacter")]
 script = ExtResource("4_4hhh7")
 chestcharacter = NodePath("..")

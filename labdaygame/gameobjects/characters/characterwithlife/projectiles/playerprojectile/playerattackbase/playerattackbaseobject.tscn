@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://qcmwdksvstw7"]
 
 [ext_resource type="PackedScene" uid="uid://bte074kx8p7ud" path="res://gameobjects/characters/characterwithlife/projectiles/projectilepar.tscn" id="1_nxo8i"]
-[ext_resource type="Script" uid="uid://me6nu1qiy2se" path="res://gameobjects/characters/characterwithlife/projectiles/playerprojectile/playerattackbase/playerattackbasescr.gd" id="2_5diqg"]
+[ext_resource type="Script" path="res://gameobjects/characters/characterwithlife/projectiles/playerprojectile/playerattackbase/playerattackbasescr.gd" id="2_5diqg"]
 
 [node name="Projectilepar" instance=ExtResource("1_nxo8i")]
 

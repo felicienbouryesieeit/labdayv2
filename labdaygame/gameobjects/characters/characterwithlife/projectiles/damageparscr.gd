@@ -71,7 +71,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		#print("ayooooooooooooooooooo")
 		if body.has_method("haveprojectilecollision"):
 			#pass
-			body.haveprojectilecollision(self,charactermovementvar)
+			if charactermovementvar!=null:
+				body.haveprojectilecollision(self,charactermovementvar)
 		else :
 			queue_free()
 	#print("vendredi")

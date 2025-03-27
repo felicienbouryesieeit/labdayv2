@@ -12,3 +12,4 @@ Homme
 Enfant
 Vieille Dame
 Jeune Homme
+Crédit Man

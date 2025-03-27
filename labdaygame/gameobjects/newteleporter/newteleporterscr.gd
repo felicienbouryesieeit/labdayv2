@@ -8,16 +8,22 @@ var canteleport = true
 @export	var unlockableteleporter : int = 0
 var unlockableteleporterindex : int = -1
 # Called when the node enters the scene tree for the first time.
+
+
 func _ready() -> void:
-	if unlockableteleporter == 1:
-		unlockableteleporterindex=Gamemanager.unlockableteleporterindex
-		Gamemanager.unlockableteleporterindex+=1
+	
+		
+		
+						
 	if otherteleporter!=null : 
 		otherteleporter.otherteleporter=self
 		otherteleporter.samecreen=samecreen
 		if unlockableteleporter==1:
 			#unlockableteleporterindex=Gamemanager.
 			otherteleporter.unlockableteleporter=2
+			
+	
+		
 		match direction :
 						0:
 							pass
@@ -29,7 +35,14 @@ func _ready() -> void:
 							otherteleporter.direction=4
 						4:
 							otherteleporter.direction=3
-	pass # Replace with function body.
+	
+	if unlockableteleporter != 0:
+			unlockableteleporterindex=Gamemanager.unlockableteleporterindex
+			Gamemanager.unlockableteleporterindex+=1
+		
+	
+	
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -43,19 +56,41 @@ func teleportdestination(base : float) -> float :
 	base=baseabs*basesign
 	return base
 
+
+func ifinsavelist(currentint : int)->bool:
+	var isinindex : bool = false
+	for i in range(Gamemanager.savesystem.unlockableteleporterlist.size()):
+		if Gamemanager.savesystem.unlockableteleporterlist[i]==currentint:
+			isinindex=true
+	return isinindex
+
+func addelementtosave(currentint : int) ->void:
+	if ifinsavelist(currentint)==false : 
+		Gamemanager.savesystem.unlockableteleporterlist.append(currentint)
+	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if canteleport==true:
 		#otherteleporter.canteleport=false	
 		if body.has_method("isplayerfunc"):
-			
 			if body.isplayerfunc()==true :
+				
 				if unlockableteleporter==1:
-					var isinindex : bool = false
-					for i in range(Gamemanager.savesystem.unlockableteleporterlist.size()):
-						if Gamemanager.savesystem.unlockableteleporterlist[i]==unlockableteleporterindex:
-							isinindex=true
-						if isinindex==false:
-							Gamemanager.savesystem.unlockableteleporterlist.append(unlockableteleporterindex)
+						
+						addelementtosave(unlockableteleporterindex)
+						addelementtosave(otherteleporter.unlockableteleporterindex)
+						print("bayrou"+str(Gamemanager.savesystem.unlockableteleporterlist)+str(unlockableteleporterindex))
+						Gamemanager.savesystem.save_game()
+				if unlockableteleporter==0:
+					teleport()
+				else :
+						if ifinsavelist(unlockableteleporterindex) : 
+							teleport()#S-(decalageX*distancetospawn)
+				
+			
+			
+	pass # Replace with function body.
+
+func teleport()->void:
 				var decalageY : float = Gamemanager.playermovementvar.global_position.y-global_position.y
 				var decalageX : float = Gamemanager.playermovementvar.global_position.x-global_position.x
 				
@@ -84,11 +119,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 							distancex=-1
 					#print("bouteille : "+str(distancey))
 					Gamemanager.playermovementvar.global_position.y=otherteleporter.global_position.y+(distancey*distancetospawn)#-(decalageY*distancetospawn)
-					Gamemanager.playermovementvar.global_position.x=otherteleporter.global_position.x+(distancex*distancetospawn)#S-(decalageX*distancetospawn)
-			
-	pass # Replace with function body.
-
-
+					Gamemanager.playermovementvar.global_position.x=otherteleporter.global_position.x+(distancex*distancetospawn)
+					
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if canteleport==false:
 		otherteleporter.canteleport=false	

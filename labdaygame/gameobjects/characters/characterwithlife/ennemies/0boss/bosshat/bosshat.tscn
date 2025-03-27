@@ -16,5 +16,8 @@ texture = ExtResource("3_4yc4r")
 hframes = 4
 vframes = 7
 
+[node name="typeofcharac" parent="." index="6"]
+maxlife = 40
+
 [node name="attackbehavioractor" parent="." index="10"]
 script = ExtResource("4_hes4s")

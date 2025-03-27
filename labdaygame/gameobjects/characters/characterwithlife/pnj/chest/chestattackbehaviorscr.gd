@@ -28,7 +28,12 @@ func _ready() -> void:
 	isanimated=false
 	
 	
+	
 func onhaveinteracted()->void:
 	super.onhaveinteracted()
 	charactermovementvar.animatedspritevar.set_sprite_index(1,0)
 	
+
+func beginattackbehavior() -> void:
+	super.beginattackbehavior()
+	charactermovementvar.typeofcharactervar.canbeattacked=false

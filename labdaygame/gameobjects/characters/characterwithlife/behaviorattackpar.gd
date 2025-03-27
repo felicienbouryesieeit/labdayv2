@@ -20,11 +20,11 @@ var isanimated : bool = true
 
 var projectile = load(projectile_directory)
 
-@export var range : float = 1
+@export var range : float = 0.5
 @export var cadence : float = 1
 @export var shotspeedmax : float = 100
 @export var shotaccelerationmax : float = 100
-@export var strengh : float = 1
+@export var strengh : float = 2
 
 
 

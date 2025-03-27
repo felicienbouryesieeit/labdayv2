@@ -8,4 +8,4 @@ shotspeed
 range    
 strengh    
 defense   
-cadence   
+cadence

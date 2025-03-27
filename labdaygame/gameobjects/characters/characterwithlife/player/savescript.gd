@@ -18,7 +18,8 @@ func save_game():
 		"my_int_list": my_int_list,
 		"my_string_list": my_string_list,
 		"activateonceindex":activateonceindex,
-		"inventoryvar":inventoryvar
+		"inventoryvar":inventoryvar,
+		"unlockableteleporterlist":unlockableteleporterlist
 	}
 	
 	var file = FileAccess.open(SAVE_FILE_PATH, FileAccess.WRITE)
@@ -49,6 +50,7 @@ func load_game():
 			my_string_list = data.get("my_string_list", [])
 			activateonceindex=data.get("activateonceindex", [])
 			inventoryvar=data.get("inventoryvar", [])
+			unlockableteleporterlist=data.get("unlockableteleporterlist", [])
 			
 			print("Chargement réussi !")
 		else:
@@ -58,7 +60,7 @@ func load_game():
 
 func _ready():
 	Gamemanager.savesystem=self
-	#erase_save()
+	erase_save()
 	load_game()
 	call_deferred("_ready2")
 	
