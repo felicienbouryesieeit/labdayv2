@@ -64,7 +64,7 @@ func setcurrentline() -> void:
 		
 		filetext =file.get_line()
 		if i==currentline+beginningline+1:
-			filetext2=filetext+" "+itemname
+			filetext2="u"#filetext+" "+itemname
 		print("night in the wood"+filetext)
 		i+=1		
 	file.close()
